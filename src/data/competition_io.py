@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +15,9 @@ TASK_KEYS = ("task_text", "task", "prompt", "question", "query", "input")
 ANSWER_KEYS = ("gold_answer", "answer", "target", "output")
 FAMILY_KEYS = ("family_hint", "family", "category", "type")
 SHOT_KEYS = ("few_shot_examples", "examples", "demos", "shots")
+PAIR_PATTERN = re.compile(r"(.+?)\s*->\s*(.+)")
+BIT_PAIR_PATTERN = re.compile(r"([01]{8})\s*->\s*([01]{8})")
+BIT_QUERY_PATTERN = re.compile(r"Now,\s*determine the output for:\s*([01]{8})", re.IGNORECASE)
 
 
 def repo_root() -> Path:
@@ -82,6 +86,7 @@ def normalize_row(row: dict[str, Any], *, default_index: int = 0) -> EvalExample
 
     row_copy = dict(row)
     example_id = _first_present(row_copy, ID_KEYS) or f"example-{default_index:04d}"
+    raw_prompt = _first_present(row_copy, ("prompt",))
     task_text = _first_present(row_copy, TASK_KEYS)
     if task_text is None:
         raise ValueError(f"Missing task text in row {example_id}.")
@@ -89,7 +94,12 @@ def normalize_row(row: dict[str, Any], *, default_index: int = 0) -> EvalExample
     gold_answer = _first_present(row_copy, ANSWER_KEYS)
     family_hint = _first_present(row_copy, FAMILY_KEYS)
     raw_shots = _first_present(row_copy, SHOT_KEYS)
-    few_shot_examples = _parse_shots(raw_shots or [])
+    if raw_shots is not None:
+        few_shot_examples = _parse_shots(raw_shots)
+    else:
+        task_text, few_shot_examples, inferred_family = _parse_prompt_text(str(task_text))
+        if family_hint is None:
+            family_hint = inferred_family
 
     metadata = {
         key: value
@@ -103,6 +113,8 @@ def normalize_row(row: dict[str, Any], *, default_index: int = 0) -> EvalExample
             *SHOT_KEYS,
         }
     }
+    if raw_prompt is not None:
+        metadata["raw_prompt"] = str(raw_prompt)
 
     return EvalExample(
         example_id=str(example_id),
@@ -141,3 +153,40 @@ def _parse_shots(raw_shots: Any) -> list[FewShotExample]:
         parsed.append(FewShotExample(input_text=str(input_text), output_text=str(output_text)))
     return parsed
 
+
+def _parse_prompt_text(prompt_text: str) -> tuple[str, list[FewShotExample], str | None]:
+    """Extract task query and demonstrations from free-form competition prompts."""
+
+    bit_query = BIT_QUERY_PATTERN.search(prompt_text)
+    bit_pairs = BIT_PAIR_PATTERN.findall(prompt_text)
+    if bit_query is not None and bit_pairs:
+        return (
+            bit_query.group(1),
+            [
+                FewShotExample(input_text=input_text, output_text=output_text)
+                for input_text, output_text in bit_pairs
+            ],
+            "bit_manipulation",
+        )
+
+    lines = [line.strip() for line in prompt_text.splitlines() if line.strip()]
+    pairs: list[FewShotExample] = []
+    query = prompt_text
+    for line in lines:
+        pair_match = PAIR_PATTERN.fullmatch(line)
+        if pair_match is not None:
+            pairs.append(
+                FewShotExample(
+                    input_text=pair_match.group(1).strip(),
+                    output_text=pair_match.group(2).strip(),
+                )
+            )
+            continue
+        lowered = line.casefold()
+        if "determine the output for:" in lowered:
+            query = line.split(":", 1)[-1].strip()
+
+    if pairs and query != prompt_text:
+        return query, pairs, "parsed_from_prompt"
+
+    return prompt_text, [], None
