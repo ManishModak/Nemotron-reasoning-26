@@ -1,0 +1,30 @@
+{
+  "run_name": "baseline_eval",
+  "data": {
+    "path": "artifacts/samples/smoke_eval_examples.jsonl"
+  },
+  "split": {
+    "validation_ratio": 0.5,
+    "seed": 13
+  },
+  "routing": {
+    "enabled": true,
+    "confidence_threshold": 0.95
+  },
+  "prompts": [
+    "baseline_direct",
+    "reasoned_boxed",
+    "self_check_boxed"
+  ],
+  "selected_prompt_variant": "reasoned_boxed",
+  "reporting": {
+    "output_dir": "artifacts/runs/baseline_eval"
+  },
+  "kaggle": {
+    "output_dir": "artifacts/runs/kaggle_handoff",
+    "sample_limit": 3
+  },
+  "predictor": {
+    "type": "heuristic"
+  }
+}
