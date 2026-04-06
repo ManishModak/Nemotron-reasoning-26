@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import site
 from pathlib import Path
 from typing import Any
 
@@ -64,6 +65,7 @@ class TransformersKagglePredictor:
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
+        _prepare_kaggle_runtime()
         model_path = _resolve_model_path(model_handle)
         self._torch = torch
         self._tokenizer = AutoTokenizer.from_pretrained(
@@ -77,7 +79,7 @@ class TransformersKagglePredictor:
         self._model = AutoModelForCausalLM.from_pretrained(
             model_path,
             trust_remote_code=trust_remote_code,
-            torch_dtype=_resolve_torch_dtype(torch, torch_dtype),
+            dtype=_resolve_torch_dtype(torch, torch_dtype),
             device_map=device_map,
         )
         self._batch_size = max(1, int(batch_size))
@@ -191,6 +193,28 @@ def _resolve_model_path(model_handle: str) -> str:
     import kagglehub
 
     return kagglehub.model_download(model_handle)
+
+
+def _prepare_kaggle_runtime() -> None:
+    """Mirror the organizer demo setup for Nemotron dependencies on Kaggle."""
+
+    kaggle_root = Path("/kaggle")
+    if not kaggle_root.exists():
+        return
+
+    candidate_paths = (
+        Path(
+            "/kaggle/usr/lib/notebooks/ryanholbrook/nvidia-utility-script/"
+            "nvidia_cutlass_dsl/python_packages/"
+        ),
+        Path(
+            "/kaggle/usr/lib/notebooks/ryanholbrook/nvidia_utility_script/"
+            "nvidia_cutlass_dsl/python_packages/"
+        ),
+    )
+    for candidate in candidate_paths:
+        if candidate.exists():
+            site.addsitedir(str(candidate))
 
 
 def _resolve_torch_dtype(torch_module: Any, dtype_name: str) -> Any:
