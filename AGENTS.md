@@ -1,111 +1,52 @@
 # AGENTS.md
 
-## Operating Model
+## Repo purpose
 
-This repo is the support workspace for Kaggle execution.
+Support workspace for a Kaggle competition. GPU training and submission happen on Kaggle; local work is editing, analysis, and docs.
 
-The default workflow is:
+## Primary artifact
 
-1. implement shared code and notebook structure here
-2. keep the runnable path Kaggle-compatible from the start
-3. move the relevant notebook or files to Kaggle early
-4. run training, inference, and submission checks on Kaggle
-5. bring back errors, logs, screenshots, or outputs into this repo context
-6. debug and revise the underlying code here
-7. repeat until the checkpoint passes
+[`kaggle-combined-lora-submission.ipynb`](kaggle-combined-lora-submission.ipynb) — the only notebook that runs on Kaggle. Everything else serves it.
 
-## Execution Boundary
+## Workflow
 
-Competition-critical runs are expected to happen on Kaggle notebooks, not in this local workspace.
+1. Edit the combined notebook or supporting docs locally.
+2. Sync to Kaggle, run on GPU.
+3. Bring errors/logs/scores back; record in `reports/`.
+4. Patch locally, rerun on Kaggle. Keep diffs small between runs.
 
-That includes:
+## Rules
 
-- baseline competition runs
-- GPU-backed inference validation
-- LoRA fine-tuning
-- GRPO or other RL runs
-- final submission packaging checks that depend on Kaggle environment behavior
+- **Nothing is validated until Kaggle confirms it.** Local completion is not a checkpoint.
+- **One notebook for Kaggle.** Do not split into multiple notebooks or build a separate local pipeline.
+- **Kaggle runs:** model loading, LoRA/RL training, submission packaging.
+- **Local work:** notebook edits, `train.csv` analysis, [`docs/`](docs/README.md) updates, experiment notes.
 
-Local work in this repo should focus on:
+## Context the user should share
 
-- notebook structure
-- prompt design
-- parsing and evaluation utilities
-- data transformation code
-- config authoring
-- symbolic solver logic
-- experiment planning and result tracking
+Ask the user to attach or paste anything that improves debugging or decisions, when relevant:
 
-Local work should not drift into a separate local-only execution path. Prefer code that is directly reusable by Kaggle notebooks.
+- **Competition inputs:** `train.csv` / `test.csv` snippets, Kaggle dataset names, competition kernel links, official metric or submission demo notebooks.
+- **Utilities:** NVIDIA utility script paths, CUTLASS / Triton setup notes, `kagglehub` model IDs, pinned package versions from a working run.
+- **Custom data or artifacts:** filtered training JSONL, exported adapter configs, `submission.zip` structure, prior `reports/` entries.
+- **Failure evidence:** full cell output, stderr, environment (GPU type, session time left).
 
-## Checkpoint Rule
+Agents should use **Context7** (library/framework docs) and **web search** when fixing version-specific APIs, Kaggle environment quirks, or NeMo/TRL/vLLM behavior—not only training knowledge.
 
-Do not treat code as complete just because it is written locally.
+## When a Kaggle run fails
 
-A task reaches a real checkpoint only when:
+- Read the stack trace / log the user shares.
+- Identify env mismatches, OOM, install issues, or formatting bugs.
+- Patch the notebook here; user reruns on Kaggle.
 
-- the relevant notebook or module is prepared here
-- it has been transferred to Kaggle
-- the Kaggle run has been attempted
-- the result is recorded in `reports/` or the active working notes
+## Docs index
 
-## Kaggle Handoff Pattern
+[`docs/README.md`](docs/README.md) — competition rules, strategy/stack, training format, NeMo reference.
 
-For each milestone:
+## Agent skill (project)
 
-1. prepare the minimal runnable Kaggle notebook here
-2. identify the exact Kaggle dependencies and runtime assumptions
-3. run it on Kaggle as early as possible
-4. collect failures, runtime limits, and output quality issues
-5. patch the shared code locally
-6. rerun on Kaggle
+[`.agents/skills/nemotron-kaggle-engineer/SKILL.md`](.agents/skills/nemotron-kaggle-engineer/SKILL.md) — Nemotron/Kaggle workflow (YAML frontmatter + body per Cursor skill conventions). To author new skills, use your global **create-skill** / **skill-creator** guidance; keep this repo’s skills under `.agents/skills/`.
 
-Keep changes small between Kaggle tests so regressions are easy to isolate.
+## Archive
 
-## Development Bias
-
-Prefer a Kaggle-first bias for any compute-bound or submission-critical work:
-
-- model loading
-- prompt-only inference with the real backend
-- throughput and memory checks
-- LoRA or RL runs
-- artifact packaging
-
-Prefer local iteration first for:
-
-- parsers and dataset normalization
-- prompt templates
-- symbolic solvers
-- evaluation logic
-- report generation
-
-The goal is not a separate local pipeline. The goal is fast local iteration in service of a Kaggle-valid path.
-
-## Support Expectation
-
-When a Kaggle run fails or behaves unexpectedly, the assistant should help with:
-
-- reading stack traces and notebook errors
-- identifying environment mismatches
-- adapting code for Kaggle storage, package, and GPU limits
-- reducing runtime or memory pressure
-- adjusting prompts, parsing, batching, or training configs
-- converting working local logic into Kaggle-safe notebook cells
-
-The expected debugging loop is collaborative:
-
-- user runs or tests on Kaggle
-- user shares the error, log, output, or observed behavior
-- assistant analyzes it and proposes the next patch
-- assistant updates repo files here
-- user reruns on Kaggle
-
-## Planning Constraint
-
-All plans in this repo should assume:
-
-- coding and organization happen locally in this repository
-- compute-bound execution happens on Kaggle at defined checkpoints
-- notebooks should stay thin and reusable around shared `src/` code
-- no major modeling decision is considered validated until Kaggle confirms it
+Old multi-notebook pipeline, `src/`, configs, tests: [`docs/archive/`](docs/archive/README.md). Do not use unless explicitly reviving.

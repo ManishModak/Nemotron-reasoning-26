@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+import os
 import re
 import site
+import shutil
 from pathlib import Path
 from typing import Any
 
@@ -215,6 +217,30 @@ def _prepare_kaggle_runtime() -> None:
     for candidate in candidate_paths:
         if candidate.exists():
             site.addsitedir(str(candidate))
+
+    ptxas_candidates = (
+        Path("/usr/local/cuda/bin/ptxas"),
+        Path("/usr/bin/ptxas"),
+        Path(
+            "/kaggle/usr/lib/notebooks/ryanholbrook/nvidia_utility_script/"
+            "triton/backends/nvidia/bin/ptxas"
+        ),
+        Path(
+            "/kaggle/usr/lib/notebooks/ryanholbrook/nvidia-utility-script/"
+            "triton/backends/nvidia/bin/ptxas"
+        ),
+    )
+    executable_ptxas = next(
+        (
+            str(candidate)
+            for candidate in ptxas_candidates
+            if candidate.exists() and candidate.is_file() and os.access(candidate, os.X_OK)
+        ),
+        shutil.which("ptxas"),
+    )
+    if executable_ptxas:
+        os.environ.setdefault("TRITON_PTXAS_PATH", executable_ptxas)
+        os.environ.setdefault("TRITON_PTXAS_BLACKWELL_PATH", executable_ptxas)
 
 
 def _resolve_torch_dtype(torch_module: Any, dtype_name: str) -> Any:

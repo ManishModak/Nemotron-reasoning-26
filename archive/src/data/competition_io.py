@@ -129,6 +129,22 @@ def resolve_dataset_path(
 ) -> Path:
     """Resolve an explicit or discovered dataset path."""
 
+    path_obj = None if path_like in (None, "") else Path(path_like)
+    if (
+        auto_discover
+        and fallback_filename is not None
+        and path_obj is not None
+        and not path_obj.is_absolute()
+        and Path("/kaggle/input").exists()
+    ):
+        discovered = discover_dataset_file(
+            fallback_filename,
+            base_dir=base_dir,
+            search_roots=(Path.cwd(),),
+        )
+        if discovered is not None:
+            return discovered
+
     if path_like not in (None, ""):
         explicit = resolve_path(path_like)
         if explicit.exists():

@@ -1,58 +1,36 @@
-# Nemotron Model Reasoning Challenge
+# Nemotron Model Reasoning Challenge (Kaggle)
 
-Working repo scaffold for the NVIDIA Nemotron Model Reasoning Challenge on Kaggle.
+Repo for the NVIDIA Nemotron reasoning competition. **Competition runs happen on Kaggle**; this workspace holds the runnable notebook, data copies, and notes.
 
-## Goal
+## Default runnable (submit this path)
 
-Build a reproducible pipeline for:
+| Artifact | Purpose |
+|----------|---------|
+| [`kaggle-combined-lora-submission.ipynb`](kaggle-combined-lora-submission.ipynb) | One notebook: PyTorch env setup → LoRA SFT on `train.csv` → `submission.zip` (adapter only) |
 
-- Kaggle-first evaluation and inference
-- local support for error analysis and shared code iteration
-- data cleaning and curation
-- synthetic data generation and lightweight fine-tuning
-- reinforcement learning experiments
-- final inference and submission packaging
+Supporting docs:
 
-## Structure
+- [`docs/README.md`](docs/README.md) — index of all docs
+- [`docs/competition-rules.md`](docs/competition-rules.md) — submission, scoring, timeline
+- [`docs/training-data-format.md`](docs/training-data-format.md) — SFT text aligned with the metric
+- [`reports/kaggle-first-run-checklist.md`](reports/kaggle-first-run-checklist.md) — Kaggle run checklist
 
-- `docs/`: research notes and summaries already collected
-- `notebooks/`: staged Kaggle workflow from baseline to submission
-- `src/`: shared Python modules for evaluation, data processing, prompts, and solvers
-- `configs/`: training and experiment configs
-- `artifacts/`: saved adapters, intermediate outputs, and packaged submissions
-- `reports/`: validation summaries, ablations, and milestone notes
+## What you submit to Kaggle
 
-## Pipeline
+A **`submission.zip`** containing your LoRA adapter (`adapter_config.json` + weights). The host runs **vLLM + Nemotron-3-Nano-30B-A3B + your adapter** and scores `\boxed{}` extraction vs ground truth (see [`docs/competition-rules.md`](docs/competition-rules.md) and `nvidia-nemotron-metric.ipynb`).
 
-1. `00_eval_and_submission.ipynb`
-2. `00_baseline_eval.ipynb`
-3. `01_data_prep.ipynb`
-4. `02_synthetic_sft.ipynb`
-5. `03_rl_grpo.ipynb`
-6. `04_inference_submission.ipynb`
+## Repo layout
 
-## Default Notebook
+- `docs/` — [index](docs/README.md): rules, strategy, training format; **`docs/archive/`** — legacy docs + old `src/` / notebooks
+- `artifacts/`, `reports/` — outputs and run notes
+- `train.csv`, `test.csv` — local copies for analysis (Kaggle uses competition inputs)
+- `nvidia-*.ipynb` — upstream NVIDIA / metric / utility references
 
-Use `notebooks/00_eval_and_submission.ipynb` as the default Kaggle handoff notebook for Milestone 1.
+## Local vs Kaggle
 
-It is the simplest path to:
+- **Kaggle:** full GPU train, `kagglehub` model download, `submission.zip`.
+- **Local:** read `train.csv`, experiment design, update the combined notebook, refresh docs/reports after each Kaggle attempt.
 
-- run held-out validation on `train.csv`
-- write eval artifacts and the handoff bundle
-- generate `submission.csv` from `test.csv`
+## Legacy code
 
-The split notebooks remain available when you want to isolate evaluation from submission generation.
-
-## Execution Rule
-
-- build reusable logic in `src/` and keep notebooks thin
-- design the runnable path for Kaggle from the start
-- use local runs for CPU-safe iteration and debugging
-- use Kaggle for inference, training, runtime validation, and submission-critical checks
-
-## Immediate Priorities
-
-1. Build a strong held-out evaluation harness.
-2. Add a hybrid symbolic plus LLM inference path.
-3. Produce a reliable first submission before the progress-prize cutoff.
-4. Keep the combined Kaggle notebook path runnable at all times.
+The previous `notebooks/`, `src/`, `configs/`, and `tests/` tree lives under [`docs/archive/`](docs/archive/README.md). Use it only if you revive the old eval/solver harness.
