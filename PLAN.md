@@ -37,6 +37,7 @@ Target date: April 9, 2026
 
 Deliverables:
 
+- combined Kaggle notebook running held-out eval and submission generation end to end
 - baseline evaluation notebook running end to end
 - held-out validation split and error report
 - prompt-only improved submission
@@ -121,7 +122,7 @@ The assistant should support each checkpoint by helping interpret failures and u
 
 ### 1. Evaluation
 
-Owner: `notebooks/00_baseline_eval.ipynb`, `src/eval/`
+Owner: `notebooks/00_eval_and_submission.ipynb`, `notebooks/00_baseline_eval.ipynb`, `src/eval/`
 
 Tasks:
 
@@ -130,6 +131,7 @@ Tasks:
 - standardize prompt and output parsing
 - track best prompt variants
 - keep the baseline flow notebook-safe and Kaggle-runnable at every checkpoint
+- keep the combined eval-plus-submission notebook as the default Kaggle entrypoint
 
 ### 2. Data
 
@@ -145,7 +147,7 @@ Tasks:
 
 ### 3. Prompting and Solvers
 
-Owner: `src/prompts/`, `src/solvers/`, `notebooks/04_inference_submission.ipynb`
+Owner: `src/prompts/`, `src/solvers/`, `notebooks/00_eval_and_submission.ipynb`, `notebooks/04_inference_submission.ipynb`
 
 Tasks:
 
@@ -196,7 +198,7 @@ Default path:
 
 ## Immediate Next Actions
 
-1. Make `notebooks/00_baseline_eval.ipynb` the primary baseline notebook and keep the Kaggle wrapper thin.
+1. Make `notebooks/00_eval_and_submission.ipynb` the default Kaggle notebook and keep the split notebooks thin.
 2. Point the evaluation path at the real competition dataset instead of smoke-only defaults.
 3. Build shared parsing utilities under `src/` for the known puzzle families.
 4. Start a simple symbolic routing prototype under `src/solvers/`.

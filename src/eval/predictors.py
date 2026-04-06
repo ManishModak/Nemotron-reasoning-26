@@ -90,6 +90,7 @@ class TransformersKagglePredictor:
         for start in range(0, len(prompts), self._batch_size):
             batch = prompts[start : start + self._batch_size]
             tokenized = self._tokenizer(batch, return_tensors="pt", padding=True)
+            prompt_lengths = tokenized["attention_mask"].sum(dim=1).tolist()
             tokenized = {
                 key: value.to(self._model.device)
                 for key, value in tokenized.items()
@@ -104,9 +105,12 @@ class TransformersKagglePredictor:
                 generate_kwargs["temperature"] = self._temperature
             with self._torch.inference_mode():
                 generated = self._model.generate(**generate_kwargs)
-            prompt_length = tokenized["input_ids"].shape[1]
-            completion_tokens = generated[:, prompt_length:]
-            decoded = self._tokenizer.batch_decode(completion_tokens, skip_special_tokens=True)
+            decoded: list[str] = []
+            for row_index, prompt_length in enumerate(prompt_lengths):
+                completion_tokens = generated[row_index, int(prompt_length) :]
+                decoded.append(
+                    self._tokenizer.decode(completion_tokens, skip_special_tokens=True)
+                )
             outputs.extend(_apply_stop_tokens(text, stop) for text in decoded)
         return outputs
 

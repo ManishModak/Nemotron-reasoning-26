@@ -24,11 +24,24 @@ Build a reproducible pipeline for:
 
 ## Pipeline
 
-1. `00_baseline_eval.ipynb`
-2. `01_data_prep.ipynb`
-3. `02_synthetic_sft.ipynb`
-4. `03_rl_grpo.ipynb`
-5. `04_inference_submission.ipynb`
+1. `00_eval_and_submission.ipynb`
+2. `00_baseline_eval.ipynb`
+3. `01_data_prep.ipynb`
+4. `02_synthetic_sft.ipynb`
+5. `03_rl_grpo.ipynb`
+6. `04_inference_submission.ipynb`
+
+## Default Notebook
+
+Use `notebooks/00_eval_and_submission.ipynb` as the default Kaggle handoff notebook for Milestone 1.
+
+It is the simplest path to:
+
+- run held-out validation on `train.csv`
+- write eval artifacts and the handoff bundle
+- generate `submission.csv` from `test.csv`
+
+The split notebooks remain available when you want to isolate evaluation from submission generation.
 
 ## Execution Rule
 
@@ -42,3 +55,4 @@ Build a reproducible pipeline for:
 1. Build a strong held-out evaluation harness.
 2. Add a hybrid symbolic plus LLM inference path.
 3. Produce a reliable first submission before the progress-prize cutoff.
+4. Keep the combined Kaggle notebook path runnable at all times.
