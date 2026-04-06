@@ -6,7 +6,8 @@ Working repo scaffold for the NVIDIA Nemotron Model Reasoning Challenge on Kaggl
 
 Build a reproducible pipeline for:
 
-- local evaluation and error analysis
+- Kaggle-first evaluation and inference
+- local support for error analysis and shared code iteration
 - data cleaning and curation
 - synthetic data generation and lightweight fine-tuning
 - reinforcement learning experiments
@@ -29,9 +30,15 @@ Build a reproducible pipeline for:
 4. `03_rl_grpo.ipynb`
 5. `04_inference_submission.ipynb`
 
+## Execution Rule
+
+- build reusable logic in `src/` and keep notebooks thin
+- design the runnable path for Kaggle from the start
+- use local runs for CPU-safe iteration and debugging
+- use Kaggle for inference, training, runtime validation, and submission-critical checks
+
 ## Immediate Priorities
 
 1. Build a strong held-out evaluation harness.
 2. Add a hybrid symbolic plus LLM inference path.
 3. Produce a reliable first submission before the progress-prize cutoff.
-

@@ -1,4 +1,4 @@
-"""Dataset loading and normalization for local and Kaggle evaluation."""
+"""Dataset loading, discovery, and normalization for local and Kaggle evaluation."""
 
 from __future__ import annotations
 
@@ -15,9 +15,40 @@ TASK_KEYS = ("task_text", "task", "prompt", "question", "query", "input")
 ANSWER_KEYS = ("gold_answer", "answer", "target", "output")
 FAMILY_KEYS = ("family_hint", "family", "category", "type")
 SHOT_KEYS = ("few_shot_examples", "examples", "demos", "shots")
+
 PAIR_PATTERN = re.compile(r"(.+?)\s*->\s*(.+)")
 BIT_PAIR_PATTERN = re.compile(r"([01]{8})\s*->\s*([01]{8})")
 BIT_QUERY_PATTERN = re.compile(r"Now,\s*determine the output for:\s*([01]{8})", re.IGNORECASE)
+GRAVITY_PAIR_PATTERN = re.compile(
+    r"For t =\s*(-?\d+(?:\.\d+)?)s,\s*distance =\s*(-?\d+(?:\.\d+)?)\s*m",
+    re.IGNORECASE,
+)
+GRAVITY_QUERY_PATTERN = re.compile(
+    r"Now,\s*determine the falling distance for t =\s*(-?\d+(?:\.\d+)?)s",
+    re.IGNORECASE,
+)
+UNIT_PAIR_PATTERN = re.compile(
+    r"(-?\d+(?:\.\d+)?)\s*([A-Za-z]+)\s+becomes\s+(-?\d+(?:\.\d+)?)",
+    re.IGNORECASE,
+)
+UNIT_QUERY_PATTERN = re.compile(
+    r"Now,\s*convert the following measurement:\s*(-?\d+(?:\.\d+)?)\s*([A-Za-z]+)",
+    re.IGNORECASE,
+)
+ROMAN_QUERY_PATTERN = re.compile(
+    r"Now,\s*write the number\s+(-?\d+)\s+in the Wonderland numeral system\.?",
+    re.IGNORECASE,
+)
+TEXT_QUERY_PATTERN = re.compile(
+    r"Now,\s*decrypt the following text:\s*(.+)",
+    re.IGNORECASE,
+)
+EQUATION_PAIR_PATTERN = re.compile(r"(.+?)\s*=\s*(.+)")
+EQUATION_QUERY_PATTERN = re.compile(
+    r"Now,\s*determine the result for:\s*(.+)",
+    re.IGNORECASE,
+)
+COMPETITION_HINTS = ("nvidia", "nemotron", "reasoning", "challenge", "competition")
 
 
 def repo_root() -> Path:
@@ -35,28 +66,83 @@ def resolve_path(path_like: str | Path) -> Path:
     return repo_root() / path
 
 
+def discover_dataset_file(
+    filename: str,
+    *,
+    base_dir: str | Path | None = None,
+    search_roots: tuple[str | Path, ...] = (),
+) -> Path | None:
+    """Discover one dataset file by name, preferring Kaggle competition inputs."""
+
+    roots: list[Path] = []
+    kaggle_root = Path("/kaggle/input")
+    if kaggle_root.exists():
+        roots.append(kaggle_root)
+    for item in search_roots:
+        candidate = resolve_path(item)
+        if candidate.exists() and candidate not in roots:
+            roots.append(candidate)
+    base_root = resolve_path(base_dir or ".")
+    if base_root.exists() and base_root not in roots:
+        roots.append(base_root)
+    repo = repo_root()
+    if repo not in roots:
+        roots.append(repo)
+
+    candidates: list[Path] = []
+    for search_root in roots:
+        direct = search_root / filename
+        if direct.is_file():
+            candidates.append(direct)
+        candidates.extend(path for path in search_root.rglob(filename) if path.is_file())
+
+    if not candidates:
+        return None
+    return max(candidates, key=_score_dataset_candidate)
+
+
 def discover_dataset_paths(base_dir: str | Path | None = None) -> dict[str, Path]:
     """Discover likely competition dataset files."""
 
-    root = resolve_path(base_dir or ".")
-    candidates = {
-        "train": ["data/train.jsonl", "data/train.json", "data/train.csv"],
-        "validation": [
-            "data/validation.jsonl",
-            "data/validation.json",
-            "data/validation.csv",
-        ],
-        "test": ["data/test.jsonl", "data/test.json", "data/test.csv"],
-        "smoke": ["artifacts/samples/smoke_eval_examples.jsonl"],
-    }
     found: dict[str, Path] = {}
-    for name, paths in candidates.items():
-        for relative in paths:
-            candidate = root / relative
-            if candidate.exists():
-                found[name] = candidate
-                break
+    for name, filename in (
+        ("train", "train.csv"),
+        ("validation", "validation.csv"),
+        ("test", "test.csv"),
+    ):
+        candidate = discover_dataset_file(filename, base_dir=base_dir, search_roots=(Path.cwd(),))
+        if candidate is not None:
+            found[name] = candidate
+
+    smoke = resolve_path("artifacts/samples/smoke_eval_examples.jsonl")
+    if smoke.exists():
+        found["smoke"] = smoke
     return found
+
+
+def resolve_dataset_path(
+    path_like: str | Path | None,
+    *,
+    fallback_filename: str | None = None,
+    auto_discover: bool = False,
+    base_dir: str | Path | None = None,
+) -> Path:
+    """Resolve an explicit or discovered dataset path."""
+
+    if path_like not in (None, ""):
+        explicit = resolve_path(path_like)
+        if explicit.exists():
+            return explicit
+    if auto_discover and fallback_filename is not None:
+        discovered = discover_dataset_file(
+            fallback_filename,
+            base_dir=base_dir,
+            search_roots=(Path.cwd(),),
+        )
+        if discovered is not None:
+            return discovered
+    target = path_like or fallback_filename or "<unknown>"
+    raise FileNotFoundError(f"Could not resolve dataset path for: {target}")
 
 
 def load_eval_examples(path_like: str | Path) -> list[EvalExample]:
@@ -155,38 +241,174 @@ def _parse_shots(raw_shots: Any) -> list[FewShotExample]:
 
 
 def _parse_prompt_text(prompt_text: str) -> tuple[str, list[FewShotExample], str | None]:
-    """Extract task query and demonstrations from free-form competition prompts."""
+    """Extract task query and demonstrations from the competition prompt templates."""
 
-    bit_query = BIT_QUERY_PATTERN.search(prompt_text)
-    bit_pairs = BIT_PAIR_PATTERN.findall(prompt_text)
-    if bit_query is not None and bit_pairs:
-        return (
-            bit_query.group(1),
-            [
-                FewShotExample(input_text=input_text, output_text=output_text)
-                for input_text, output_text in bit_pairs
-            ],
-            "bit_manipulation",
-        )
+    lowered = prompt_text.casefold()
+    for parser in (
+        _parse_bit_prompt,
+        _parse_gravity_prompt,
+        _parse_unit_prompt,
+        _parse_roman_prompt,
+        _parse_text_prompt,
+        _parse_equation_prompt,
+        _parse_generic_prompt,
+    ):
+        parsed = parser(prompt_text, lowered)
+        if parsed is not None:
+            return parsed
+    return prompt_text, [], None
 
+
+def _parse_bit_prompt(
+    prompt_text: str,
+    lowered: str,
+) -> tuple[str, list[FewShotExample], str] | None:
+    if "bit manipulation rule transforms 8-bit binary numbers" not in lowered:
+        return None
+    query_match = BIT_QUERY_PATTERN.search(prompt_text)
+    pairs = BIT_PAIR_PATTERN.findall(prompt_text)
+    if query_match is None or not pairs:
+        return None
+    return (
+        query_match.group(1),
+        [
+            FewShotExample(input_text=input_text, output_text=output_text)
+            for input_text, output_text in pairs
+        ],
+        "bit_manipulation",
+    )
+
+
+def _parse_gravity_prompt(
+    prompt_text: str,
+    lowered: str,
+) -> tuple[str, list[FewShotExample], str] | None:
+    if "gravitational constant has been secretly changed" not in lowered:
+        return None
+    query_match = GRAVITY_QUERY_PATTERN.search(prompt_text)
+    pairs = GRAVITY_PAIR_PATTERN.findall(prompt_text)
+    if query_match is None or not pairs:
+        return None
+    shots = [
+        FewShotExample(input_text=f"{time_value}s", output_text=f"{distance_value} m")
+        for time_value, distance_value in pairs
+    ]
+    return f"{query_match.group(1)}s", shots, "gravity_distance"
+
+
+def _parse_unit_prompt(
+    prompt_text: str,
+    lowered: str,
+) -> tuple[str, list[FewShotExample], str] | None:
+    if "secret unit conversion is applied to measurements" not in lowered:
+        return None
+    query_match = UNIT_QUERY_PATTERN.search(prompt_text)
+    pairs = UNIT_PAIR_PATTERN.findall(prompt_text)
+    if query_match is None or not pairs:
+        return None
+    shots = [
+        FewShotExample(input_text=f"{value} {unit}", output_text=converted)
+        for value, unit, converted in pairs
+    ]
+    return f"{query_match.group(1)} {query_match.group(2)}", shots, "unit_conversion"
+
+
+def _parse_roman_prompt(
+    prompt_text: str,
+    lowered: str,
+) -> tuple[str, list[FewShotExample], str] | None:
+    if "different numeral system" not in lowered:
+        return None
+    query_match = ROMAN_QUERY_PATTERN.search(prompt_text)
+    if query_match is None:
+        return None
+    lines = [line.strip() for line in prompt_text.splitlines() if line.strip()]
+    pairs = _collect_arrow_pairs(lines)
+    if not pairs:
+        return None
+    return query_match.group(1), pairs, "roman_numeral"
+
+
+def _parse_text_prompt(
+    prompt_text: str,
+    lowered: str,
+) -> tuple[str, list[FewShotExample], str] | None:
+    if "secret encryption rules are used on text" not in lowered:
+        return None
+    query_match = TEXT_QUERY_PATTERN.search(prompt_text)
+    if query_match is None:
+        return None
+    lines = [line.strip() for line in prompt_text.splitlines() if line.strip()]
+    pairs = _collect_arrow_pairs(lines)
+    if not pairs:
+        return None
+    return query_match.group(1).strip(), pairs, "text_decryption"
+
+
+def _parse_equation_prompt(
+    prompt_text: str,
+    lowered: str,
+) -> tuple[str, list[FewShotExample], str] | None:
+    if "secret set of transformation rules is applied to equations" not in lowered:
+        return None
+    query_match = EQUATION_QUERY_PATTERN.search(prompt_text)
+    if query_match is None:
+        return None
     lines = [line.strip() for line in prompt_text.splitlines() if line.strip()]
     pairs: list[FewShotExample] = []
-    query = prompt_text
+    for line in lines:
+        pair_match = EQUATION_PAIR_PATTERN.fullmatch(line)
+        if pair_match is None:
+            continue
+        pairs.append(
+            FewShotExample(
+                input_text=pair_match.group(1).strip(),
+                output_text=pair_match.group(2).strip(),
+            )
+        )
+    if not pairs:
+        return None
+    return query_match.group(1).strip(), pairs, "equation_transform"
+
+
+def _parse_generic_prompt(
+    prompt_text: str,
+    _: str,
+) -> tuple[str, list[FewShotExample], str] | None:
+    lines = [line.strip() for line in prompt_text.splitlines() if line.strip()]
+    pairs = _collect_arrow_pairs(lines)
+    query: str | None = None
+    for line in lines:
+        lowered_line = line.casefold()
+        if "determine the output for:" in lowered_line or "decrypt the following text:" in lowered_line:
+            query = line.split(":", 1)[-1].strip()
+    if pairs and query is not None:
+        return query, pairs, "parsed_from_prompt"
+    return None
+
+
+def _collect_arrow_pairs(lines: list[str]) -> list[FewShotExample]:
+    pairs: list[FewShotExample] = []
     for line in lines:
         pair_match = PAIR_PATTERN.fullmatch(line)
-        if pair_match is not None:
-            pairs.append(
-                FewShotExample(
-                    input_text=pair_match.group(1).strip(),
-                    output_text=pair_match.group(2).strip(),
-                )
-            )
+        if pair_match is None:
             continue
-        lowered = line.casefold()
-        if "determine the output for:" in lowered:
-            query = line.split(":", 1)[-1].strip()
+        pairs.append(
+            FewShotExample(
+                input_text=pair_match.group(1).strip(),
+                output_text=pair_match.group(2).strip(),
+            )
+        )
+    return pairs
 
-    if pairs and query != prompt_text:
-        return query, pairs, "parsed_from_prompt"
 
-    return prompt_text, [], None
+def _score_dataset_candidate(path: Path) -> tuple[int, int, str]:
+    lowered = path.as_posix().casefold()
+    score = 0
+    if lowered.startswith("/kaggle/input/"):
+        score += 100
+    if any(hint in lowered for hint in COMPETITION_HINTS):
+        score += 20
+    if any(noisy in lowered for noisy in ("sample", "smoke", "artifact", "artifacts", "docs")):
+        score -= 30
+    return score, -len(lowered), lowered

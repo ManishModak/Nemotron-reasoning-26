@@ -4,20 +4,30 @@ Current date in workspace context: April 5, 2026
 
 ## Execution Model
 
-This repo is the local coding and planning workspace.
+This repo exists to support Kaggle execution, not to replace it.
 
-Execution model:
+Default execution model:
 
-- build notebooks, utilities, prompts, configs, and solver logic here
-- stop at defined checkpoints
-- move the runnable notebook or code path to Kaggle
-- perform the actual environment validation, GPU-backed testing, and competition runs on Kaggle
-- bring failures and observations back here for debugging and iteration
+- develop shared code, prompts, parsing, configs, and notebook structure here
+- keep the code Kaggle-compatible from the start
+- run compute-bound validation and submission-critical paths on Kaggle
+- bring failures, logs, runtime notes, and outputs back here for targeted fixes
 
 Practical rule:
 
+- local work is for code quality, iteration speed, and reproducibility
+- Kaggle is the source of truth for inference, training, runtime limits, and submission behavior
 - local completion is not enough
 - each major phase needs a Kaggle checkpoint before it is treated as validated
+
+## Development Rule
+
+Use a Kaggle-first workflow with local support:
+
+- if the task needs GPU, model loading, adapter training, throughput checks, or submission packaging, develop the runnable path for Kaggle directly
+- if the task is parser logic, evaluation logic, prompt construction, data normalization, solver code, or report generation, build and test it locally first, then hand it off to Kaggle
+- avoid local-only assumptions in paths, dependencies, or notebook structure
+- prefer thin notebooks and reusable `src/` modules so Kaggle handoff stays small and easy to debug
 
 ## Milestones
 
@@ -98,11 +108,11 @@ Acceptance criteria:
 
 Each major workstream follows this loop:
 
-1. prepare code here
-2. transfer the runnable unit to Kaggle
-3. test on Kaggle
+1. prepare the smallest runnable Kaggle unit here
+2. transfer the notebook or module snapshot to Kaggle
+3. run it on Kaggle as early as possible
 4. capture logs, errors, metrics, and runtime constraints
-5. patch locally in this repo
+5. patch the underlying code here
 6. rerun on Kaggle
 
 The assistant should support each checkpoint by helping interpret failures and updating the local codebase accordingly.
@@ -119,7 +129,7 @@ Tasks:
 - log per-puzzle-family errors
 - standardize prompt and output parsing
 - track best prompt variants
-- convert the local baseline flow into a Kaggle-runnable notebook checkpoint
+- keep the baseline flow notebook-safe and Kaggle-runnable at every checkpoint
 
 ### 2. Data
 
@@ -151,8 +161,8 @@ Owner: `notebooks/02_synthetic_sft.ipynb`, `configs/axolotl/`
 
 Tasks:
 
-- create synthetic-data workflow
-- prepare a small smoke-test SFT run locally
+- create synthetic-data workflow locally
+- prepare the runnable SFT notebook for Kaggle
 - execute the actual smoke test on Kaggle
 - scale to LoRA training with tracked ablations
 
@@ -186,8 +196,9 @@ Default path:
 
 ## Immediate Next Actions
 
-1. Implement the evaluation harness in `00_baseline_eval.ipynb`.
-2. Build shared parsing utilities under `src/eval/`.
-3. Start a simple symbolic routing prototype under `src/solvers/`.
-4. Transfer the first baseline checkpoint to Kaggle and record the result.
-5. Keep training work blocked until evaluation is trustworthy on Kaggle as well as locally.
+1. Make `notebooks/00_baseline_eval.ipynb` the primary baseline notebook and keep the Kaggle wrapper thin.
+2. Point the evaluation path at the real competition dataset instead of smoke-only defaults.
+3. Build shared parsing utilities under `src/` for the known puzzle families.
+4. Start a simple symbolic routing prototype under `src/solvers/`.
+5. Transfer the first baseline checkpoint to Kaggle early and record the result before expanding scope.
+6. Keep training work blocked until evaluation is trustworthy on Kaggle as well as locally.

@@ -1,8 +1,10 @@
-"""Local predictor implementations used for smoke tests and notebook scaffolding."""
+"""Predictor backends for smoke tests and Kaggle execution."""
 
 from __future__ import annotations
 
 import re
+from pathlib import Path
+from typing import Any
 
 from src.eval.schemas import EvalExample, FewShotExample
 from src.solvers.arithmetic import AffineArithmeticSolver
@@ -42,6 +44,92 @@ class HeuristicPredictor:
         if _supports_reverse(example):
             return example.task_text[::-1]
         return "unknown"
+
+
+class TransformersKagglePredictor:
+    """Kaggle-backed Hugging Face predictor for the real baseline checkpoint."""
+
+    def __init__(
+        self,
+        *,
+        model_handle: str,
+        max_new_tokens: int = 128,
+        batch_size: int = 1,
+        temperature: float = 0.0,
+        do_sample: bool = False,
+        trust_remote_code: bool = True,
+        torch_dtype: str = "bfloat16",
+        device_map: str = "auto",
+    ) -> None:
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+
+        model_path = _resolve_model_path(model_handle)
+        self._torch = torch
+        self._tokenizer = AutoTokenizer.from_pretrained(
+            model_path,
+            trust_remote_code=trust_remote_code,
+        )
+        if self._tokenizer.pad_token is None:
+            self._tokenizer.pad_token = self._tokenizer.eos_token or self._tokenizer.unk_token
+        if self._tokenizer.pad_token_id is None and self._tokenizer.eos_token_id is not None:
+            self._tokenizer.pad_token_id = self._tokenizer.eos_token_id
+        self._model = AutoModelForCausalLM.from_pretrained(
+            model_path,
+            trust_remote_code=trust_remote_code,
+            torch_dtype=_resolve_torch_dtype(torch, torch_dtype),
+            device_map=device_map,
+        )
+        self._batch_size = max(1, int(batch_size))
+        self._max_new_tokens = max(1, int(max_new_tokens))
+        self._temperature = float(temperature)
+        self._do_sample = bool(do_sample)
+
+    def __call__(self, prompts: list[str], *, stop: tuple[str, ...] = ()) -> list[str]:
+        outputs: list[str] = []
+        for start in range(0, len(prompts), self._batch_size):
+            batch = prompts[start : start + self._batch_size]
+            tokenized = self._tokenizer(batch, return_tensors="pt", padding=True)
+            tokenized = {
+                key: value.to(self._model.device)
+                for key, value in tokenized.items()
+            }
+            generate_kwargs: dict[str, Any] = {
+                **tokenized,
+                "max_new_tokens": self._max_new_tokens,
+                "do_sample": self._do_sample,
+                "pad_token_id": self._tokenizer.pad_token_id,
+            }
+            if self._do_sample:
+                generate_kwargs["temperature"] = self._temperature
+            with self._torch.inference_mode():
+                generated = self._model.generate(**generate_kwargs)
+            prompt_length = tokenized["input_ids"].shape[1]
+            completion_tokens = generated[:, prompt_length:]
+            decoded = self._tokenizer.batch_decode(completion_tokens, skip_special_tokens=True)
+            outputs.extend(_apply_stop_tokens(text, stop) for text in decoded)
+        return outputs
+
+
+def build_predictor(config: dict[str, Any]) -> HeuristicPredictor | TransformersKagglePredictor:
+    """Build a predictor instance from experiment config."""
+
+    predictor_config = config.get("predictor", config)
+    predictor_type = predictor_config.get("type", "heuristic")
+    if predictor_type == "heuristic":
+        return HeuristicPredictor()
+    if predictor_type == "transformers_kaggle":
+        return TransformersKagglePredictor(
+            model_handle=predictor_config["model_handle"],
+            max_new_tokens=predictor_config.get("max_new_tokens", 128),
+            batch_size=predictor_config.get("batch_size", 1),
+            temperature=predictor_config.get("temperature", 0.0),
+            do_sample=predictor_config.get("do_sample", False),
+            trust_remote_code=predictor_config.get("trust_remote_code", True),
+            torch_dtype=predictor_config.get("torch_dtype", "bfloat16"),
+            device_map=predictor_config.get("device_map", "auto"),
+        )
+    raise ValueError(f"Unsupported predictor type: {predictor_type}")
 
 
 def _example_from_prompt(prompt: str) -> EvalExample:
@@ -90,3 +178,36 @@ def _format_output(variant: str, answer: str) -> str:
             f"Final answer: \\boxed{{{answer}}}"
         )
     return f"\\boxed{{{answer}}}"
+
+
+def _resolve_model_path(model_handle: str) -> str:
+    handle_path = Path(model_handle)
+    if handle_path.exists():
+        return str(handle_path)
+    import kagglehub
+
+    return kagglehub.model_download(model_handle)
+
+
+def _resolve_torch_dtype(torch_module: Any, dtype_name: str) -> Any:
+    normalized = dtype_name.casefold()
+    mapping = {
+        "bfloat16": torch_module.bfloat16,
+        "bf16": torch_module.bfloat16,
+        "float16": torch_module.float16,
+        "fp16": torch_module.float16,
+        "float32": torch_module.float32,
+        "fp32": torch_module.float32,
+    }
+    if normalized not in mapping:
+        raise ValueError(f"Unsupported torch dtype: {dtype_name}")
+    return mapping[normalized]
+
+
+def _apply_stop_tokens(text: str, stop_tokens: tuple[str, ...]) -> str:
+    truncated = text
+    for token in stop_tokens:
+        index = truncated.find(token)
+        if index != -1:
+            truncated = truncated[:index]
+    return truncated

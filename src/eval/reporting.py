@@ -29,7 +29,12 @@ def build_error_buckets(predictions: list[PredictionRecord]) -> dict[str, list[s
     return buckets
 
 
-def write_run_artifacts(result: EvalRunResult, output_dir: str | Path) -> dict[str, Path]:
+def write_run_artifacts(
+    result: EvalRunResult,
+    output_dir: str | Path,
+    *,
+    failure_sample_size: int = 5,
+) -> dict[str, Path]:
     """Write markdown, CSV, and JSONL artifacts for one evaluation run."""
 
     output_path = Path(output_dir)
@@ -42,7 +47,10 @@ def write_run_artifacts(result: EvalRunResult, output_dir: str | Path) -> dict[s
 
     _write_predictions_csv(result.predictions, predictions_csv)
     _write_predictions_jsonl(result.predictions, predictions_jsonl)
-    summary_md.write_text(render_markdown_summary(result), encoding="utf-8")
+    summary_md.write_text(
+        render_markdown_summary(result, failure_sample_size=failure_sample_size),
+        encoding="utf-8",
+    )
     metrics_json.write_text(json.dumps(result.metrics, indent=2), encoding="utf-8")
 
     result.artifact_paths.update(
@@ -56,14 +64,19 @@ def write_run_artifacts(result: EvalRunResult, output_dir: str | Path) -> dict[s
     return result.artifact_paths
 
 
-def render_markdown_summary(result: EvalRunResult) -> str:
+def render_markdown_summary(
+    result: EvalRunResult,
+    *,
+    failure_sample_size: int = 5,
+) -> str:
     """Render a short markdown summary for reports and notebook output."""
 
     failure_sample = [
         prediction.example_id
         for prediction in result.predictions
         if not prediction.is_correct
-    ][:5]
+    ][:failure_sample_size]
+    failures_by_family = build_failure_samples(result.predictions, sample_size=failure_sample_size)
     lines = [
         f"# Evaluation Summary: {result.run_name}",
         "",
@@ -91,6 +104,12 @@ def render_markdown_summary(result: EvalRunResult) -> str:
             lines.append(f"- {example_id}")
     else:
         lines.append("- none")
+    lines.extend(["", "## Failure Samples By Family"])
+    if failures_by_family:
+        for family_name, example_ids in failures_by_family.items():
+            lines.append(f"- {family_name}: {', '.join(example_ids)}")
+    else:
+        lines.append("- none")
     return "\n".join(lines) + "\n"
 
 
@@ -115,6 +134,24 @@ def export_handoff_bundle(
     bundle_path.write_text(json.dumps(bundle, indent=2), encoding="utf-8")
     result.artifact_paths["handoff_bundle"] = bundle_path
     return bundle_path
+
+
+def build_failure_samples(
+    predictions: list[PredictionRecord],
+    *,
+    sample_size: int = 5,
+) -> dict[str, list[str]]:
+    """Return a small sample of failing ids for each family."""
+
+    failures: dict[str, list[str]] = {}
+    for prediction in predictions:
+        if prediction.is_correct:
+            continue
+        family_name = prediction.family_hint or "unknown_family"
+        bucket = failures.setdefault(family_name, [])
+        if len(bucket) < sample_size and prediction.example_id not in bucket:
+            bucket.append(prediction.example_id)
+    return failures
 
 
 def _write_predictions_csv(predictions: list[PredictionRecord], output_path: Path) -> None:

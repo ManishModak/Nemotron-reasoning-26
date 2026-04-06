@@ -26,6 +26,7 @@ def evaluate_examples(
     router: ConservativeRouter | None = None,
     run_name: str = "baseline_eval",
     output_dir: str | Path | None = None,
+    failure_sample_size: int = 5,
 ) -> EvalRunResult:
     """Run evaluation across all examples and prompt variants."""
 
@@ -49,7 +50,7 @@ def evaluate_examples(
         error_buckets=build_error_buckets(predictions),
     )
     if output_dir is not None:
-        write_run_artifacts(result, output_dir)
+        write_run_artifacts(result, output_dir, failure_sample_size=failure_sample_size)
     return result
 
 

@@ -17,10 +17,11 @@ def test_runner_writes_artifacts(tmp_path: Path) -> None:
         predictor=HeuristicPredictor(),
         router=ConservativeRouter(confidence_threshold=0.95),
         output_dir=tmp_path,
+        failure_sample_size=2,
     )
 
     assert result.metrics["total_predictions"] == 12
     assert (tmp_path / "summary.md").exists()
     assert (tmp_path / "predictions.csv").exists()
+    assert (tmp_path / "metrics.json").exists()
     assert result.metrics["routed_predictions"] > 0
-
