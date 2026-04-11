@@ -28,6 +28,8 @@ artifacts/*
 !artifacts/.gitkeep
 reports/*
 !reports/.gitkeep
+!reports/kaggle-first-run-checklist.md
+!reports/2026-04-11-foundation-export-findings.md
 
 # Kaggle and model outputs
 *.zip
@@ -37,4 +39,3 @@ reports/*
 *.pth
 *.ckpt
 wandb/
-
