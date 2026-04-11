@@ -26,7 +26,7 @@ For long runs, use `Save Version -> Save & Run All`. Use `Quick Save` for code s
 
 ## What you submit to Kaggle
 
-A **`submission.zip`** containing your LoRA adapter (`adapter_config.json` + weights). The notebook writes checkpoints to `/kaggle/working/sft_checkpoints`, writes the final adapter to `/kaggle/working/final_adapter`, and packages `/kaggle/working/submission.zip`. The host runs **vLLM + Nemotron-3-Nano-30B-A3B + your adapter** and scores `\boxed{}` extraction vs ground truth (see [`docs/competition-rules.md`](docs/competition-rules.md) and `nvidia-nemotron-metric.ipynb`).
+A **`submission.zip`** containing your LoRA adapter (`adapter_config.json` + weights). The notebook writes the final adapter to `/kaggle/working/final_adapter` and packages `/kaggle/working/submission.zip`. Full `Trainer` checkpoints are intentionally disabled because they exhausted Kaggle disk during committed runs. The host runs **vLLM + Nemotron-3-Nano-30B-A3B + your adapter** and scores `\boxed{}` extraction vs ground truth (see [`docs/competition-rules.md`](docs/competition-rules.md) and `nvidia-nemotron-metric.ipynb`).
 
 ## Repo layout
 
@@ -37,7 +37,7 @@ A **`submission.zip`** containing your LoRA adapter (`adapter_config.json` + wei
 
 ## Local vs Kaggle
 
-- **Kaggle:** full GPU train, checkpoint/resume under `/kaggle/working`, prefer attached Nemotron model inputs and fall back to `kagglehub` only if needed, then build `submission.zip`.
+- **Kaggle:** full GPU train, prefer attached Nemotron model inputs and fall back to `kagglehub` only if needed, then build `submission.zip` in a committed background run.
 - **Local:** read `train.csv`, experiment design, update the combined notebook, refresh docs/reports after each Kaggle attempt.
 
 ## Legacy code
