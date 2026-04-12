@@ -2,11 +2,15 @@
 
 Repo for the NVIDIA Nemotron reasoning competition. **Competition runs happen on Kaggle**; this workspace holds the runnable notebook, data copies, and notes.
 
+## Current status
+
+**First scored submission achieved** — 0.58 (rank 1333, top is 0.85). See [`reports/2026-04-12-first-scored-submission.md`](reports/2026-04-12-first-scored-submission.md).
+
 ## Default runnable (submit this path)
 
 | Artifact | Purpose |
 |----------|---------|
-| [`kaggle-combined-lora-submission.ipynb`](kaggle-combined-lora-submission.ipynb) | One notebook: PyTorch env setup -> LoRA SFT on `train.csv` -> `submission.zip` (adapter only) |
+| [`foundation-notebook.ipynb`](foundation-notebook.ipynb) | One notebook: PyTorch env setup -> LoRA SFT on `train.csv` -> `submission.zip` (adapter only) |
 
 Supporting docs:
 
@@ -34,6 +38,7 @@ A **`submission.zip`** containing your LoRA adapter (`adapter_config.json` + wei
 - `artifacts/`, `reports/` - outputs and run notes
 - `train.csv`, `test.csv` - local copies for analysis (Kaggle uses competition inputs)
 - `nvidia-*.ipynb` - upstream NVIDIA / metric / utility references
+- `archive/` - superseded notebooks (e.g., old `kaggle-combined-lora-submission.ipynb`)
 
 ## Local vs Kaggle
 

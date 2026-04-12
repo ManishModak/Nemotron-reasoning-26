@@ -11,4 +11,4 @@ Start here. Superseded notes live under [`archive/streamlined-2026/`](archive/st
 
 **Run procedure:** [`reports/kaggle-first-run-checklist.md`](../reports/kaggle-first-run-checklist.md) covers Kaggle settings, committed background-run workflow, and which artifacts to bring back after each run.
 
-**Repo entrypoints:** root [`README.md`](../README.md), [`PLAN.md`](../PLAN.md), [`kaggle-combined-lora-submission.ipynb`](../kaggle-combined-lora-submission.ipynb).
+**Repo entrypoints:** root [`README.md`](../README.md), [`PLAN.md`](../PLAN.md), [`foundation-notebook.ipynb`](../foundation-notebook.ipynb).

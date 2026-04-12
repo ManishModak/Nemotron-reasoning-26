@@ -41,7 +41,7 @@ What we actually rely on when Kaggle stability matters:
 
 ## Multi-stage workflow (conceptual)
 
-This is the logical pipeline the old multi-notebook scaffold mapped to. The **default repo submission path** is now one notebook (`kaggle-combined-lora-submission.ipynb`); you can still split work across sessions mentally using these stages:
+This is the logical pipeline the old multi-notebook scaffold mapped to. The **default repo submission path** is now one notebook (`foundation-notebook.ipynb`); you can still split work across sessions mentally using these stages:
 
 1. **Baseline + EDA** — validation split, error buckets, optional DSPy on prompts.  
 2. **Data** — Curator / polars cleaning, HF `datasets` export.  

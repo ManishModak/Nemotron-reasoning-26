@@ -1,6 +1,6 @@
-# First Kaggle run checklist (combined LoRA notebook)
+# First Kaggle run checklist (foundation notebook)
 
-Use [`kaggle-combined-lora-submission.ipynb`](../kaggle-combined-lora-submission.ipynb) as the only required runnable.
+Use [`foundation-notebook.ipynb`](../foundation-notebook.ipynb) as the only required runnable.
 
 ## Before you run
 

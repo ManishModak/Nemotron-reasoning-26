@@ -9,7 +9,7 @@ Derived from a general AI-engineer profile, **narrowed to this workspace only**.
 
 ## Scope
 
-- **Primary artifact:** [`kaggle-combined-lora-submission.ipynb`](../../../kaggle-combined-lora-submission.ipynb) — env install → LoRA SFT → save adapter → zip.
+- **Primary artifact:** [`foundation-notebook.ipynb`](../../../foundation-notebook.ipynb) — env install → LoRA SFT → save adapter → zip.
 - **Submission:** `submission.zip` with `adapter_config.json` + weights; host evaluates with vLLM + LoRA (see [`docs/competition-rules.md`](../../../docs/competition-rules.md)).
 - **Training text:** User suffix + `\boxed{answer}` alignment — [`docs/training-data-format.md`](../../../docs/training-data-format.md).
 - **Reference notebooks in repo:** `nvidia-utility-script.ipynb`, `nvidia-nemotron-submission-demo.ipynb`, `nvidia-nemotron-metric.ipynb`.

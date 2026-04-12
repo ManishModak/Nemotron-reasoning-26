@@ -69,5 +69,5 @@ Runs on **Kaggle** (including **Blackwell-class** VMs when allocated). Plan trai
 ## Repo pointers
 
 - Training text alignment with the metric: [training-data-format.md](training-data-format.md)  
-- Runnable Kaggle path: root `kaggle-combined-lora-submission.ipynb`  
+- Runnable Kaggle path: root `foundation-notebook.ipynb`  
 - Metric reference: `nvidia-nemotron-metric.ipynb`  

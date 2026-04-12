@@ -12,4 +12,4 @@ See [`streamlined-2026/README.md`](streamlined-2026/README.md) for the exact map
 
 ## Legacy pipeline code
 
-If your checkout still has `notebooks/`, `src/`, `configs/`, or `tests/` under `docs/archive/` from an older layout, treat them as **inactive**; the active submission path is root `kaggle-combined-lora-submission.ipynb`.
+If your checkout still has `notebooks/`, `src/`, `configs/`, or `tests/` under `docs/archive/` from an older layout, treat them as **inactive**; the active submission path is root `foundation-notebook.ipynb`.

@@ -10,7 +10,7 @@ After the raw puzzle text from `train.csv`, append **exactly** the same suffix t
 \nPlease put your final answer inside `\boxed{}`. For example: `\boxed{your answer}`
 ```
 
-In Python (as in `kaggle-combined-lora-submission.ipynb`):
+In Python (as in `foundation-notebook.ipynb`):
 
 ```python
 BOXED_SUFFIX = (

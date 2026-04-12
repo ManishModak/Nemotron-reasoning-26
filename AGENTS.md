@@ -6,7 +6,7 @@ Support workspace for a Kaggle competition. GPU training and submission happen o
 
 ## Primary artifact
 
-[`kaggle-combined-lora-submission.ipynb`](kaggle-combined-lora-submission.ipynb) — the only notebook that runs on Kaggle. Everything else serves it.
+[`foundation-notebook.ipynb`](foundation-notebook.ipynb) — the only notebook that runs on Kaggle. Everything else serves it.
 
 ## Workflow
 
@@ -45,8 +45,8 @@ Agents should use **Context7** (library/framework docs) and **web search** when 
 
 ## Agent skill (project)
 
-[`.agents/skills/nemotron-kaggle-engineer/SKILL.md`](.agents/skills/nemotron-kaggle-engineer/SKILL.md) — Nemotron/Kaggle workflow (YAML frontmatter + body per Cursor skill conventions). To author new skills, use your global **create-skill** / **skill-creator** guidance; keep this repo’s skills under `.agents/skills/`.
+[`.agents/skills/nemotron-kaggle-engineer/SKILL.md`](.agents/skills/nemotron-kaggle-engineer/SKILL.md) — Nemotron/Kaggle workflow (YAML frontmatter + body per Cursor skill conventions). To author new skills, use your global **create-skill** / **skill-creator** guidance; keep this repo's skills under `.agents/skills/`.
 
 ## Archive
 
-Old multi-notebook pipeline, `src/`, configs, tests: [`docs/archive/`](docs/archive/README.md). Do not use unless explicitly reviving.
+Old multi-notebook pipeline, `src/`, configs, tests: [`docs/archive/`](docs/archive/README.md). Superseded `kaggle-combined-lora-submission.ipynb`: [`archive/`](archive/). Do not use unless explicitly reviving.
