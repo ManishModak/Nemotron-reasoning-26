@@ -1,0 +1,27 @@
+row_id,question,gold_answer,prediction,normalized_match,task_error,model,family
+8814e4a7,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+85 -> LXXXV
+13 -> XIII
+13 -> XIII
+76 -> LXXVI
+41 -> XLI
+Now, write the number 70 in the Wonderland numeral system.",LXX,LXX,True,,minimax/minimax-m2.5:free,numeral
+812131f1,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01001000 -> 01000100
+10000010 -> 00011000
+11000100 -> 00101100
+00110100 -> 10100011
+01011010 -> 11010101
+10001100 -> 01101000
+11010001 -> 10000101
+
+Now, determine the output for: 10111110",11111011,,False,"HTTP 429: {""error"":{""message"":""Provider returned error"",""code"":429,""metadata"":{""raw"":""minimax/minimax-m2.5:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations"",""provider_name"":""OpenInference"",""is_byok"":false}},""user_id"":""user_3ApM80ycgZ42K6NmHBeL9RRZ1Ch""}",minimax/minimax-m2.5:free,bit_manipulation
+91336795,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+66 -> LXVI
+12 -> XII
+76 -> LXXVI
+3 -> III
+96 -> XCVI
+Now, write the number 44 in the Wonderland numeral system.",XLIV,XLIV,True,,minimax/minimax-m2.5:free,numeral

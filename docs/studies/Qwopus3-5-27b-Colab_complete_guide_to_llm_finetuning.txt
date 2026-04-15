@@ -1,0 +1,907 @@
+Complete Guide to LLM Fine-tuning
+Qwopus3.5-27B LoRA Fine-tuning with Unsloth
+Jackrong
+April 5, 2026
+Abstract
+This work proposes and implements a reasoning-oriented supervised fine-tuning pipeline for
+Qwen3.5-27B. Built with Unsloth on Google Colab, the workflow combines 4-bit quantized loading
+and rank-64 LoRA adaptation to enable efficient training of a 27B-scale model under single-GPU
+VRAM constraints. Unlike generic chat fine-tuning, the pipeline mixes three reasoning data
+sources and normalizes heterogeneous assistant outputs into a unified supervision format that
+combines <think>...</think> traces with final answers. Together with the Qwen thinking
+chat template and response-only supervision, the optimization target is explicitly focused on
+assistant-side reasoning continuation rather than memorizing full dialogue turns.
+After training, the pipeline supports LoRA adapter checkpointing, merged 16-bit export,
+and multi-format GGUF release, forming a complete engineering chain from data normalization
+to parameter-efficient fine-tuning and deployment delivery. Importantly, although Qwen3.5
+belongs to a multimodal model family, the notebook implemented in this study executes text-only
+reasoning SFT rather than vision-language joint training.
+Keywords:Qwen3.5-27B, Reasoning SFT, LoRA, Unsloth, 4-bit Quantization, Google Colab,
+GGUF
+Base LLM
+(pretrained)Training Data
+(domain / task)
+Fine-tuning
+LoRA / PEFT: train a small adapter
+Adapted Model
+base + adapter (better on your tasks)+
+LLM Fine-tuning:adapt a pretrained LLM to your domain with task-specific data (often by
+training a small LoRA adapter).
+1
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+Author’s Note — A Message to Builders
+For beginners, hobbyists, and anyone curious about AI: this path is learnable.
+The purpose of this document is not only to describe one training run, but also to communicate
+a broader message to beginners, hobbyists, and anyone curious about AI: fine-tuning, post-
+training, and even moderate-scale pretraining are not inaccessible technical rituals. They
+are engineering practices that can be learned, reproduced, and gradually mastered. With
+open-source models, public datasets, cloud compute platforms, and an increasingly mature
+training toolchain, what you often need is simply a Google account, a regular laptop, and
+sustained curiosity.
+As a learner who also started from zero, I understand the uncertainty many newcomers face:
+environment setup complexity, opaque hyperparameters, and anxiety about compute resources
+often become the first barrier to entry. This is exactly why optimization toolchains such as
+Unsloth matter: by improving training efficiency and resource utilization, they substantially
+lower the practical threshold for large-model fine-tuning, turning what once required expensive
+hardware and specialized experience into something ordinary developers can attempt and master.
+In that sense, we all have the opportunity to stand on the shoulders of giants, understand
+models, adapt models, and give them new capabilities.
+— From one learner to another
+1 Prerequisites and Platform Overview
+1.1 What is Unsloth?
+Unsloth is a high-impact open-source team and toolkit for LLM post-training. Beyond efficient
+LoRA/QLoRA, it also supports full fine-tuning, continued pretraining, and low-precision setups
+(4-bit, 8-bit, 16-bit, FP8), while remaining compatible with Hugging Face/TRL workflows including
+SFT, GRPO, GSPO, and DPO.
+Unsloth: quick summary
+Unsloth’s core advantagecore advantage is systems-level optimization for post-training—
+official docs and benchmark pages repeatedly highlight around 2 ×training speedups and large
+VRAM savings (commonly reported near 70%, with RL workflows often claiming 50–90%),
+enabling longer context and larger-model fine-tuning on limited GPUs; on top of this, it still
+provides 250+ notebooks and broad support across 500+ models.
+2
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+1.2 What is Google Colab?
+Google Colab is a cloud-hosted Jupyter notebook environment provided by Google. It lets you run
+Python code in the browser, connect to GPU runtimes, and quickly prototype machine learning
+workflows without configuring a local CUDA environment from scratch.
+Why Colab is commonly used here
+•Fast notebook-based experimentation for training and debugging.
+•Easy integration with Google Drive for checkpoint persistence.
+•Direct access to GPU-backed runtimes in Colab Pro/Pro+ tiers.
+1.3 Hardware Requirement: NVIDIA CUDA GPU
+For this project setup, you should use anNVIDIA GPU with CUDA support. CUDA is
+required by the PyTorch + accelerated training stack used in this guide, including 4-bit loading and
+LoRA fine-tuning workflows.
+GPU requirement note
+•Recommended: NVIDIA GPUs available in Colab (e.g., A100/H100 class when available).
+•Training 27B-class models is not practical on CPU-only runtimes.
+•If CUDA is unavailable, notebook cells related to model loading/training may fail.
+3
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+Contents
+1 Prerequisites and Platform Overview 2
+1.1 What is Unsloth? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.2 What is Google Colab? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.3 Hardware Requirement: NVIDIA CUDA GPU . . . . . . . . . . . . . . . . . . . . . 3
+2 Introduction 6
+2.1 Background and Motivation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2.2 Tech Stack Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3 Environment Setup and Preparation 7
+3.1 Experiment Tracking (Optional) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3.1.1 What it does . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3.2 Installing Dependencies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+3.2.1 Core libraries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+4 Model Loading and LoRA Configuration 9
+4.1 Loading the Pretrained Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.1.1 How 4-bit quantization works . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.1.2 Model loading code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.1.3 Best Practices: Thinking vs. Instruct Sampling Settings . . . . . . . . . . . . 10
+4.1.4 Template First: Confirm the Chat Format Before Training . . . . . . . . . . . 10
+4.2 Configuring the LoRA Adapter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+4.2.1 LoRA principles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+4.2.2 LoRA configuration code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+5 Data Processing and Preprocessing 12
+5.1 Part I: Configuration and Multi-source Dataset Loading . . . . . . . . . . . . . . . . 12
+5.1.1 Pipeline goal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+5.2 Part II: Conversation Normalization and Reasoning-format Unification . . . . . . . . 14
+5.2.1 Normalization strategy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+5.3 Part III: Template Serialization, Length Control, and Format QA . . . . . . . . . . . 17
+5.3.1 Final dataset construction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+4
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+6 Training Configuration and Execution 19
+6.1 Trainer Configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+6.1.1 Trainer code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+6.1.2 Key training parameters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+6.1.3 Detailed notes on key parameters . . . . . . . . . . . . . . . . . . . . . . . . . 20
+6.2 Train on Responses Only (Recommended) . . . . . . . . . . . . . . . . . . . . . . . . 20
+6.3 Label Sanity Check (Before/After Training) . . . . . . . . . . . . . . . . . . . . . . . 21
+7 Start Training (Most Important) 21
+8 Saving and Deployment 21
+8.1 Saving a 16-bit model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+8.2 Exporting GGUF (optional) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+9 Common Issues and Optimization Tips 23
+9.1 Typical failure modes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+9.2 Hyperparameter tuning workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+10 Summary and Outlook 24
+10.1 Key takeaways . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+10.2 Typical metrics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+10.3 Next learning steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+10.4 References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+10.5 Acknowledgements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+5
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+2 Introduction
+Overview: Scope and goal
+Project Goal
+Goal.Adapt Qwen3.5-27B into a more structured, reasoning-efficient model by distilling
+high-quality analytical and step-by-step problem-solving patterns, with a focus on stronger
+performance in coding, mathematics, and offline analytical tasks while reducing unnecessarily
+long or repetitive reasoning on simpler queries.
+Training Setting
+Setting. Load Qwen3.5-27B through Unsloth in a memory-efficient format suitable for Colab,
+and perform response-only supervised fine-tuning on curated high-fidelity reasoning data to
+produce a more organized, transparent, and practically useful model for downstream inference
+and research-oriented experimentation.
+2.1 Background and Motivation
+Key Points: Why parameter-efficient fine-tuning (PEFT)?
+With the rapid progress of Large Language Models (LLMs), efficiently adapting a general-purpose
+model to a specific domain or task has become a key challenge.
+•Full-parameter fine-tuning is often expensive in compute and memory.
+•PEFT methods (especially LoRA) train a small set of parameters while keeping the base model
+frozen, enabling fast iteration for individual developers and small teams.
+2.2 Tech Stack Overview
+Key stack only (focus points):
+ComponentKey point
+UnslothFaster and more memory-efficient fine-tuning workflow for Colab.
+LoRA (PEFT)Train only low-rank adapters to reduce compute and cost.
+4-bit quantizationLower VRAM usage while keeping 27B-scale training practical.
+Colab Pro GPU (A100/H100)Provides the CUDA GPU runtime needed for this pipeline.
+Table 1: Essential tech stack (condensed)
+6
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+3 Environment Setup and Preparation
+3.1 Experiment Tracking (Optional)
+3.1.1 What it does
+Weights & Biases (WandB) is a powerful experiment tracking platform. It can monitor training
+metrics in real time, including:
+•Loss curves
+•Learning-rate schedules
+•VRAM utilization
+•Training speed and ETA
+Code: WandB login setup
+1import os
+2import wandb
+3from google.colab import drive
+4from google.colab import userdata
+5
+6drive.mount('/content/drive')
+7wandb_api_key = userdata.get('WANDB_API_KEY')
+8wandb.login(key=wandb_api_key)
+9
+10drive_output_path = "/content/drive/MyDrive/Qwen3.5-27B--checkpoints"
+11os.makedirs(drive_output_path, exist_ok=True)
+Warning: Colab usage notes
+•Run this cell in Google Colab (not Kaggle), and grant Drive permission when prompted by
+drive.mount().
+•Store your WandB API key in Colab Secrets as WANDB_API_KEY ; if login fails, re-check the
+secret name and value.
+•Ensure your runtime has internet access and enough Drive space, otherwise checkpoint
+saving to/content/drive/MyDrive/...may fail.
+7
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+3.2 Installing Dependencies
+3.2.1 Core libraries
+Fine-tuning an LLM typically requires these core libraries:
+LibraryVersion Purpose
+UnslothGitHub (unsloth[base]) Installed from Unsloth GitHub for latest base runtime
+updates
+PyTorch2.8.0 Core deep learning backend used by this Colab setup
+Transformers5.2.0 Hugging Face model stack pinned to the notebook
+environment
+TRL0.22.2 Training utility stack aligned with Unsloth workflow
+xformers0.0.32.post2 Attention acceleration backend matched to the pinned
+torch version
+Table 2: Core dependency list
+Code: Install commands
+1%%capture
+2import os, importlib.util
+3!pip install --upgrade -qqq uv
+4if importlib.util.find_spec("torch") is None or "COLAB_" in "".join(os.environ.keys()):
+5try: import numpy, PIL; _numpy = f"numpy=={numpy.__version__}"; _pil = f"pillow=={
+PIL.__version__}"
+6except: _numpy = "numpy"; _pil = "pillow"
+7!uv pip install -qqq \
+8"torch==2.8.0" "triton>=3.3.0" {_numpy} {_pil} torchvision bitsandbytes
+xformers==0.0.32.post2 \
+9"unsloth_zoo[base] @ git+https://github.com/unslothai/unsloth-zoo" \
+10"unsloth[base] @ git+https://github.com/unslothai/unsloth"
+11elif importlib.util.find_spec("unsloth") is None:
+12!uv pip install -qqq unsloth
+13!uv pip install --upgrade --no-deps tokenizers trl==0.22.2 unsloth unsloth_zoo
+14!uv pip install transformers==5.2.0
+15# causal_conv1d is supported only on torch==2.8.0. If you have newer torch versions,
+please wait 10 minutes!
+16!uv pip install --no-build-isolation flash-linear-attention causal_conv1d==1.6.0
+Tip: Installation notes
+•Use the%%capturemagic to hide install logs and keep the notebook clean.
+•Installation usually takes about 3–5 minutes.
+•If you see version warnings but Unsloth imports correctly, you can typically ignore them.
+8
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+4 Model Loading and LoRA Configuration
+4.1 Loading the Pretrained Model
+4.1.1 How 4-bit quantization works
+4-bit quantization stores model parameters in 4-bit precision, dramatically reducing VRAM usage
+while keeping inference and training stable (especially when combined with quantization-aware
+kernels and mixed precision). In practice, 4-bit is often the best balance for single-GPU fine-tuning.
+4.1.2 Model loading code
+Code: Load Qwen3.5-27B with Unsloth
+1from unsloth import FastLanguageModel
+2import torch
+3
+4fourbit_models = [
+5"unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit", # Qwen 14B 2x faster
+6"unsloth/Qwen3-4B-Thinking-2507-unsloth-bnb-4bit",
+7"unsloth/Qwen3-8B-unsloth-bnb-4bit",
+8"unsloth/Qwen3-14B-unsloth-bnb-4bit",
+9"unsloth/Qwen3-32B-unsloth-bnb-4bit",
+10
+11# 4bit dynamic quants for superior accuracy and low memory use
+12"unsloth/gemma-3-12b-it-unsloth-bnb-4bit",
+13"unsloth/Phi-4",
+14"unsloth/Llama-3.1-8B",
+15"unsloth/Llama-3.2-3B",
+16"unsloth/orpheus-3b-0.1-ft-unsloth-bnb-4bit" # [NEW] We support TTS models!
+17] # More models at https://huggingface.co/unsloth
+18
+19model, tokenizer = FastLanguageModel.from_pretrained(
+20model_name = "unsloth/Qwen3.5-27B",
+21max_seq_length = 32768, # Choose any for long context!
+22load_in_4bit = True, # 4 bit quantization to reduce memory
+23load_in_8bit = False, # [NEW!] A bit more accurate, uses 2x memory
+24full_finetuning = False, # [NEW!] We have full finetuning now!
+25)
+Warning: Common pitfalls
+•If you hit OOM, reducemax_seq_length(e.g., 8192 or 16384) or use smaller batch size.
+•Make sure the model identifier matches an existing HF repo name.
+•If the model is gated, you must provide a valid HF token.
+9
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+4.1.3 Best Practices: Thinking vs. Instruct Sampling Settings
+Qwen models are commonly used in two inference modes:Instruct(instruction-following chat) and
+Thinking(reasoning with explicit thinking tags). The recommended sampling settings are different:
+Thinking typically uses a lower temperature and a highertop_pto improve reasoning stability.
+ParameterInstruct (Qwen3) Thinking (Qwen3/Qwen3.5)
+Temperature0.7 0.6/0.7/1
+Top P0.80 0.95
+TopK20 20
+Table 3: Recommended sampling settings for Qwen Instruct vs. Thinking (rule-of-thumb)
+Output length:For most queries, set the maximum output length to 32768 tokens (if your
+runtime/VRAM allows); this is sufficient for many long-form responses.
+4.1.4 Template First: Confirm the Chat Format Before Training
+Why this matters before SFT
+If you have already chosen the model to train, the next critical step is to confirm its corresponding
+chat template. Different model families and companies use different role markers, separators,
+special tokens, and system/user/assistant formatting rules.
+If your training data format does not match the model’s native chat template, you may see
+unstable loss, weaker instruction-following behavior, or degraded response quality. In short:
+pick the model first, then align the dataset and prompt formatting to that model’s
+template. The example below shows a typical template structure.
+Code: Qwen3 Chat template Example Main Part (Instruct / Thinking)
+1<|im_start|>user
+2Hey there! What is 1+1? <|im_end|>
+3<|im_start|>assistant
+4<think>
+5
+6# Instruct mode: <think></think>answer
+7# Thinking mode: may include <think>..reasoning..</think>answer
+8
+9</think>
+10The answer is 2.
+11<|im_end|>
+10
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+4.2 Configuring the LoRA Adapter
+4.2.1 LoRA principles
+LoRA (Low-Rank Adaptation)is a parameter-efficient fine-tuning method. Instead of updating
+all original model weights, LoRA keeps the pretrained model frozen and adds two small trainable
+low-rank matrices (often denoted as AandB) to selected linear layers. The product of these
+matrices learns a lightweight task-specific update, so the model can adapt to new domains with far
+fewer trainable parameters. In practice, this greatly reduces VRAM usage and training cost while
+preserving most of the base model’s capability, which is why LoRA is widely used for single-GPU or
+Colab-based LLM fine-tuning.
+Frozen Pre-trained Model
+(e.g., Qwen3.5-27B)Trainable LoRA Adapter
+(Low-Rank MatricesA, B)
+Training update
+(only LoRA parameters)
+Figure 1: LoRA (Low-Rank Adaptation) principle: keep the base model frozen and learn a small,
+trainable low-rank update.
+4.2.2 LoRA configuration code
+Code: Attach LoRA adapters
+1model = FastLanguageModel.get_peft_model(
+2model,
+3r = 64, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+4target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
+5"gate_proj", "up_proj", "down_proj",
+6"out_proj",],
+7lora_alpha = 64,
+8lora_dropout = 0, # Supports any, but = 0 is optimized
+9bias = "none", # Supports any, but = "none" is optimized
+10# [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
+11use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context
+12random_state = 3407,
+13use_rslora = False, # We support rank stabilized LoRA
+14loftq_config = None, # And LoftQ
+15)
+11
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+Tip: Recommended starting values
+•r: 8/16/64/128 (higher rank can improve quality but costs more VRAM).
+•lora_alpha: often set toror2r(twicer) as a practical baseline.
+•target_modules: start with attention + MLP projections (as above).
+5 Data Processing and Preprocessing
+5.1 Part I: Configuration and Multi-source Dataset Loading
+5.1.1 Pipeline goal
+This stage defines the data pipeline configuration and loads three heterogeneous reasoning datasets
+into a unified workflow. The key design choice is to sample each source with a fixed ratio so that
+high-quality reasoning traces and conversational diversity are both preserved.
+Core principle for SFT beginners
+Dataset selection largely determines what the model finally learns.Beginners often
+assume model size is the most important factor, but in supervised fine-tuning, dataset design
+usually has a larger impact than simply running more steps. In practice, these factors are often
+the strongest drivers of final quality:
+•Data quality(signal-to-noise, correctness, and reasoning faithfulness).
+•Data style(answer tone, structure, verbosity, and formatting habits).
+•Task distribution(which capabilities are emphasized most often).
+•Format consistency(stable template/role formatting across samples).
+Bottom line:for SFT, these data decisions usually matter more than “just training a bit
+longer.”
+•Set global controls (seed, context window, per-dataset sample sizes).
+•Initialize the Qwen thinking chat template early for downstream serialization.
+•Load three sources with fallback logic for schema-specific dataset issues.
+Note.The dataset choices and hyperparameters shown below are not the final production
+training settings. In real projects, you should tune them based on your training goals, dataset
+characteristics, hardware, and runtime environment. This section is provided as an example
+to help you understand the pipeline and workflow. Code can be generated or assisted by AI,
+but you still need to understand what each step is doing and why.
+12
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+Detailed reference: TRL SFTTrainer
+For a full reference of the supervised fine-tuning trainer, see: https://huggingface.co/docs/
+trl/sft_trainer
+What this page explains in detail:
+•How to useSFTTrainerfor quick-start SFT training.
+•Supported dataset schemas (language modeling and prompt-completion; standard and
+conversational formats).
+•Core SFT mechanics: preprocessing, tokenization, next-token cross-entropy loss, label
+shifting, and padding-mask handling.
+•Practical options: packing, assistant_only_loss ,completion_only_loss , and
+PEFT/LoRA integration.
+•Common training metrics and key customization options inSFTConfig.
+Code: Configuration and dataset loading
+1from datasets import load_dataset, concatenate_datasets, Dataset
+2from unsloth.chat_templates import get_chat_template
+3import re
+4import json
+5import multiprocessing as mp
+6import pandas as pd
+7
+8RANDOM_SEED = 12181531
+9MAX_CONTEXT_WINDOW = 8192
+10
+11num_samples_dict = {
+12"ds1": 3900, # nohurry/Opus-4.6-Reasoning-3000x-filtered
+13"ds2": 700, # Jackrong/Qwen3.5-reasoning-700x
+14"ds3": 9633, # Roman1111111/claude-opus-4.6-10000x
+15}
+16
+17tokenizer = get_chat_template(
+18tokenizer,
+19chat_template="qwen3-thinking",
+20)
+21
+22def load_ds3_via_pandas_parquet():
+23parquet_path = (
+24"hf://datasets/Roman1111111/claude-opus-4.6-10000x"
+25"@refs/convert/parquet/default/train/0000.parquet"
+26)
+27df = pd.read_parquet(parquet_path)
+28return Dataset.from_pandas(df, preserve_index=False)
+29
+30def load_and_sample(dataset_name, sample_count=None, split="train", subset=None):
+31try:
+13
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+32if subset:
+33ds = load_dataset(dataset_name, subset, split=split)
+34else:
+35ds = load_dataset(dataset_name, split=split)
+36except ValueError as e:
+37err = str(e)
+38if dataset_name == "Roman1111111/claude-opus-4.6-10000x" and "Feature type'
+Json'not found" in err:
+39ds = load_ds3_via_pandas_parquet()
+40else:
+41raise
+42
+43if sample_count is not None:
+44sample_count = min(sample_count, len(ds))
+45ds = ds.shuffle(seed=RANDOM_SEED).select(range(sample_count))
+46
+47return ds
+48
+49# ds1: problem / thinking / solution
+50# ds2: multi-turn conversation
+51# ds3: messages with possible reasoning fields
+52ds1 = load_and_sample("nohurry/Opus-4.6-Reasoning-3000x-filtered", num_samples_dict["
+ds1"], split="train")
+53ds2 = load_and_sample("Jackrong/Qwen3.5-reasoning-700x", num_samples_dict["ds2"],
+split="train")
+54ds3 = load_and_sample("Roman1111111/claude-opus-4.6-10000x", num_samples_dict["ds3"],
+split="train")
+5.2 Part II: Conversation Normalization and Reasoning-format Unification
+5.2.1 Normalization strategy
+Because the three datasets use different schemas (problem/solution pairs, multi-turn chat, and
+message objects with optional reasoning fields), we normalize them into a single conversations
+structure and enforce an assistant output format centered on <think>...</think> plus final answer
+text.
+•Standardize assistant messages into a reasoning-visible format.
+•Parse mixed message types (dict / JSON string) safely.
+•Convert each source with dataset-specific formatting functions.
+14
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+Code: Multi-source formatting to unified conversations
+1def _strip(x):
+2return (x or "").strip()
+3
+4THINK_BLOCK_RE = re.compile(r"<think>.*?</think>", flags=re.DOTALL)
+5
+6def normalize_assistant_to_think_solution(text: str) -> str:
+7text = _strip(text)
+8if not text:
+9return "<think></think>\n"
+10
+11m = THINK_BLOCK_RE.search(text)
+12if m:
+13think_block = m.group(0).strip()
+14rest = text[m.end():].lstrip()
+15return f"{think_block}\n{rest}".rstrip() if rest else f"{think_block}\n"
+16
+17return f"<think></think>\n{text}".rstrip()
+18
+19def build_assistant_with_reasoning(content: str, reasoning: str = "") -> str:
+20content = _strip(content)
+21reasoning = _strip(reasoning)
+22
+23if "<think>" in content and "</think>" in content:
+24return normalize_assistant_to_think_solution(content)
+25
+26if reasoning:
+27return f"<think>{reasoning}</think>\n{content}" if content else f"<think>{
+reasoning}</think>\n"
+28
+29return normalize_assistant_to_think_solution(content)
+30
+31def parse_message_item(m):
+32if isinstance(m, dict):
+33return m
+34if isinstance(m, str):
+35s = m.strip()
+36if not s:
+37return None
+38try:
+39obj = json.loads(s)
+40return obj if isinstance(obj, dict) else None
+41except Exception:
+42return None
+43return None
+44
+45def format_ds1(examples):
+46out = []
+47for p, t, s in zip(examples.get("problem", []), examples.get("thinking", []),
+examples.get("solution", [])):
+48p, t, s = _strip(p), _strip(t), _strip(s)
+49if not p or not s:
+15
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+50continue
+51assistant = f"<think>{t}</think>\n{s}" if t else f"<think></think>\n{s}"
+52out.append([
+53{"role": "user", "content": p},
+54{"role": "assistant", "content": assistant},
+55])
+56return {"conversations": out}
+57
+58def format_ds2(examples):
+59out = []
+60for conv in examples.get("conversation", []):
+61if not conv:
+62continue
+63cleaned = []
+64for m in conv:
+65frm = (m.get("from") or "").strip()
+66val = m.get("value", "")
+67if frm == "human":
+68cleaned.append({"role": "user", "content": _strip(val)})
+69elif frm == "gpt":
+70cleaned.append({"role": "assistant", "content":
+normalize_assistant_to_think_solution(val)})
+71if len(cleaned) >= 2 and cleaned[-1]["role"] == "assistant":
+72out.append(cleaned)
+73return {"conversations": out}
+74
+75def format_ds3(examples):
+76out = []
+77for msgs in examples.get("messages", []):
+78if not msgs:
+79continue
+80parsed = [pm for pm in (parse_message_item(m) for m in msgs) if pm is not None
+]
+81if not parsed:
+82continue
+83
+84convo = [m for m in parsed if m.get("role") != "system"]
+85if len(convo) < 2 or convo[-1].get("role") != "assistant":
+86continue
+87
+88cleaned = []
+89for m in convo:
+90role = m.get("role")
+91content = m.get("content", "")
+92reasoning = m.get("reasoning", "")
+93if role == "assistant":
+94content = build_assistant_with_reasoning(content, reasoning)
+95else:
+96content = _strip(content)
+97if role in ("user", "assistant") and content is not None:
+98cleaned.append({"role": role, "content": content})
+99
+16
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+100if len(cleaned) >= 2 and cleaned[-1]["role"] == "assistant":
+101out.append(cleaned)
+102
+103return {"conversations": out}
+104
+105ds1 = ds1.map(format_ds1, batched=True, remove_columns=ds1.column_names)
+106ds2 = ds2.map(format_ds2, batched=True, remove_columns=ds2.column_names)
+107ds3 = ds3.map(format_ds3, batched=True, remove_columns=ds3.column_names)
+5.3 Part III: Template Serialization, Length Control, and Format QA
+5.3.1 Final dataset construction
+After normalization, we merge the three datasets, serialize each conversation through the Qwen
+thinking template, filter over-length samples by tokenized length, and run a final assistant-format
+quality check before training.
+•Keep only non-empty normalized conversations.
+•Build training text viaapply_chat_template.
+•Enforce context-window constraints and reasoning tag integrity.
+Code: Merge, template, filter, and validate
+1ds1 = ds1.filter(lambda x: x["conversations"] is not None and len(x["conversations"])
+> 0)
+2ds2 = ds2.filter(lambda x: x["conversations"] is not None and len(x["conversations"])
+> 0)
+3ds3 = ds3.filter(lambda x: x["conversations"] is not None and len(x["conversations"])
+> 0)
+4
+5combined_dataset = concatenate_datasets([ds1, ds2, ds3]).shuffle(seed=RANDOM_SEED)
+6
+7def formatting_prompts_func(examples):
+8convos = examples["conversations"]
+9texts = [
+10tokenizer.apply_chat_template(
+11convo,
+12tokenize=False,
+13add_generation_prompt=False,
+14)
+15for convo in convos
+16]
+17return {"text": texts}
+18
+19dataset = combined_dataset.map(formatting_prompts_func, batched=True)
+20
+21num_proc = mp.cpu_count()
+17
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+22_text_tok = getattr(tokenizer, "tokenizer", tokenizer)
+23
+24def filter_long_sequences_batched(examples):
+25texts = examples["text"]
+26tokenized = _text_tok(
+27texts,
+28truncation=False,
+29padding=False,
+30add_special_tokens=False,
+31)["input_ids"]
+32return [len(toks) <= MAX_CONTEXT_WINDOW for toks in tokenized]
+33
+34dataset = dataset.filter(filter_long_sequences_batched, batched=True, num_proc=
+num_proc)
+35
+36def check_assistant_format(examples):
+37convos = examples["conversations"]
+38ok = []
+39for convo in convos:
+40good = True
+41for m in convo:
+42if m["role"] == "assistant":
+43c = m.get("content", "")
+44if "<think>" not in c or "</think>" not in c:
+45good = False
+46break
+47if not re.search(r"</think>\n", c):
+48good = False
+49break
+50ok.append(good)
+51return {"_ok": ok}
+52
+53check = dataset.map(
+54check_assistant_format,
+55batched=True,
+56remove_columns=dataset.column_names,
+57num_proc=num_proc,
+58)
+59
+60bad = len(check) - sum(check["_ok"])
+61if bad > 0:
+62dataset = dataset.filter(lambda x: all(
+63(m["role"] != "assistant") or (
+64("<think>" in m["content"]) and ("</think>\n" in m["content"])
+65)
+66for m in x["conversations"]
+67))
+68
+69print(dataset[0]["text"][:8000])
+18
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+Tip: Practical checks before training
+•Print a few post-template samples to verify role separators and reasoning tags.
+•Track the retained-sample ratio after length filtering to avoid accidental over-pruning.
+•If many samples fail format QA, inspect the original source-specific conversion functions
+first.
+6 Training Configuration and Execution
+6.1 Trainer Configuration
+6.1.1 Trainer code
+Code: SFT training with TRL + Unsloth
+1from trl import SFTTrainer, SFTConfig
+2trainer = SFTTrainer(
+3model = model,
+4tokenizer = tokenizer,
+5train_dataset = dataset,
+6eval_dataset = None, # Can set up evaluation!
+7args = SFTConfig(
+8dataset_text_field = "text",
+9per_device_train_batch_size = 6,
+10gradient_accumulation_steps = 6, # Use GA to mimic batch size!
+11warmup_ratio = 0.03,
+12#warmup_steps = 60,
+13num_train_epochs = 1, # Set this for 1 full training run.
+14#max_steps = 50,
+15learning_rate = 2e-4, # Reduce to 2e-5 for long training runs
+16logging_steps = 1,
+17optim = "adamw_8bit",
+18weight_decay = 0.001,
+19lr_scheduler_type = "linear",
+20seed = 3407,
+21save_steps = 200,
+22save_total_limit = 1,
+23save_strategy = "steps",
+24report_to = "wandb", # Can use Weights & Biases
+25output_dir = drive_output_path,
+26),
+27)
+19
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+6.1.2 Key training parameters
+ParameterTypical value Notes
+per_device_train_batch_size1–128 Depends on VRAM
+gradient_accumulation_steps1–128 Increase effective batch size
+learning_rate1e-5–3e-4 Tune carefully
+warmup_steps1–5000 Stabilizes early training
+max_steps / num_train_epochstask-dependent Prefer steps for reproducibility
+logging_steps1–20 For monitoring
+save_steps10–500 Checkpoint cadence
+Table 4: Common training hyperparameters
+6.1.3 Detailed notes on key parameters
+•Learning rate:If loss is unstable, reduce LR; if convergence is too slow, increase slightly.
+•Effective batch size:batch_size×grad_accum; bigger is often more stable.
+•Sequence length:Longer context increases VRAM and compute dramatically; start small.
+•Optimizer:adamw_8bithelps reduce memory usage.
+6.2 Train on Responses Only (Recommended)
+In most chat fine-tuning settings, you want the model to learn only the assistant responses, while
+not backpropagating on the user instruction or template tokens. Unsloth provides train_on_
+responses_onlyto automatically mask labels outside the assistant spans.
+Code: Mask labels to train only on assistant responses
+1from unsloth.chat_templates import train_on_responses_only
+2trainer = train_on_responses_only(
+3trainer,
+4instruction_part = "<|im_start|>user\n",
+5response_part = "<|im_start|>assistant\n<think>",
+6)
+Tip: Why this matters
+If you train on the entire serialized prompt, the model may waste capacity learning to reproduce
+system/user content and special tokens, which can hurt instruction-following quality.
+20
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+6.3 Label Sanity Check (Before/After Training)
+To verify that masking worked as expected, you can decode a sample’s labels. In many trainers,
+tokens you do not want to train on are set to -100(ignore index). The snippet below replaces those
+positions with the pad token id so decode can run, and then replaces the visible pad token with
+spaces for readability.
+Code: Decode labels to verify masking
+1tokenizer.decode([tokenizer.pad_token_id if x == -100 else x for x in trainer.
+train_dataset[100]["labels"]]).replace(tokenizer.pad_token, " ")
+7 Start Training (Most Important)
+After the trainer is configured (and optionally masked to responses-only), start training:
+Code: Run training
+1trainer_stats = trainer.train()
+Tip: What is trainer_stats?
+trainer_stats typically contains training metrics (e.g., loss, steps, runtime). You can print or
+log it for quick validation.
+8 Saving and Deployment
+8.1 Saving a 16-bit model
+After training, you can push a merged 16-bit model directly to Hugging Face Hub for standard
+Transformers inference and sharing.
+Tip: What this block does
+•ReadsHF_TOKENsecurely from Colab Secrets (instead of hard-coding tokens in notebooks).
+•Verifies the token viawhoami()and auto-builds your target repo id.
+•Uploads the merged 16-bit checkpoint with tokenizer, so the model can be loaded directly
+from Hugging Face Hub.
+21
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+Code: Push merged 16-bit model to Hugging Face Hub
+1from huggingface_hub import whoami
+2from google.colab import userdata
+3
+4try:
+5hf_token = userdata.get("HF_TOKEN")
+6if not hf_token:
+7raise ValueError("HF_TOKEN is not set")
+8except Exception as e:
+9raise RuntimeError("HF_TOKEN was not found in Colab Secrets.") from e
+10
+11try:
+12username = whoami(token=hf_token)["name"]
+13repo_id = f"{username}/Qwopus3.5-27B"
+14except Exception as e:
+15raise RuntimeError("Failed to authenticate with Hugging Face.") from e
+16
+17model.push_to_hub_merged(
+18repo_id,
+19tokenizer,
+20save_method="merged_16bit",
+21token=hf_token,
+22)
+23
+24print(f"Uploaded to https://huggingface.co/{repo_id}")
+8.2 Exporting GGUF (optional)
+If you want to run the model in llama.cpp -compatible stacks, export and publish a GGUF quantized
+model.
+Tip: What this GGUF step does
+•ReadsHF_TOKENfrom Colab Secrets and validates Hugging Face identity.
+•Exports and uploads multiple GGUF variants (q4_k_m,q8_0,bf16) to one Hub repo.
+•Makes the model directly usable in llama.cpp -style runtimes with different quality/speed
+trade-offs.
+Warning: Compatibility note
+GGUF export depends on the model architecture and your environment. Follow the latest
+Unsloth /llama.cppguidance for Qwen-family compatibility.
+22
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+Code: Push GGUF model to Hugging Face Hub
+1from huggingface_hub import whoami
+2from google.colab import userdata
+3
+4try:
+5hf_token = userdata.get("HF_TOKEN")
+6if not hf_token:
+7raise ValueError("HF_TOKEN is not set")
+8except Exception as e:
+9raise RuntimeError("HF_TOKEN was not found in Colab Secrets.") from e
+10
+11try:
+12username = whoami(token=hf_token)["name"]
+13repo_id = f"{username}/Qwopus3.5-27B-GGUF"
+14except Exception as e:
+15raise RuntimeError("Failed to authenticate with Hugging Face.") from e
+16
+17model.push_to_hub_gguf(
+18repo_id,
+19tokenizer,
+20quantization_method=["q4_k_m","q8_0","bf16"],
+21token=hf_token,
+22)
+23
+24print(f"Uploaded to https://huggingface.co/{repo_id}")
+9 Common Issues and Optimization Tips
+9.1 Typical failure modes
+Warning: Failure modes checklist
+•Out-of-memory (OOM): reduce sequence length, batch size, or increase grad accumulation;
+enable gradient checkpointing.
+•Loss does not decrease: verify data formatting and the chat template; consider lowering the
+learning rate.
+•Overfitting: reduce steps/epochs, increase data diversity, or enable dropout.
+23
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+9.2 Hyperparameter tuning workflow
+Tip: A practical, reproducible workflow
+1. Stage 1: Validate data + template
+•Run 50–200 steps and confirm the loss decreases.
+•Spot-check decoded prompts and targets (ensure roles/separators are correct).
+2. Stage 2: Learning-rate sweep
+•Try[1e-5, 2e-5, 3e-5](expand if needed for your scale).
+•Choose the fastest stable loss decrease (avoid divergence/oscillation).
+3. Stage 3: LoRA rank tuning
+•Try[16, 32, 64].
+•Balance quality vs. VRAM and training time.
+4. Stage 4: Batch size optimization
+•Increase batch size as VRAM allows.
+•Use gradient accumulation steps to keep an appropriate effective batch size.
+10 Summary and Outlook
+10.1 Key takeaways
+Summary of the end-to-end workflow
+This guide covered the full end-to-end workflow for LLM fine-tuning:
+1.Environment:Google Colab GPU runtime + Unsloth stack, with optional WandB logging
+and Google Drive checkpoint persistence.
+2.Model loading:Qwen3.5-27B is loaded in 4-bit mode to fit single-GPU VRAM constraints
+while keeping training practical.
+3.Parameter-efficient adaptation:rank-64 LoRA adapters are attached to key projection
+modules, so only a small parameter subset is updated.
+4.Data pipeline:mixed reasoning datasets are normalized into one assistant-target format with
+Qwen chat template and response-only supervision.
+5.Training and release:SFT is run with memory-aware hyperparameters, then exported to
+Hugging Face Hub as merged 16-bit weights and optional GGUF variants.
+24
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+10.2 Typical metrics
+MetricTypical value / observed range
+Base model scaleQwen3.5-27B
+Runtime environmentGoogle Colab (A100/H100 class GPU)
+Model loading mode4-bit quantized base + LoRA adapters
+LoRA rank used in this guide64
+Export targetsmerged 16-bit + GGUF (q4_k_m / q8_0 / bf16)
+Table 5: Configuration-level metrics aligned with the Qwen3.5-27B Colab workflow
+Tip: How to interpret these metrics
+For 27B-scale fine-tuning on Colab, absolute runtime and loss values are highly sensitive to
+GPU type, sequence length, effective batch size, and dataset composition. In practice, compare
+runs within the same setup rather than relying on a single universal number.
+10.3 Next learning steps
+1.Strengthen the current Qwen3.5-27B pipeline first
+•Build a small, high-quality evaluation set for coding/math/reasoning tasks.
+•Comparer=16/32/64and sequence length settings under the same data split.
+•Track inference behavior changes (reasoning length, answer accuracy, and format stability).
+2.Improve data quality and supervision strategy
+•Add harder long-context and multi-step reasoning samples.
+•Remove noisy or contradictory outputs in mixed-source datasets.
+•Experiment with style constraints for more concise final answers.
+3.Move from SFT to preference alignment
+•Try DPO with pairwise preference data collected from your target tasks.
+•Evaluate whether alignment improves helpfulness without overextending reasoning traces.
+•Keep SFT checkpoints as stable baselines for A/B comparison.
+4.Deployment and reproducibility
+•Validate both Hub merged models and GGUF exports with the same prompt suite.
+•Document exact package versions and notebook cells for rerunnable training.
+•Add lightweight serving endpoints (e.g., vLLM/TGI) once offline quality is validated.
+25
+Complete Guide to LLM Fine-tuning LoRA Fine-tuning Practice with Unsloth
+10.4 References
+Selected references
+•Unsloth repository:https://github.com/unslothai/unsloth
+•Hugging Face Transformers:https://huggingface.co/docs/transformers
+•Qwen documentation:https://github.com/QwenLM/Qwen
+•LoRA paper:https://arxiv.org/abs/2106.09685
+•WandB docs:https://docs.wandb.ai
+10.5 Acknowledgements
+Acknowledgements
+Thanks to the following open-source projects and communities:
+•The Unsloth team for an extremely optimized fine-tuning framework.
+•The Hugging Face community for a rich model ecosystem.
+•Google Colab for accessible cloud GPU experimentation.
+•All dataset contributors and open-source model teams.
+Congratulations on completing your LLM fine-tuning journey!
+You now know how to adapt a general LLM into a customized AI assistant.
+Go build and iterate—looking forward to the great models you train!
+This guide is compiled from practical experience and will be continuously updated. Questions
+and suggestions are welcome.
+No one starts as an expert. But every expert was once brave enough to begin.
+26

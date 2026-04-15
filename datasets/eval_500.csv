@@ -1,0 +1,3629 @@
+id,prompt,answer
+f7074a8f,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+53 -> LIII
+30 -> XXX
+45 -> XLV
+Now, write the number 79 in the Wonderland numeral system.",LXXIX
+956a23da,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+39.27 m becomes 41.81
+20.35 m becomes 21.67
+42.12 m becomes 44.84
+5.62 m becomes 5.98
+Now, convert the following measurement: 13.04 m",13.88
+e44415b8,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+49.86 m becomes 46.98
+21.32 m becomes 20.09
+45.5 m becomes 42.88
+16.7 m becomes 15.74
+45.38 m becomes 42.76
+Now, convert the following measurement: 49.62 m",46.76
+ba469498,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+12.78 m becomes 23.23
+21.97 m becomes 39.94
+32.32 m becomes 58.76
+10.31 m becomes 18.74
+Now, convert the following measurement: 25.78 m",46.87
+e9ed78f7,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.89s, distance = 66.0 m
+For t = 1.36s, distance = 14.62 m
+For t = 3.86s, distance = 117.75 m
+For t = 1.57s, distance = 19.48 m
+For t = 1.77s, distance = 24.76 m
+Now, determine the falling distance for t = 1.44s given d = 0.5*g*t^2.",16.39
+32a2dcd8,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+nbrmfkpp istmj mkcb isbkpu -> princess found near forest
+putjkmu isddsqp uak zchrfcd fcpudk -> student follows the magical castle
+utbudk facpkp zcn -> turtle chases map
+uak jcbo putjkmu jbkczp -> the dark student dreams
+zstpk kvndsbkp pusbl -> mouse explores story
+Now, decrypt the following text: grbj qbrukp jssb",bird writes door
+c93a4fa1,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+wzjor uxjmrn mgr cwxd nroxrm -> alice writes the dark secret
+ujewxc jywajlrn whftr ownmzr -> wizard imagines above castle
+vxjlornn nrrn mgr obxjfbn nroxrm -> princess sees the curious secret
+mgr ozrtrx nmbcrlm cxwun -> the clever student draws
+nmbcrlm nrrn mgr ywajowz yjxxfx -> student sees the magical mirror
+Now, decrypt the following text: yfbnr jywajlrn mgr ujnr nmfxq",mouse imagines the wise story
+fe407d0f,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+kymri jiij bawupsa zkykri -> alice sees through palace
+lmqkwg jiij oih -> wizard sees key
+bai jirwib otmsab lkbraij -> the secret knight watches
+bai lmji jbpgitb duptg -> the wise student found
+Now, decrypt the following text: rkb jbpgmij bai jmyniw cijjksi",cat studies the silver message
+071d7301,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+bdz wftodb bzhrdzf ceqqesi -> the bright teacher follows
+bdz hlrtzlb stvhfj izzi -> the ancient wizard sees
+bdz jhfu rhb rdhizi -> the dark cat chases
+hqtrz znaqefzi mtffef -> alice explores mirror
+Now, decrypt the following text: fhwwtb ibyjtzi lzhf beszf",rabbit studies near tower
+898e4973,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+11 -> XI
+77 -> LXXVII
+78 -> LXXVIII
+67 -> LXVII
+54 -> LIV
+Now, write the number 28 in the Wonderland numeral system.",XXVIII
+5a19f71a,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10001001 -> 01101100
+00111100 -> 01100001
+10110101 -> 00001101
+01010000 -> 10000010
+11000100 -> 10100110
+11110101 -> 00001111
+11000011 -> 01111110
+01111000 -> 11000011
+
+Now, determine the output for: 01001100",11100010
+6659ec00,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.36s, distance = 72.56 m
+For t = 4.16s, distance = 111.22 m
+For t = 1.51s, distance = 14.65 m
+For t = 3.06s, distance = 60.18 m
+For t = 1.14s, distance = 8.35 m
+Now, determine the falling distance for t = 3.43s given d = 0.5*g*t^2.",75.61
+7aba9046,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01001011 -> 10010100
+10001010 -> 00010000
+10000100 -> 00001100
+01110011 -> 11100101
+00110111 -> 01101111
+10001101 -> 00011110
+00100110 -> 01001101
+
+Now, determine the output for: 10001111",00011010
+83e7b19c,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+33.77 m becomes 52.42
+35.4 m becomes 54.95
+37.29 m becomes 57.88
+Now, convert the following measurement: 33.61 m",52.17
+bd417168,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11010100 -> 00010001
+11000011 -> 00000000
+00111100 -> 00000000
+00110100 -> 00000000
+10011101 -> 01100110
+11000101 -> 00010001
+00001111 -> 00000000
+
+Now, determine the output for: 01100101",00010001
+fb37f51d,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.29s, distance = 63.5 m
+For t = 3.28s, distance = 63.11 m
+For t = 2.86s, distance = 47.99 m
+For t = 2.67s, distance = 41.82 m
+For t = 3.88s, distance = 88.32 m
+Now, determine the falling distance for t = 3.04s given d = 0.5*g*t^2.",54.22
+fa4d703a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+{)/"") = &?&
+@"":@[ = :<>
+>{/[@ = ""<&
+Now, determine the result for: ^)-))","^^"""""
+b48ff026,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+yrqqu cmlbqb knnz -> queen chases book
+fmq bqcpqf fqlcmqp cmlbqb -> the secret teacher chases
+yrqqu xlfcmqb fmq lucgquf knnz -> queen watches the ancient book
+tnrbq dgbcnvqpb fmq cjqvqp tqbblhq -> mouse discovers the clever message
+Now, decrypt the following text: fmq xgbq spgucqbb bqqb",the wise princess sees
+d9a186d1,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+17 -> XVII
+76 -> LXXVI
+23 -> XXIII
+62 -> LXII
+39 -> XXXIX
+Now, write the number 74 in the Wonderland numeral system.",LXXIV
+724fe70c,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+91 -> XCI
+87 -> LXXXVII
+64 -> LXIV
+Now, write the number 38 in the Wonderland numeral system.",XXXVIII
+91be6ad6,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+18 -> XVIII
+48 -> XLVIII
+96 -> XCVI
+Now, write the number 31 in the Wonderland numeral system.",XXXI
+daae01eb,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+11 -> XI
+47 -> XLVII
+40 -> XL
+Now, write the number 95 in the Wonderland numeral system.",XCV
+640acd9c,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.97s, distance = 120.89 m
+For t = 3.45s, distance = 58.25 m
+For t = 3.45s, distance = 58.25 m
+For t = 2.74s, distance = 36.74 m
+For t = 4.8s, distance = 112.76 m
+Now, determine the falling distance for t = 3.12s given d = 0.5*g*t^2.",47.64
+b2ea0c09,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+15.43 m becomes 28.13
+27.21 m becomes 49.60
+33.89 m becomes 61.77
+44.73 m becomes 81.53
+Now, convert the following measurement: 12.14 m",22.13
+466ad340,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+^|+""^ = &/
+]$+^} = `#
+`#-$` = -#}
+|$-|` = -&#
+Now, determine the result for: `^-$#",-#$
+794dcc94,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+krqzxt mnnm irxxwx -> wizard sees mirror
+iwomn trmcwjnxm ynlwat mcvwwh -> mouse discovers beyond school
+foxfhn rizpranm fvn pwhtna irxxwx -> turtle imagines the golden mirror
+czf gwhhwkm inmmzpn -> cat follows message
+srap cvzmnm fvxwopv czmfhn -> king chases through castle
+Now, decrypt the following text: fvn ilmfnxrwom sarpvf kxrfnm",the mysterious knight writes
+6bd59a1f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+35+01 = 34
+74$02 = 939
+93[74 = 68
+72[49 = 121
+41$63 = 305
+Now, determine the result for: 82$15",7241
+cabc0445,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.09s, distance = 12.49 m
+For t = 3.77s, distance = 40.64 m
+For t = 3.95s, distance = 44.62 m
+Now, determine the falling distance for t = 2.64s given d = 0.5*g*t^2.",19.93
+89906f16,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01100001 -> 00001111
+01110100 -> 10100111
+11011001 -> 11001111
+10110111 -> 10111111
+11110110 -> 10111111
+10001010 -> 01011100
+00111001 -> 11001011
+10100101 -> 00101111
+11000010 -> 00011110
+
+Now, determine the output for: 00100000",00000011
+b3f9a15c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+32[35 = 0221
+64}04 = 6}
+23}18 = 94
+94/21 = 16
+Now, determine the result for: 85[56",1773
+83dcb60d,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.0s, distance = 5.0 m
+For t = 2.35s, distance = 27.62 m
+For t = 1.74s, distance = 15.14 m
+For t = 3.2s, distance = 51.22 m
+Now, determine the falling distance for t = 3.15s given d = 0.5*g*t^2.",49.63
+9165792d,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+29 -> XXIX
+43 -> XLIII
+85 -> LXXXV
+72 -> LXXII
+94 -> XCIV
+Now, write the number 86 in the Wonderland numeral system.",LXXXVI
+76d2ee64,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+82-66 = -83
+97-87 = -1
+04*03 = 0021
+61*04 = 046
+06+39 = 3906
+Now, determine the result for: 02+94",9402
+714330e8,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+32.03 m becomes 35.05
+44.11 m becomes 48.27
+17.68 m becomes 19.35
+28.28 m becomes 30.94
+Now, convert the following measurement: 20.99 m",22.97
+2817d770,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10111000 -> 11101110
+01010000 -> 01010101
+10000000 -> 00100010
+11011000 -> 01110111
+00000010 -> 00001000
+00010001 -> 01000100
+11111011 -> 11111111
+00110110 -> 11011101
+11000011 -> 00111111
+00010110 -> 01011101
+
+Now, determine the output for: 00011000",01100110
+b631f2b8,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10100010 -> 11111111
+11010110 -> 11111111
+00100011 -> 11111111
+01000110 -> 11111111
+01000000 -> 11111111
+00100100 -> 11111111
+01000101 -> 11111111
+01000111 -> 11111111
+00001010 -> 11111111
+
+Now, determine the output for: 11010010",11111111
+4d81ccf0,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ebssa icsqfsl hsr -> queen creates key
+yqffsc csqkl pqm -> hatter reads map
+qotis lfbktsl fys lsicsf hsr -> alice studies the secret key
+cqggtf kcsqpl fys ltonsc pqm -> rabbit dreams the silver map
+Now, decrypt the following text: fsqiysc kcsqpl fys prlfsctvbl gvvh",teacher dreams the mysterious book
+4b257a7e,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+nlot qolgpr larltp idotpa -> bird writes inside garden
+edggpo opdtr gep suzuoyhz yuoprg -> hatter reads the colorful forest
+vlai yuhat bloouo -> king found mirror
+gep bdilsdz vlai topdbr -> the magical king dreams
+khppa yuzzuqr vpf -> queen follows key
+Now, decrypt the following text: vlai todqr dnump sdrgzp",king draws above castle
+f119f794,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ymjudt mcjyl bdvqdt -> dragon reads potion
+jeqzc lccl vfc gmqufv zjlvec -> alice sees the bright castle
+atqufv zmcjvcl jmdxty kjeecs -> knight creates around valley
+gqmy zfjlcl wclljuc -> bird chases message
+hqojmy rdeedhl rdmclv -> wizard follows forest
+Now, decrypt the following text: pxcct zfjlcl lczmcv",queen chases secret
+981e69c9,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+uivhz wivey fehfyz riczn -> mouse found inside tower
+rsz hfkqzn tfny cnfrzh -> the silver bird writes
+sbrrzn mnzbrzh tiia -> hatter creates book
+Now, decrypt the following text: bkfmz hrvyfzh yiin",alice studies door
+e172a24e,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+30.3 m becomes 32.64
+10.66 m becomes 11.48
+27.51 m becomes 29.64
+Now, convert the following measurement: 48.77 m",52.54
+b1f8f11c,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.43s, distance = 5.23 m
+For t = 1.1s, distance = 3.09 m
+For t = 4.36s, distance = 48.61 m
+For t = 3.71s, distance = 35.19 m
+For t = 3.83s, distance = 37.51 m
+Now, determine the falling distance for t = 4.0s given d = 0.5*g*t^2.",40.91
+10176ad8,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+49.18 m becomes 92.58
+22.3 m becomes 41.98
+8.57 m becomes 16.13
+27.36 m becomes 51.50
+Now, convert the following measurement: 48.24 m",90.81
+8471932e,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.62s, distance = 177.99 m
+For t = 2.97s, distance = 73.56 m
+For t = 4.74s, distance = 187.36 m
+Now, determine the falling distance for t = 4.33s given d = 0.5*g*t^2.",156.35
+ec92f091,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+>`+>> = `/
+$>-`$ = <
+&]+>` = !>>
+`$+$] = !\[
+]$+!& = !\`
+Now, determine the result for: ![+/[",</
+b5fdebcc,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.05s, distance = 85.84 m
+For t = 3.12s, distance = 50.94 m
+For t = 4.25s, distance = 94.53 m
+For t = 2.43s, distance = 30.9 m
+Now, determine the falling distance for t = 3.91s given d = 0.5*g*t^2.",80.01
+6f0b7840,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+nrajtl kthln ulcunx padx -> dragon found inside cave
+cmhnxlm nucptdxrc jarnxl -> student discovers garden
+qammxr orumxc precmay -> hatter writes crystal
+pam nucptdxrc hlnxr vthlmaul -> cat discovers under mountain
+wlujqm rxanc lxar ucyaln -> knight reads near island
+Now, decrypt the following text: raiium ktyytoc lxar cpqtty",rabbit follows near school
+f3cdeb29,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00000001 -> 11110101
+00100111 -> 10001001
+00000100 -> 11010111
+00010110 -> 01100011
+10010000 -> 01011110
+10011000 -> 00001110
+11001001 -> 00100111
+10100000 -> 10111110
+
+Now, determine the output for: 10111101",01101110
+80549a8f,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+56 -> LVI
+15 -> XV
+80 -> LXXX
+30 -> XXX
+Now, write the number 9 in the Wonderland numeral system.",IX
+ecdef821,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+wlaicp vcbixbe jbic rlmmizb -> wizard creates near village
+vix ngojp xdb pict viexmb -> cat found the dark castle
+tjlzdx vdiebe xdb vmbrbc zicpbj -> knight chases the clever garden
+vix vdiebe jbic wgjpbcmijp -> cat chases near wonderland
+xdb vmbrbc vix bkfmgcbe -> the clever cat explores
+Now, decrypt the following text: dixxbc ngojp xdb voclgoe yggt",hatter found the curious book
+1b562504,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+36 -> XXXVI
+71 -> LXXI
+35 -> XXXV
+30 -> XXX
+Now, write the number 35 in the Wonderland numeral system.",XXXV
+ba5e6c2e,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+flphe hmpkceh cbhcke qtyyej -> mouse studies inside valley
+metigen cftdcbeh mnethpne -> teacher imagines treasure
+zcbd netkh mnethpne -> king reads treasure
+metigen sncmeh mge ilylnrpy fehhtde -> teacher writes the colorful message
+gtmmen knetfh aejlbk ycantnj -> hatter dreams beyond library
+Now, decrypt the following text: kntdlb netkh pbken rlnehm",dragon reads under forest
+524b744b,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10001100 -> 01101111
+10001000 -> 11101110
+00011100 -> 01111111
+01110111 -> 11011101
+00110011 -> 01011101
+01110101 -> 00011101
+01111110 -> 10111111
+01100000 -> 11111011
+11110010 -> 00111101
+
+Now, determine the output for: 11101111",11111011
+4684abe0,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+06*88 = 1825
+26*35 = 7823
+61+53 = 5361
+Now, determine the result for: 74-86",-12
+9cbbfd73,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+uws nwsuotl ktwd luoiiy -> cat watches near school
+svdsyt udtwstl ak iutwk -> turtle creates in ocean
+sot oapptk owsstd pdtwjl -> the hidden hatter dreams
+rdakutll lsvpatl sodivco rwywut -> princess studies through palace
+Now, decrypt the following text: sot uvdaivl rdakutll mivkp",the curious princess found
+4cb5e927,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+37/18 = 665
+88:71 = 159
+25-97 = -72
+Now, determine the result for: 69-49",-20
+25d6c521,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+30 -> XXX
+54 -> LIV
+35 -> XXXV
+25 -> XXV
+97 -> XCVII
+Now, write the number 98 in the Wonderland numeral system.",XCVIII
+0a49dd70,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+9.42 m becomes 18.68
+9.2 m becomes 18.24
+34.54 m becomes 68.49
+Now, convert the following measurement: 49.71 m",98.57
+f299569f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+34{31 = 55
+44{74 = 09
+91'95 = 04
+19\16 = 1555
+22{69 = 711
+Now, determine the result for: 18\73",7992
+3cd80c64,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00011101 -> 00001110
+00100101 -> 00010010
+11111111 -> 01111111
+00100000 -> 00010000
+00001011 -> 00000101
+00000100 -> 00000010
+10110101 -> 01011010
+
+Now, determine the output for: 11001000",01100100
+04b818d2,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+6.15 m becomes 7.01
+14.5 m becomes 16.52
+45.41 m becomes 51.75
+Now, convert the following measurement: 36.59 m",41.70
+c2f263df,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.44s, distance = 51.38 m
+For t = 3.6s, distance = 56.27 m
+For t = 3.3s, distance = 47.28 m
+For t = 4.56s, distance = 90.28 m
+Now, determine the falling distance for t = 4.52s given d = 0.5*g*t^2.",88.71
+fae3ee40,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+'?*</ = |&?
+<&*<| = |?#
+'|:$' = #/#'
+Now, determine the result for: <#*&|",{$
+98e1a8b4,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10110101 -> 11111010
+10010000 -> 01111011
+00000110 -> 00001111
+01011011 -> 01101101
+11100101 -> 01010010
+10010101 -> 11111011
+00001101 -> 00110111
+00100101 -> 01110110
+00001011 -> 11000111
+
+Now, determine the output for: 00110000",01111110
+ebb0495a,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+40.11 m becomes 33.05
+10.2 m becomes 8.41
+7.06 m becomes 5.82
+30.01 m becomes 24.73
+26.27 m becomes 21.65
+Now, convert the following measurement: 35.2 m",29.01
+3456da40,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10100111 -> 00101001
+10001111 -> 00100011
+01111100 -> 00011111
+10110101 -> 00101101
+00101100 -> 00001011
+10101000 -> 00101010
+00011100 -> 00000111
+
+Now, determine the output for: 00111101",00001111
+3d24aef4,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00111001 -> 11001001
+00101000 -> 01000001
+01111001 -> 11001011
+10000011 -> 00011101
+11011111 -> 11111111
+11110000 -> 10000110
+01110011 -> 10011011
+00001000 -> 01000000
+01101100 -> 01100011
+
+Now, determine the output for: 10010100",10100101
+20052c2f,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10010110 -> 11010011
+01110011 -> 01101110
+11110011 -> 01111111
+10010011 -> 01110011
+11010001 -> 00111011
+11001000 -> 00011001
+11101100 -> 10011101
+11011000 -> 00011011
+01111010 -> 01001111
+
+Now, determine the output for: 00110011",01100110
+5a6dd286,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11101100 -> 11111111
+11101110 -> 11111111
+00001000 -> 01010000
+01011111 -> 11111110
+00000000 -> 00000000
+00111110 -> 11111101
+11111011 -> 11111111
+11101000 -> 11010111
+00101101 -> 01111011
+
+Now, determine the output for: 10010110",10111100
+00d9f682,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+4 -> IV
+42 -> XLII
+59 -> LIX
+77 -> LXXVII
+55 -> LV
+Now, write the number 100 in the Wonderland numeral system.",C
+001b24c4,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+11 -> XI
+15 -> XV
+94 -> XCIV
+19 -> XIX
+Now, write the number 38 in the Wonderland numeral system.",XXXVIII
+60be7db6,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.04s, distance = 88.94 m
+For t = 4.64s, distance = 207.19 m
+For t = 4.64s, distance = 207.19 m
+For t = 3.33s, distance = 106.71 m
+Now, determine the falling distance for t = 3.64s given d = 0.5*g*t^2.",127.51
+9eaae1f1,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+[[*// = [[//
+&[-|' = -[{
+|[+{[ = /\:
+Now, determine the result for: [|-/[",/\
+6a04be76,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+46.13 m becomes 75.36
+49.18 m becomes 80.34
+46.51 m becomes 75.98
+Now, convert the following measurement: 32.22 m",52.63
+b8f8ae0d,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+23 -> XXIII
+69 -> LXIX
+44 -> XLIV
+Now, write the number 14 in the Wonderland numeral system.",XIV
+b3745e98,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+!!*!! = !'$@
+%>->[ = -']
+%'-'@ = -|
+%>+[! = $']
+Now, determine the result for: @\-|>",!'
+ae50c309,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+17.63 m becomes 9.17
+6.89 m becomes 3.59
+16.26 m becomes 8.46
+Now, convert the following measurement: 48.69 m",25.33
+e2f184b4,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11011110 -> 00011011
+00011111 -> 00000011
+11000110 -> 00011000
+00010001 -> 00000010
+01111001 -> 00001111
+00010011 -> 00000010
+10011110 -> 00010011
+
+Now, determine the output for: 00001111",00000001
+8d3d7fac,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+mlxmyh rxhwnu uhzxhm -> turtle dreams secret
+mhwzkhx ixemhu mkh fbyrhj fwxrhj -> teacher writes the golden garden
+mkh fbyrhj qxejzhuu ixemhu -> the golden princess writes
+mhwzkhx iwmzkhu ahc -> teacher watches key
+dexr uhhu ejuerh mbihx -> bird sees inside tower
+Now, decrypt the following text: mkh ueythx ajefkm reuzbthxu",the silver knight discovers
+4027a3ae,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+txcv dupjazdo hgd ohzscvd lxzzaz -> king explores the strange mirror
+hrzhjd izseo xc jxyzszk -> turtle draws in library
+larod xlsvxcdo hzdsorzd -> mouse imagines treasure
+Now, decrypt the following text: ohridch zdsio prmmjd",student reads puzzle
+eebac653,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10111111 -> 11111110
+11000101 -> 10011111
+11101100 -> 11111011
+00111010 -> 11111100
+00000111 -> 00011110
+11000010 -> 10001111
+00110011 -> 11101110
+10110111 -> 11111110
+00011101 -> 01111110
+
+Now, determine the output for: 01000111",10011111
+5abb1149,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+zftk fwenfdgy umg ygctgu yujtb -> bird imagines the secret story
+uitulg yggy fdyfkg netkgd -> turtle sees inside garden
+umg yflagt tezzfu peucmgy -> the silver rabbit watches
+Now, decrypt the following text: vfdn kfycjagty umtjinm aflleng",king discovers through village
+bae825ba,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.9s, distance = 12.65 m
+For t = 4.48s, distance = 70.34 m
+For t = 3.56s, distance = 44.42 m
+For t = 4.63s, distance = 75.13 m
+Now, determine the falling distance for t = 3.65s given d = 0.5*g*t^2.",46.69
+adb23476,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+11.0 m becomes 10.77
+13.05 m becomes 12.77
+49.33 m becomes 48.28
+Now, convert the following measurement: 37.26 m",36.47
+b3c0b44e,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+35.06 m becomes 36.93
+45.15 m becomes 47.56
+44.34 m becomes 46.71
+20.98 m becomes 22.10
+23.47 m becomes 24.73
+Now, convert the following measurement: 40.82 m",43.00
+deb4943f,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+9 -> IX
+45 -> XLV
+46 -> XLVI
+96 -> XCVI
+60 -> LX
+Now, write the number 67 in the Wonderland numeral system.",LXVII
+2403d93c,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+88 -> LXXXVIII
+84 -> LXXXIV
+95 -> XCV
+Now, write the number 41 in the Wonderland numeral system.",XLI
+bfd0e232,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.87s, distance = 228.71 m
+For t = 4.53s, distance = 197.89 m
+For t = 3.77s, distance = 137.06 m
+For t = 1.64s, distance = 25.94 m
+Now, determine the falling distance for t = 4.1s given d = 0.5*g*t^2.",162.1
+a9c3ff5d,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+84 -> LXXXIV
+40 -> XL
+68 -> LXVIII
+15 -> XV
+91 -> XCI
+Now, write the number 95 in the Wonderland numeral system.",XCV
+d45dc67f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+{?:'@ = ?
+{!:%' = (%
+%|""(| = (('(
+`?""?% = ]!`@
+!(:?% = '{
+Now, determine the result for: %|}|'",(%(
+7c68cc31,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.61s, distance = 11.1 m
+For t = 2.39s, distance = 24.46 m
+For t = 4.61s, distance = 91.01 m
+For t = 3.37s, distance = 48.64 m
+Now, determine the falling distance for t = 2.48s given d = 0.5*g*t^2.",26.34
+d20e7c41,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.0s, distance = 86.4 m
+For t = 4.64s, distance = 116.25 m
+For t = 2.95s, distance = 46.99 m
+Now, determine the falling distance for t = 4.8s given d = 0.5*g*t^2.",124.41
+36caeddc,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+30.5 m becomes 59.41
+16.03 m becomes 31.22
+30.37 m becomes 59.16
+Now, convert the following measurement: 7.13 m",13.89
+0245b9bb,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10011111 -> 01100011
+11011010 -> 00111111
+11010100 -> 11111110
+01001111 -> 00111011
+01101010 -> 11111111
+01000101 -> 10111010
+01100011 -> 01001110
+00101100 -> 10001111
+
+Now, determine the output for: 10001101",00001001
+77804b32,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10010101 -> 11001011
+11110110 -> 01111111
+01000011 -> 10100101
+10101100 -> 01011110
+00111000 -> 00011111
+01111100 -> 00111111
+10001011 -> 11001101
+10110000 -> 01011011
+00100100 -> 00010010
+10000011 -> 11001001
+
+Now, determine the output for: 00101000",00010110
+e102a09d,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+43*33 = 3343
+78-45 = 33
+76+78 = 7876
+67+69 = 6967
+25*43 = 4325
+Now, determine the result for: 42-44",-02
+4e177b84,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+50 -> L
+1 -> I
+48 -> XLVIII
+37 -> XXXVII
+39 -> XXXIX
+Now, write the number 86 in the Wonderland numeral system.",LXXXVI
+af0fd8f6,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10111010 -> 00101110
+00110100 -> 00001101
+10010011 -> 10100100
+00011000 -> 00000110
+00011111 -> 10000111
+10101000 -> 00101010
+00000101 -> 10000001
+
+Now, determine the output for: 10011011",10100110
+b61470ef,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00101011 -> 01100011
+11100000 -> 00000111
+01100001 -> 01100101
+01000111 -> 10100001
+00010010 -> 01011111
+01100010 -> 10100011
+00001100 -> 11100100
+01111010 -> 10010101
+11111010 -> 10110111
+11000111 -> 10000011
+
+Now, determine the output for: 00100000",10110111
+b8432f69,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+[}-[& = -\{
+[:-@{ = {{
+!@+{| = {|!@
+!:+)& = )&!:
+{[-!| = -:!
+Now, determine the result for: !{*!}",:&&
+bb9611b7,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.57s, distance = 81.47 m
+For t = 4.29s, distance = 117.65 m
+For t = 2.36s, distance = 35.6 m
+For t = 4.09s, distance = 106.93 m
+For t = 4.94s, distance = 156.0 m
+Now, determine the falling distance for t = 4.53s given d = 0.5*g*t^2.",131.18
+31678582,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+]|@<| = "")
+<)@|< = }<
+?]@/| = <}
+#?@<] = |:
+Now, determine the result for: #/&"":",<:)
+923e1560,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+33.69 m becomes 36.98
+5.25 m becomes 5.76
+19.53 m becomes 21.44
+48.57 m becomes 53.31
+47.68 m becomes 52.33
+Now, convert the following measurement: 24.57 m",26.97
+1c27ef41,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.87s, distance = 37.39 m
+For t = 2.95s, distance = 39.51 m
+For t = 2.7s, distance = 33.09 m
+For t = 4.71s, distance = 100.71 m
+For t = 3.33s, distance = 50.34 m
+Now, determine the falling distance for t = 3.9s given d = 0.5*g*t^2.",69.05
+814b1fef,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.33s, distance = 54.47 m
+For t = 2.41s, distance = 16.87 m
+For t = 4.33s, distance = 54.47 m
+Now, determine the falling distance for t = 1.32s given d = 0.5*g*t^2.",5.06
+2e044d8e,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+71@08 = 0631
+32@83 = 478
+84'63 = 8463
+71""13 = 41
+Now, determine the result for: 53@59",5233
+9cecae80,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10110001 -> 01110100
+01001000 -> 10011001
+01111000 -> 11111111
+01000100 -> 10000000
+10000111 -> 00011110
+01100101 -> 11000110
+10101001 -> 01000111
+01010010 -> 10101110
+
+Now, determine the output for: 11100001",11011110
+4179c322,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+56*15 = 5133
+04*28 = 0823
+73*85 = 6412
+24-65 = -41
+76+06 = 0676
+Now, determine the result for: 15-75",-6
+3d80f21e,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+36 -> XXXVI
+18 -> XVIII
+96 -> XCVI
+Now, write the number 7 in the Wonderland numeral system.",VII
+e03315c8,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+13 -> XIII
+96 -> XCVI
+48 -> XLVIII
+Now, write the number 7 in the Wonderland numeral system.",VII
+fafe9174,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+92 -> XCII
+9 -> IX
+82 -> LXXXII
+46 -> XLVI
+Now, write the number 15 in the Wonderland numeral system.",XV
+543af90d,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.58s, distance = 162.46 m
+For t = 4.86s, distance = 182.93 m
+For t = 1.29s, distance = 12.89 m
+For t = 4.05s, distance = 127.04 m
+For t = 4.56s, distance = 161.05 m
+Now, determine the falling distance for t = 3.15s given d = 0.5*g*t^2.",76.85
+3b411a49,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.36s, distance = 53.2 m
+For t = 4.4s, distance = 91.23 m
+For t = 4.32s, distance = 87.94 m
+For t = 2.79s, distance = 36.68 m
+Now, determine the falling distance for t = 3.1s given d = 0.5*g*t^2.",45.28
+eed2f3ae,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01010100 -> 00101111
+01101010 -> 00010111
+01000010 -> 10110111
+00110000 -> 00111111
+10111001 -> 00111011
+10111000 -> 00011111
+11011010 -> 11010111
+10011011 -> 11110011
+11000000 -> 11111111
+00010010 -> 11110111
+
+Now, determine the output for: 01100100",11101111
+b9b5a2c1,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+&&*$( = :<:&
+`|*[& = }|`#
+::*`} = (`:
+&|-|< = `&
+&:*[` = <<:|
+Now, determine the result for: |#-`|",&`
+18602be3,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00000111 -> 11011011
+01110100 -> 10001101
+00000001 -> 11110011
+11010010 -> 00100011
+11011011 -> 01001111
+10001000 -> 10011011
+11110011 -> 10101111
+11101011 -> 00001111
+11111100 -> 11101011
+11111111 -> 11111111
+
+Now, determine the output for: 10001111",10111111
+cc735e46,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+65(87 = (22
+71(58 = (13
+51`93 = 144
+Now, determine the result for: 44:82",4482
+69ae933f,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+60 -> LX
+69 -> LXIX
+54 -> LIV
+62 -> LXII
+42 -> XLII
+Now, write the number 45 in the Wonderland numeral system.",XLV
+024101d9,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11000011 -> 10000111
+11001110 -> 10011101
+00110101 -> 01101010
+01000010 -> 10000100
+01011100 -> 10111000
+00010101 -> 00101010
+00111101 -> 01111010
+
+Now, determine the output for: 00010000",00100000
+0ec04296,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.48s, distance = 111.45 m
+For t = 2.04s, distance = 38.3 m
+For t = 2.38s, distance = 52.13 m
+Now, determine the falling distance for t = 4.52s given d = 0.5*g*t^2.",188.02
+e915879a,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11011001 -> 01010111
+00100001 -> 00110100
+11111100 -> 11100001
+11100001 -> 01001100
+11010010 -> 00110011
+01110111 -> 11010101
+01000111 -> 11001011
+00110001 -> 00111110
+11010000 -> 01110010
+10101111 -> 10100010
+
+Now, determine the output for: 00000001",00100000
+a88fbc44,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+32 -> XXXII
+38 -> XXXVIII
+88 -> LXXXVIII
+83 -> LXXXIII
+Now, write the number 88 in the Wonderland numeral system.",LXXXVIII
+2701a005,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+15#13 = 195
+85!47 = 38
+36[86 = 123
+Now, determine the result for: 88[51",140
+b2cbea0f,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.88s, distance = 25.57 m
+For t = 2.52s, distance = 45.95 m
+For t = 4.56s, distance = 150.45 m
+For t = 2.21s, distance = 35.34 m
+Now, determine the falling distance for t = 4.94s given d = 0.5*g*t^2.",176.57
+a62dd199,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10001101 -> 00110011
+10111000 -> 00111110
+00000101 -> 01010111
+11111100 -> 00111111
+01101100 -> 10011111
+01000001 -> 01110101
+11010001 -> 11110101
+
+Now, determine the output for: 11001010",10111011
+9497f712,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+zfgcevuu yhlcj pvxhcj agnnsbv -> princess found beyond village
+tiv kxutvfghlu jfsbhc jfvsku -> the mysterious dragon dreams
+tiv igjjvc est utljgvu -> the hidden cat studies
+Now, decrypt the following text: rgwsfj efvstvu gc esutnv",wizard creates in castle
+4bfd095a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+{%*)) = )){
+)/*/"" = [^^{
+)""-\[ = -\\
+{)*[{ = \\@
+Now, determine the result for: @/*[@",{<<<
+a04ecffd,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+44!24 = !20
+17>32 = 49
+59!87 = !28
+64-32 = 2047
+10!89 = !79
+Now, determine the result for: 67!35",!32
+cead963f,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+85 -> LXXXV
+34 -> XXXIV
+88 -> LXXXVIII
+27 -> XXVII
+Now, write the number 34 in the Wonderland numeral system.",XXXIV
+d0ea0990,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+16 -> XVI
+73 -> LXXIII
+2 -> II
+58 -> LVIII
+2 -> II
+Now, write the number 37 in the Wonderland numeral system.",XXXVII
+4aeed935,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+24*74 = 7424
+75+78 = 7875
+31+96 = 9631
+07-19 = -12
+Now, determine the result for: 55*14",1455
+c3c025aa,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+seutkeo meem skoalpk jaoems -> teacher sees through forest
+slosfe mslgxem ske hxme jaoems -> turtle studies the wise forest
+yleeq mslgxem ske tloxalm bxooao -> queen studies the curious mirror
+Now, decrypt the following text: hxruog hoxsem zedaqg haqgeofuqg",wizard writes beyond wonderland
+72405c90,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+psnya mbtouay bjsea eqvvbka -> mouse watches above village
+tua ovaeai ytnfazt yaay -> the clever student sees
+mqxbif awgvsiay tua yaoiat oirytbv -> wizard explores the secret crystal
+Now, decrypt the following text: mqxbif ytnfqay jssc",wizard studies book
+eedd22d7,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+48.39 m becomes 52.33
+30.24 m becomes 32.70
+48.17 m becomes 52.10
+39.76 m becomes 43.00
+Now, convert the following measurement: 21.18 m",22.91
+bfc59d3a,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+45.63 m becomes 71.13
+15.63 m becomes 24.37
+22.95 m becomes 35.78
+31.47 m becomes 49.06
+22.94 m becomes 35.76
+Now, convert the following measurement: 11.54 m",17.99
+fdae34f8,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.48s, distance = 94.16 m
+For t = 1.25s, distance = 12.15 m
+For t = 2.36s, distance = 43.3 m
+Now, determine the falling distance for t = 4.94s given d = 0.5*g*t^2.",189.74
+e3ff3a78,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+18.76 m becomes 28.09
+7.89 m becomes 11.81
+43.04 m becomes 64.44
+33.45 m becomes 50.08
+Now, convert the following measurement: 49.47 m",74.07
+56acd7ad,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+44.09 m becomes 47.02
+15.79 m becomes 16.84
+21.26 m becomes 22.67
+34.57 m becomes 36.87
+Now, convert the following measurement: 28.31 m",30.19
+0c4e7430,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+85 -> LXXXV
+18 -> XVIII
+4 -> IV
+Now, write the number 46 in the Wonderland numeral system.",XLVI
+c6ccffe6,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+45 -> XLV
+25 -> XXV
+46 -> XLVI
+85 -> LXXXV
+26 -> XXVI
+Now, write the number 62 in the Wonderland numeral system.",LXII
+2bf76506,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+37.1 m becomes 29.13
+9.4 m becomes 7.38
+24.17 m becomes 18.98
+20.48 m becomes 16.08
+22.57 m becomes 17.72
+Now, convert the following measurement: 48.2 m",37.85
+db56bba9,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10010110 -> 10001001
+01110000 -> 00000111
+10000110 -> 10001000
+10111111 -> 11001011
+01010100 -> 00000101
+00001101 -> 01000000
+10110110 -> 10001011
+
+Now, determine the output for: 10000111",11001000
+209884a3,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+88 -> LXXXVIII
+90 -> XC
+27 -> XXVII
+20 -> XX
+Now, write the number 33 in the Wonderland numeral system.",XXXIII
+67032a5c,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00101011 -> 01011001
+11101001 -> 01001111
+10111110 -> 11110101
+11101011 -> 01011111
+11100011 -> 00011111
+00001000 -> 01000000
+00011001 -> 11001000
+01010110 -> 10110010
+00000011 -> 00011000
+
+Now, determine the output for: 10011111",11111100
+da616170,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01110000 -> 00100011
+10110011 -> 11011111
+11100010 -> 11001111
+00011100 -> 10001000
+00111110 -> 10001001
+00110101 -> 01100111
+10100100 -> 01000111
+
+Now, determine the output for: 11110100",00010111
+a6f1b553,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.31s, distance = 49.91 m
+For t = 1.16s, distance = 6.13 m
+For t = 2.67s, distance = 32.47 m
+For t = 3.85s, distance = 67.52 m
+Now, determine the falling distance for t = 4.43s given d = 0.5*g*t^2.",89.4
+7c0569e8,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+19.2 m becomes 33.80
+18.74 m becomes 32.99
+25.06 m becomes 44.12
+42.9 m becomes 75.53
+32.57 m becomes 57.34
+Now, convert the following measurement: 11.86 m",20.88
+51ac2b8c,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.43s, distance = 29.29 m
+For t = 1.26s, distance = 7.87 m
+For t = 4.72s, distance = 110.51 m
+For t = 3.51s, distance = 61.11 m
+Now, determine the falling distance for t = 4.79s given d = 0.5*g*t^2.",113.81
+270e7c66,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+52 -> LII
+59 -> LIX
+94 -> XCIV
+Now, write the number 90 in the Wonderland numeral system.",XC
+ece1ab97,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+31.05 m becomes 42.88
+22.41 m becomes 30.95
+37.38 m becomes 51.63
+31.33 m becomes 43.27
+Now, convert the following measurement: 34.53 m",47.69
+e3a5f597,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+zoqgb vxbkzg qnvbx pkab -> mouse dreams under cave
+lkttbx cowworg yquuwb -> hatter follows puzzle
+xkssft coqnv tlb zkifpkw zbggkib -> rabbit found the magical message
+tbkplbx xbkvg hbe -> teacher reads key
+Now, decrypt the following text: sfxv plkgbg gtoxe",bird chases story
+2d92a92d,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+pgnz dbutz wyvnyo -> bird found secret
+pgnz zgwvbsynw wyvnyo -> bird discovers secret
+ncppgo zgwvbsynw tycn wvhbbf -> rabbit discovers near school
+ohy acjgvcf hcooyn xngoyw -> the magical hatter writes
+Now, decrypt the following text: ncppgo vnycoyw pyqbtz bvyct",rabbit creates beyond ocean
+b8f00ea7,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+82:87 = :05
+41:15 = :73
+42:31 = 11
+11#21 = 32
+Now, determine the result for: 36\28",5615
+9a5b6b28,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+19^37 = ^18
+16^24 = ^8
+21^48 = ^27
+Now, determine the result for: 81^59",^22
+fb5b3034,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+42.01 m becomes 28.48
+17.36 m becomes 11.77
+26.55 m becomes 18.00
+42.04 m becomes 28.50
+Now, convert the following measurement: 37.16 m",25.19
+5a0c141c,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01100111 -> 01111100
+11001111 -> 11101001
+00111000 -> 10000111
+00001000 -> 10000001
+11111100 -> 11011111
+01001010 -> 10101001
+00111011 -> 10110111
+01101111 -> 11111101
+01110111 -> 01111110
+
+Now, determine the output for: 10000100",01010000
+c4ae8bd9,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.77s, distance = 50.87 m
+For t = 3.93s, distance = 102.4 m
+For t = 4.11s, distance = 111.99 m
+For t = 2.15s, distance = 30.65 m
+Now, determine the falling distance for t = 4.29s given d = 0.5*g*t^2.",122.02
+eaf49e67,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+86 -> LXXXVI
+33 -> XXXIII
+31 -> XXXI
+Now, write the number 65 in the Wonderland numeral system.",LXV
+9668f2c2,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+14.48 m becomes 8.56
+15.89 m becomes 9.39
+37.01 m becomes 21.88
+Now, convert the following measurement: 21.73 m",12.84
+023aa939,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.75s, distance = 149.17 m
+For t = 4.31s, distance = 122.81 m
+For t = 2.63s, distance = 45.73 m
+For t = 4.01s, distance = 106.31 m
+Now, determine the falling distance for t = 4.36s given d = 0.5*g*t^2.",125.68
+45c0e0a1,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+78 -> LXXVIII
+38 -> XXXVIII
+90 -> XC
+66 -> LXVI
+Now, write the number 35 in the Wonderland numeral system.",XXXV
+4d04ce0c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+`[>`\ = (}#}
+:#&?' = ]'
+(]>\\ = (##(
+\#>?' = ?#'#
+Now, determine the result for: ?(&[}",&:?
+258b796b,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+&}-&& = ""
+$|-$% = $
+}%-$` = }
+Now, determine the result for: `]*|[",`]|[
+eb40d1f3,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00100001 -> 00000000
+11000010 -> 00000000
+00100100 -> 00000000
+10001101 -> 10010000
+01111000 -> 00000001
+11110001 -> 00010010
+00001011 -> 00100000
+00110010 -> 00000000
+
+Now, determine the output for: 01011101",10000001
+2b88fafb,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11111001 -> 10011111
+00000010 -> 00100000
+10110100 -> 01001111
+01001111 -> 11110110
+00110010 -> 00100011
+01000111 -> 01110110
+10100000 -> 00001111
+10100011 -> 00111111
+
+Now, determine the output for: 00001101",11010000
+5a752e51,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+91 -> XCI
+13 -> XIII
+72 -> LXXII
+Now, write the number 37 in the Wonderland numeral system.",XXXVII
+da1754e3,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+yxdfq qupxlmqk fykhxq -> alice explores castle
+fyh alvwr hsq ywfdqwh fmekhyx -> cat found the ancient crystal
+ivqqw alvwr ymlvwr lfqyw -> queen found around ocean
+fyh alvwr fykhxq -> cat found castle
+blvkq zmdhqk bqkkynq -> mouse writes message
+Now, decrypt the following text: pmdwfqkk rmyzk dwkdrq blvwhydw",princess draws inside mountain
+d0a6832f,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.89s, distance = 34.53 m
+For t = 1.2s, distance = 5.95 m
+For t = 3.65s, distance = 55.07 m
+For t = 2.67s, distance = 29.47 m
+Now, determine the falling distance for t = 4.33s given d = 0.5*g*t^2.",77.5
+f6a05295,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.39s, distance = 15.78 m
+For t = 1.95s, distance = 10.5 m
+For t = 2.73s, distance = 20.58 m
+For t = 4.37s, distance = 52.74 m
+For t = 4.04s, distance = 45.08 m
+Now, determine the falling distance for t = 3.05s given d = 0.5*g*t^2.",25.69
+17fc6883,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.56s, distance = 57.37 m
+For t = 2.58s, distance = 18.37 m
+For t = 4.81s, distance = 63.84 m
+For t = 1.48s, distance = 6.04 m
+Now, determine the falling distance for t = 3.96s given d = 0.5*g*t^2.",43.27
+ab407759,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.8s, distance = 30.69 m
+For t = 1.04s, distance = 4.23 m
+For t = 3.61s, distance = 51.01 m
+For t = 2.45s, distance = 23.49 m
+For t = 3.87s, distance = 58.62 m
+Now, determine the falling distance for t = 1.63s given d = 0.5*g*t^2.",10.4
+c5dd2a9b,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10100001 -> 00000000
+11000000 -> 00000000
+10101010 -> 10101010
+00111000 -> 00000000
+10101001 -> 00100010
+11110110 -> 10011001
+01110000 -> 00000000
+
+Now, determine the output for: 10011100",00100010
+41fac383,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+thvec pyzkx uqc xtlb wcaatoc -> alice found the dark message
+dlvkecaa acca uqc fvac pylcau -> princess sees the wise forest
+auzxcku xltfa uqc ezlvyza dyuvyk -> student draws the curious potion
+Now, decrypt the following text: uqc avhscl ucteqcl xlctwa",the silver teacher dreams
+06d682ea,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+fdp sban vbf peojhapl -> the dark cat explores
+nkwcdf ghuks wk hvpbk -> knight found in ocean
+iuppk swlvhmpal ouzzjp -> queen discovers puzzle
+Now, decrypt the following text: xwas swlvhmpal bahuks vbmp",bird discovers around cave
+f5e4615b,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+65 -> LXV
+88 -> LXXXVIII
+40 -> XL
+Now, write the number 83 in the Wonderland numeral system.",LXXXIII
+0da71d35,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+jlf niin lusyzg olplji -> cat sees around palace
+czxhkf ruxfin xz bsyzflxz -> knight writes in mountain
+bsyni gxnjswiun fki jspsuvyp cia -> mouse discovers the colorful key
+klffiu niin qssc -> hatter sees book
+Now, decrypt the following text: gulhsz gulrn fki kxggiz juanflp",dragon draws the hidden crystal
+f06bd0ca,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+bxohkxi mgjhnyxij oenyx dnpubogu -> teacher discovers above mountain
+bxohkxi ixomj oinpum rnixjb -> teacher reads around forest
+bkx eigvkb wgaoim ixomj -> the bright wizard reads
+bkx wgjx fpxxu mgjhnyxij -> the wise queen discovers
+wgaoim hixobxj cxq -> wizard creates key
+Now, decrypt the following text: bkx ouhgxub kobbxi mgjhnyxij",the ancient hatter discovers
+28c7a0cf,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+27.59 m becomes 36.72
+36.56 m becomes 48.66
+44.28 m becomes 58.94
+Now, convert the following measurement: 27.93 m",37.18
+acc0955e,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+jfeewy csbuhvwyb kncwy mfycwn -> hatter discovers under garden
+ufe slfmsnwb ejw bwuywe rheshn -> cat imagines the secret potion
+cyfmhn cywflb uygbefp -> dragon dreams crystal
+Now, decrypt the following text: zsyc cywflb ejw cfyi eywfbkyw",bird dreams the dark treasure
+5d834875,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+08`18 = 0846
+34-95 = 201
+79`94 = 3574
+33`23 = 6501
+Now, determine the result for: 91-33",25
+92528df4,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.23s, distance = 72.81 m
+For t = 2.79s, distance = 31.67 m
+For t = 1.35s, distance = 7.42 m
+For t = 3.72s, distance = 56.31 m
+Now, determine the falling distance for t = 2.81s given d = 0.5*g*t^2.",32.13
+b7f05101,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+osfnqk xrbsh lrkfrs -> knight found potion
+wfth gqzmpm zwrdp dfjjznp -> bird chases above village
+kqp hzto kpzgqpt hfmgrdptm -> the dark teacher discovers
+kqp hzto zjfgp htzim -> the dark alice draws
+Now, decrypt the following text: zjfgp fuznfspm bshpt kript",alice imagines under tower
+41fafef0,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+76 -> LXXVI
+52 -> LII
+19 -> XIX
+17 -> XVII
+84 -> LXXXIV
+Now, write the number 11 in the Wonderland numeral system.",XI
+14917709,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+18.09 m becomes 22.17
+27.84 m becomes 34.12
+45.04 m becomes 55.20
+Now, convert the following measurement: 35.92 m",44.02
+d68daa97,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00100101 -> 01011001
+10101011 -> 10011010
+11100010 -> 00011000
+01011100 -> 11010111
+00000010 -> 00100000
+00000111 -> 01110001
+11011110 -> 11010111
+
+Now, determine the output for: 11100110",01011001
+322c6169,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00101111 -> 10110100
+01100000 -> 00000000
+01110110 -> 11011001
+01010100 -> 00000000
+10100110 -> 11010010
+00010110 -> 01001000
+10010011 -> 01001000
+
+Now, determine the output for: 11000111",01100011
+d01b69aa,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+gxugha zuacpm gva pcyedch guacmxua -> turtle dreams the magical treasure
+prxma duacgam curxoz grbau -> mouse creates around tower
+gacdvau uaczm oacu mdvrrh -> teacher reads near school
+Now, decrypt the following text: jxaao mgxzeam irgero",queen studies potion
+981182f4,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+beobti ifktpoiz dpoizb -> turtle explores forest
+qcb oicuz bmi vnzi rpph -> cat reads the wise book
+zbeuiyb zbeuniz bmopewm nztcyu -> student studies through island
+hynwmb ifktpoiz eyuio nztcyu -> knight explores under island
+Now, decrypt the following text: ctnqi uocvz hia",alice draws key
+b1b095ea,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11111010 -> 01111110
+10010101 -> 10000101
+10110000 -> 00101100
+10110101 -> 10001101
+01100010 -> 01011000
+00100010 -> 01001000
+11011111 -> 11010111
+10001100 -> 10100011
+
+Now, determine the output for: 00111100",10001111
+487ae36f,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.84s, distance = 88.79 m
+For t = 2.54s, distance = 24.45 m
+For t = 1.96s, distance = 14.56 m
+For t = 4.42s, distance = 74.05 m
+Now, determine the falling distance for t = 4.65s given d = 0.5*g*t^2.",81.95
+899e9abc,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+`}-""` = -}#
+/}-/@ = -?""
+}@+(} = ()
+Now, determine the result for: ?)-}}","["""
+1dd697e1,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+rib txyxskey tzr lsprbn -> the colorful cat writes
+rib tybvbs zyptb tsbzrbn -> the clever alice creates
+msphtbnn kxyyxln rib tespxen mxrpxh -> princess follows the curious potion
+dhpgir oszln rib wzgptzy qxxd -> knight draws the magical book
+Now, decrypt the following text: rib tespxen qpso tsbzrbn",the curious bird creates
+543dc1a0,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+28.32 m becomes 33.80
+10.25 m becomes 12.23
+7.32 m becomes 8.74
+42.97 m becomes 51.28
+27.35 m becomes 32.64
+Now, convert the following measurement: 7.14 m",8.52
+3019f44e,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+dmceimu abnehkmun dim nmeumd ahhu -> teacher discovers the secret door
+dmceimu abnehkmun dumcnyum -> teacher discovers treasure
+dim nducprm dmceimu vhypa -> the strange teacher found
+cxbem zubdmn ypamu kcxxmq -> alice writes under valley
+dim oubrid zblcua zubdmn -> the bright wizard writes
+Now, decrypt the following text: ucoobd ndyabmn bp hemcp",rabbit studies in ocean
+6f91481e,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11101000 -> 00000000
+00010010 -> 00000000
+01101101 -> 10000000
+01010101 -> 10100000
+10000001 -> 00000000
+10100001 -> 00000000
+00100010 -> 01000000
+10011001 -> 00100000
+00011100 -> 00000000
+
+Now, determine the output for: 01100111",11000000
+4009ae3e,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+21.21 m becomes 22.45
+14.91 m becomes 15.78
+6.46 m becomes 6.84
+Now, convert the following measurement: 13.87 m",14.68
+74da6cbe,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+jovjwi vitcl ljmvb -> turtle reads story
+upytvc utjeail xtvciz -> wizard watches garden
+jai apcciz upytvc qmozc -> the hidden wizard found
+jai tzepizj jiteaiv cvithl -> the ancient teacher dreams
+Now, decrypt the following text: atjjiv eatlil pz meitz",hatter chases in ocean
+5d45db8f,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+27.65 m becomes 21.21
+37.77 m becomes 28.98
+49.72 m becomes 38.15
+5.39 m becomes 4.14
+Now, convert the following measurement: 27.65 m",21.21
+52862572,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11110111 -> 10111111
+10110011 -> 10111111
+10100001 -> 00100111
+01101011 -> 00010011
+10000110 -> 10001100
+01000001 -> 01010111
+11111101 -> 11101111
+01010001 -> 11011111
+
+Now, determine the output for: 01011010",00000010
+4c7ed129,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ncpqtr huzidf froua -> knight dreams story
+tirrzu fzzf rtz tphhzc dzffiqz -> hatter sees the hidden message
+jpmiuh huzidf rtz tphhzc wymmxz -> wizard dreams the hidden puzzle
+Now, decrypt the following text: rtz eyupoyf fryhzcr etifzf",the curious student chases
+09d5ee68,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+<:+|& = <:|&
+'&+>? = '&>?
+$!*!| = !!:&
+|:-?' = -&$
+Now, determine the result for: |:*>>",!?'!
+969a6b00,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+/(':! = `/
+@|'`^ = '`|
+^^}>^ = (?
+@/""(: = @/?^
+Now, determine the result for: `^"">?",?!?>
+cf0f56d2,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+38.92 m becomes 64.47
+49.42 m becomes 81.87
+48.97 m becomes 81.12
+48.6 m becomes 80.51
+Now, convert the following measurement: 25.93 m",42.96
+d030b265,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10100011 -> 00110001
+11101100 -> 11000001
+01000000 -> 00000000
+00111100 -> 11000000
+00111110 -> 11100000
+11000110 -> 01100001
+01000101 -> 01010000
+10101101 -> 11010001
+
+Now, determine the output for: 00001100",11000000
+da2998b6,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+^#+[| = >?<
+^^+$> = ([
+#[-?> = -#^
+Now, determine the result for: <(-<#",-?|
+3f9bd1e7,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10110111 -> 11011010
+01111101 -> 10110100
+00011100 -> 00000000
+01110111 -> 11111001
+00001100 -> 00000000
+01001101 -> 00100100
+01011110 -> 01101001
+
+Now, determine the output for: 00010100",00000000
+5a3cbc28,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+hda xirbsiy csiya bcumblay -> the curious mouse imagines
+frumsl xrauhay hda yaxrah murfal -> dragon creates the secret garden
+zblm wsilf bl xuyhna -> king found in castle
+unbxa raufy hda ybnvar cayyuma -> alice reads the silver message
+Now, decrypt the following text: xuh guhxday blybfa vbnnuma",cat watches inside village
+397010ac,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.73s, distance = 101.98 m
+For t = 4.5s, distance = 148.43 m
+For t = 2.34s, distance = 40.14 m
+For t = 2.68s, distance = 52.65 m
+Now, determine the falling distance for t = 3.22s given d = 0.5*g*t^2.",76.0
+13ad7bce,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+69-63 = 06
+06*17 = 1706
+37+29 = 461
+79*88 = 8879
+47-09 = -61
+Now, determine the result for: 71-45",-73
+3687b4bb,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+24`28 = 3443
+65#51 = 17
+87`61 = 7421
+52`01 = 942
+14#57 = 611
+Now, determine the result for: 53`95",4602
+8e962ee6,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+22.98 m becomes 28.17
+39.27 m becomes 48.13
+24.49 m becomes 30.02
+32.37 m becomes 39.68
+26.86 m becomes 32.92
+Now, convert the following measurement: 34.57 m",42.37
+598af975,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+32.95 m becomes 32.68
+32.78 m becomes 32.51
+42.57 m becomes 42.22
+25.63 m becomes 25.42
+32.32 m becomes 32.05
+Now, convert the following measurement: 25.59 m",25.38
+99e18140,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+14.04 m becomes 16.33
+49.99 m becomes 58.16
+18.51 m becomes 21.53
+7.34 m becomes 8.54
+13.63 m becomes 15.86
+Now, convert the following measurement: 30.25 m",35.19
+c5582800,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.44s, distance = 124.43 m
+For t = 4.54s, distance = 130.1 m
+For t = 1.22s, distance = 9.39 m
+For t = 2.45s, distance = 37.89 m
+Now, determine the falling distance for t = 4.9s given d = 0.5*g*t^2.",151.55
+bc586060,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.64s, distance = 7.43 m
+For t = 3.77s, distance = 39.29 m
+For t = 2.62s, distance = 18.98 m
+For t = 1.23s, distance = 4.18 m
+Now, determine the falling distance for t = 4.38s given d = 0.5*g*t^2.",53.03
+f692a1d8,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ldy mypoyl gqyya wkeswaym -> the secret queen imagines
+ldy mloeasy jowapymm urqaf -> the strange princess found
+krqmy urhhrtm ldy mypoyl kej -> mouse follows the secret map
+ldy keswpeh lyepdyo telpdym -> the magical teacher watches
+ehwpy mlqfwym eorqaf uroyml -> alice studies around forest
+Now, decrypt the following text: lqolhy urqaf qafyo rpyea",turtle found under ocean
+a6046287,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+59 -> LIX
+84 -> LXXXIV
+5 -> V
+38 -> XXXVIII
+Now, write the number 75 in the Wonderland numeral system.",LXXV
+cf9bebe9,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11010011 -> 01011011
+00001101 -> 01001101
+11110011 -> 11001011
+01011001 -> 00110111
+10001100 -> 10001001
+00011001 -> 00010111
+11101001 -> 10101111
+11101111 -> 10110101
+
+Now, determine the output for: 10100101",10111001
+a027a729,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+45.28 m becomes 55.91
+29.49 m becomes 36.42
+34.61 m becomes 42.74
+41.06 m becomes 50.70
+15.36 m becomes 18.97
+Now, convert the following measurement: 5.92 m",7.31
+e9d5d653,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+mussj ihgghzr bhhk -> queen follows book
+dgnfs ihuja nj fdrxgs -> alice found in castle
+kjnvlx aysdqr bsphja hfsdj -> knight dreams beyond ocean
+tynjfsrr aydzr dyhuja qhujxdnj -> princess draws around mountain
+ldxxsy sotghysr xls qprxsynhur xysdruys -> hatter explores the mysterious treasure
+Now, decrypt the following text: xls lnaasj xsdflsy rssr",the hidden teacher sees
+6117f46b,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+56 -> LVI
+16 -> XVI
+76 -> LXXVI
+8 -> VIII
+38 -> XXXVIII
+Now, write the number 49 in the Wonderland numeral system.",XLIX
+96a607cc,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+28.73 m becomes 39.13
+31.37 m becomes 42.72
+13.78 m becomes 18.77
+26.27 m becomes 35.78
+Now, convert the following measurement: 16.65 m",22.68
+6d196fe8,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01110110 -> 11100111
+11101010 -> 00010111
+01100101 -> 11001011
+01000111 -> 00000011
+01101010 -> 00010111
+11111110 -> 11000111
+00101111 -> 10100011
+
+Now, determine the output for: 00000101",01001011
+7609c01e,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.29s, distance = 121.32 m
+For t = 4.08s, distance = 109.73 m
+For t = 1.5s, distance = 14.83 m
+For t = 2.32s, distance = 35.48 m
+For t = 1.28s, distance = 10.8 m
+Now, determine the falling distance for t = 2.54s given d = 0.5*g*t^2.",42.53
+9dcd3480,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+5 -> V
+74 -> LXXIV
+15 -> XV
+88 -> LXXXVIII
+Now, write the number 88 in the Wonderland numeral system.",LXXXVIII
+2630aaf8,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10111000 -> 00111111
+11100111 -> 10111001
+10110010 -> 10111101
+10111001 -> 01111111
+00000110 -> 01100111
+11000110 -> 01110101
+11010101 -> 11111101
+00011111 -> 01000111
+01000011 -> 00110010
+00010111 -> 01100111
+
+Now, determine the output for: 11111010",10111110
+f757b0f0,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+43.87 m becomes 81.38
+47.97 m becomes 88.99
+15.05 m becomes 27.92
+19.77 m becomes 36.68
+29.1 m becomes 53.98
+Now, convert the following measurement: 6.85 m",12.71
+7f73016f,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00011000 -> 11110011
+01001111 -> 10011010
+00001011 -> 10111010
+00000001 -> 00111111
+00111001 -> 00100011
+11000111 -> 11011110
+11001001 -> 01011111
+01110000 -> 11000111
+00001001 -> 00111011
+
+Now, determine the output for: 01010010",01010110
+83d0266a,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+33.14 m becomes 17.55
+41.38 m becomes 21.92
+14.95 m becomes 7.92
+49.11 m becomes 26.01
+48.53 m becomes 25.71
+Now, convert the following measurement: 13.62 m",7.21
+da900804,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.73s, distance = 137.93 m
+For t = 1.91s, distance = 22.49 m
+For t = 2.34s, distance = 33.76 m
+Now, determine the falling distance for t = 3.27s given d = 0.5*g*t^2.",65.92
+4b68c0aa,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ewig xyuzk pby gnhzyi fnpwni -> king reads the golden potion
+pqxphy vxyupyk pxyukqxy -> turtle creates treasure
+xusswp vxyupyk iyux kvbnnh -> rabbit creates near school
+Now, decrypt the following text: ewig yrfhnxyk twxxnx",king explores mirror
+797ae611,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+99 -> XCIX
+58 -> LVIII
+81 -> LXXXI
+64 -> LXIV
+Now, write the number 39 in the Wonderland numeral system.",XXXIX
+d9f1416e,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+thm vpdpwnid bcoaht vwmgtmq -> the colorful knight creates
+tiwtdm npddpeq thm viwopiq rppb -> turtle follows the curious book
+thm gcvomct eokgwu egtvhmq -> the ancient wizard watches
+Now, decrypt the following text: uwgapc npddpeq twmgqiwm",dragon follows treasure
+ddb9aafd,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+05'46 = 511
+37]85 = 51
+11'47 = 68
+15""03 = 0351
+Now, determine the result for: 55""18",5544
+049be61b,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+rsx fymjbyu rymrhx zmxoiu -> the curious turtle dreams
+rsx qjux rxofsxm cbyvz -> the wise teacher found
+moddjr zmoqu rsx fhxgxm zbbm -> rabbit draws the clever door
+Now, decrypt the following text: rsx ipurxmjbyu uryzxvr jioljvxu",the mysterious student imagines
+9443e78b,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+vmy jctqa emuanq -> cat found garden
+rytanqy rytasnr vubryml -> student studies crystal
+dqsegy vgmrnr rnvuny -> knight chases secret
+hctrn jcllcfr yunmrtun -> mouse follows treasure
+Now, decrypt the following text: ygn ryumqen aumecq vgmrnr",the strange dragon chases
+a642a3a1,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ucdz zdnfhj tricrs -> bird dreams potion
+bxnns jnnj txggqn -> queen sees puzzle
+lcsy notqrdnj ian aczzns jirdm -> king explores the hidden story
+zdfyrs vdcinj ian exdcrxj efjiqn -> dragon writes the curious castle
+Now, decrypt the following text: ian udcyai afiind zdfvj",the bright hatter draws
+baab28bb,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+::+!"" = >#
+\:-|! = \\
+\/+""/ = $/
+:{*## = \>""{
+Now, determine the result for: >/+\!",#!
+6183bab7,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+/^+^[ = :/%
+^]-/] = []
+/^+""@ = [/
+Now, determine the result for: ""{-:/",@@
+b2bdef43,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01000000 -> 11111111
+11001010 -> 01111111
+00001010 -> 01111111
+00111110 -> 01111111
+01111011 -> 10111111
+00101000 -> 11111111
+00000101 -> 00111111
+01111111 -> 10111111
+
+Now, determine the output for: 11110010",01111111
+a90fdd22,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.62s, distance = 6.96 m
+For t = 1.74s, distance = 8.03 m
+For t = 3.6s, distance = 34.38 m
+For t = 2.46s, distance = 16.05 m
+Now, determine the falling distance for t = 3.32s given d = 0.5*g*t^2.",29.24
+175345c2,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+wbx skiwxuerci lumdrq gmwtbxi -> the mysterious dragon watches
+ocxxq guewxi murcql wrgxu -> queen writes around tower
+maetx guewxi tukiwma -> alice writes crystal
+gefmul iwclexi wbx ixtuxw jxk -> wizard studies the secret key
+iwclxqw lumgi lrru -> student draws door
+Now, decrypt the following text: wxmtbxu luxmsi wbx ieavxu lrru",teacher dreams the silver door
+289ed2c5,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+20.19 m becomes 34.55
+8.75 m becomes 14.97
+16.29 m becomes 27.88
+41.51 m becomes 71.04
+Now, convert the following measurement: 14.25 m",24.39
+873b8ea2,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11100101 -> 11110010
+10000100 -> 01000010
+01111111 -> 10111111
+11101101 -> 11110110
+01001111 -> 10100111
+10111010 -> 01011101
+01001001 -> 10100100
+10011111 -> 11001111
+01110100 -> 00111010
+10110011 -> 11011001
+
+Now, determine the output for: 11100100",01110010
+b634898d,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01011111 -> 11000000
+01111110 -> 10000000
+00110010 -> 10000000
+00101000 -> 00000000
+01101101 -> 01000000
+01110101 -> 01000000
+01000111 -> 11000000
+11010110 -> 10000001
+01010110 -> 10000000
+
+Now, determine the output for: 01100011",11000000
+59f9b417,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.47s, distance = 53.13 m
+For t = 4.88s, distance = 105.08 m
+For t = 2.28s, distance = 22.94 m
+For t = 4.65s, distance = 95.41 m
+For t = 1.5s, distance = 9.93 m
+Now, determine the falling distance for t = 3.16s given d = 0.5*g*t^2.",44.06
+7312db7e,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+12.66 m becomes 20.80
+7.57 m becomes 12.43
+7.2 m becomes 11.83
+26.78 m becomes 43.99
+7.22 m becomes 11.86
+Now, convert the following measurement: 15.02 m",24.67
+d72c3779,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+43.87 m becomes 79.02
+39.04 m becomes 70.32
+9.03 m becomes 16.27
+42.33 m becomes 76.25
+16.99 m becomes 30.60
+Now, convert the following measurement: 11.61 m",20.91
+dceb9ba2,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+19 -> XIX
+90 -> XC
+42 -> XLII
+88 -> LXXXVIII
+42 -> XLII
+Now, write the number 94 in the Wonderland numeral system.",XCIV
+01e09228,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01000111 -> 01110000
+00100010 -> 00101010
+10101100 -> 01101010
+10000110 -> 01100000
+01100010 -> 00101110
+00100011 -> 00111010
+00001011 -> 10010000
+11100110 -> 01111110
+
+Now, determine the output for: 01011001",10010101
+f929c6cc,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11011110 -> 11011011
+11011011 -> 01111011
+00011101 -> 10100011
+01110100 -> 10001110
+01111000 -> 00001111
+10000101 -> 10110000
+11111011 -> 01111111
+11011100 -> 10011011
+01001100 -> 10001001
+11010001 -> 00111010
+
+Now, determine the output for: 10001100",10010001
+a47b8207,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+20.76 m becomes 38.67
+14.6 m becomes 27.20
+13.27 m becomes 24.72
+15.85 m becomes 29.52
+Now, convert the following measurement: 47.84 m",89.11
+750adc0c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+({'%@ = ({|[
+%@&:% = %(
+[|/%! = !@
+:!':| = ::^[
+Now, determine the result for: ((/!@",^/
+3c15166f,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+100 -> C
+83 -> LXXXIII
+24 -> XXIV
+57 -> LVII
+Now, write the number 27 in the Wonderland numeral system.",XXVII
+c80b985a,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ykcarik uxzzxey yromrk -> student follows secret
+ksr ocmnxcy qznor emnkry -> the curious alice writes
+amqpxi rbdzxmry wqd -> dragon explores map
+ksr oxzxmucz engqma omrqkry -> the colorful wizard creates
+vcrri mrqay ksr ynzjrm dxknxi -> queen reads the silver potion
+Now, decrypt the following text: ksr oxzxmucz kcmkzr anyoxjrmy",the colorful turtle discovers
+db564ba9,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+`:-}} = -!]
+|}-^# = -)|
+^`+!| = ^`!|
+!]+)# = !])#
+Now, determine the result for: )]*)^",(`#
+80ac5a9f,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.39s, distance = 19.21 m
+For t = 4.03s, distance = 54.61 m
+For t = 4.24s, distance = 60.44 m
+Now, determine the falling distance for t = 2.85s given d = 0.5*g*t^2.",27.31
+9eccbafd,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+|'-%> = '!
+@""-'} = `|
+%>#""} = |%
+`&-@| = @!@
+Now, determine the result for: "">#'`",@>
+0140788e,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+40.61 m becomes 73.32
+34.78 m becomes 62.79
+12.78 m becomes 23.07
+31.68 m becomes 57.19
+Now, convert the following measurement: 21.46 m",38.74
+8463d32e,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+89 -> LXXXIX
+20 -> XX
+70 -> LXX
+Now, write the number 15 in the Wonderland numeral system.",XV
+599d3d6a,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+32.3 m becomes 53.74
+13.88 m becomes 23.10
+23.9 m becomes 39.77
+14.54 m becomes 24.19
+Now, convert the following measurement: 30.47 m",50.70
+0bc7de44,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+31.68 m becomes 57.04
+30.67 m becomes 55.22
+20.22 m becomes 36.40
+44.9 m becomes 80.84
+Now, convert the following measurement: 17.35 m",31.24
+9ec1c00b,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+56 -> LVI
+80 -> LXXX
+47 -> XLVII
+Now, write the number 37 in the Wonderland numeral system.",XXXVII
+cb91b493,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+38 -> XXXVIII
+22 -> XXII
+95 -> XCV
+89 -> LXXXIX
+Now, write the number 29 in the Wonderland numeral system.",XXIX
+0cbdf547,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+riljpq bwofsa iofw nfko -> knight dreams near cave
+rlij uwlqoa qpwexjp nfko -> king writes through cave
+ulgfwb odtcewoa aonwoq -> wizard explores secret
+mxooi wofba vozeib ueibowcfib -> queen reads beyond wonderland
+Now, decrypt the following text: fclno ufqnpoa qpo vwljpq beew",alice watches the bright door
+c24e1a48,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11000100 -> 01100010
+01110011 -> 10111001
+01000000 -> 00100000
+11101010 -> 01110101
+01111101 -> 10111110
+11000000 -> 01100000
+10001010 -> 01000101
+01101101 -> 10110110
+00000111 -> 10000011
+01011110 -> 00101111
+
+Now, determine the output for: 00100010",00010001
+e5ae10ea,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+46.91 m becomes 68.85
+9.64 m becomes 14.15
+34.29 m becomes 50.32
+12.16 m becomes 17.85
+Now, convert the following measurement: 20.93 m",30.72
+cae68989,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+23 -> XXIII
+48 -> XLVIII
+71 -> LXXI
+57 -> LVII
+38 -> XXXVIII
+Now, write the number 83 in the Wonderland numeral system.",LXXXIII
+a901f565,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+79 -> LXXIX
+100 -> C
+35 -> XXXV
+47 -> XLVII
+Now, write the number 52 in the Wonderland numeral system.",LII
+c8d6d308,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+47.83 m becomes 61.99
+22.28 m becomes 28.88
+37.64 m becomes 48.78
+33.12 m becomes 42.93
+Now, convert the following measurement: 42.36 m",54.90
+1e9b66f0,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+28.97 m becomes 35.25
+9.3 m becomes 11.32
+31.82 m becomes 38.72
+Now, convert the following measurement: 8.87 m",10.79
+03a3437f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+/>-|/ = ':
+'>+/! = '>/!
+}!-'` = >'
+Now, determine the result for: '}-/>",-!
+9dfe5ac9,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+\/+<! = ''%
+'!-\% = -'%
+'%+') = ::
+Now, determine the result for: '\*%""","'\%"""
+340f68d0,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+44.41 m becomes 64.87
+10.79 m becomes 15.76
+28.57 m becomes 41.73
+Now, convert the following measurement: 10.24 m",14.96
+6d3b9da4,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+58[99 = 4148
+26'22 = 04'
+74<53 = 28
+02'83 = 81
+93'61 = 32'
+Now, determine the result for: 67<32",99
+a7ea7c33,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+30.3 m becomes 25.14
+33.93 m becomes 28.15
+13.28 m becomes 11.02
+Now, convert the following measurement: 25.14 m",20.86
+8c743940,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10100100 -> 01010010
+11000001 -> 01100000
+01111011 -> 00111101
+01100110 -> 00110011
+11010010 -> 01101001
+10101110 -> 01010111
+00110110 -> 00011011
+
+Now, determine the output for: 11001000",01100100
+ac394644,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+68 -> LXVIII
+66 -> LXVI
+98 -> XCVIII
+78 -> LXXVIII
+Now, write the number 20 in the Wonderland numeral system.",XX
+32f368ce,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+rottcg hbjjbxd trc ibjqcp hbgcdt -> hatter follows the golden forest
+tegtjc qadlbzcgd lodtjc -> turtle discovers castle
+trc ibjqcp yeccp hbjjbxd -> the golden queen follows
+tcolrcg qgcosd ucv -> teacher dreams key
+Now, decrypt the following text: tegtjc dteqacd ucv",turtle studies key
+edcb339f,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+81 -> LXXXI
+77 -> LXXVII
+57 -> LVII
+Now, write the number 81 in the Wonderland numeral system.",LXXXI
+75721550,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+41.46 m becomes 42.75
+19.26 m becomes 19.86
+29.01 m becomes 29.91
+Now, convert the following measurement: 7.7 m",7.94
+f860e46e,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+16 -> XVI
+88 -> LXXXVIII
+68 -> LXVIII
+55 -> LV
+Now, write the number 14 in the Wonderland numeral system.",XIV
+9be2a93a,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.4s, distance = 110.83 m
+For t = 2.42s, distance = 33.53 m
+For t = 3.86s, distance = 85.29 m
+For t = 2.68s, distance = 41.12 m
+For t = 1.05s, distance = 6.31 m
+Now, determine the falling distance for t = 4.12s given d = 0.5*g*t^2.",97.17
+a6082142,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01001011 -> 01001000
+11011011 -> 01001000
+00011010 -> 11000000
+10000000 -> 00000100
+00000000 -> 00000000
+11101101 -> 00100101
+10110111 -> 10010001
+01111000 -> 00000011
+01111001 -> 00001001
+
+Now, determine the output for: 11010010",00010010
+3cbc472a,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+42 -> XLII
+28 -> XXVIII
+85 -> LXXXV
+76 -> LXXVI
+100 -> C
+Now, write the number 79 in the Wonderland numeral system.",LXXIX
+985002a4,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.92s, distance = 61.62 m
+For t = 1.65s, distance = 6.93 m
+For t = 4.92s, distance = 61.62 m
+For t = 2.12s, distance = 11.44 m
+For t = 1.6s, distance = 6.52 m
+Now, determine the falling distance for t = 1.87s given d = 0.5*g*t^2.",8.9
+1f0fbe5f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+06*79 = 0285
+75-72 = 3
+88-32 = 91
+Now, determine the result for: 54-68",14
+e0918834,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10011101 -> 01000100
+01110000 -> 00000011
+11110000 -> 00000111
+10001111 -> 11000100
+00110111 -> 11000001
+11011011 -> 11000110
+01110011 -> 11000011
+00001110 -> 10000000
+
+Now, determine the output for: 11111110",10000111
+df1e3788,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+?$+(? = >>?
+&}-}^ = >#
+#}*`# = #$}!
+!!*($ = &!(>
+Now, determine the result for: >&*>#",>^>
+dc0f5e5e,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+<#+{\ = <#{\
+<<*{> = {!\^
+#>*## = }}%%
+\{+!} = \{!}
+Now, determine the result for: %%+}#",%%}#
+e6af8e6f,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00001111 -> 11110000
+01011001 -> 10010000
+10100100 -> 01000001
+00110111 -> 01110000
+11100110 -> 01100001
+11000001 -> 00010001
+01000100 -> 01000000
+01100110 -> 01100000
+01100100 -> 01000000
+
+Now, determine the output for: 10000001",00010001
+7973ccd8,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.26s, distance = 6.77 m
+For t = 3.61s, distance = 55.59 m
+For t = 4.37s, distance = 81.46 m
+For t = 3.66s, distance = 57.14 m
+For t = 2.25s, distance = 21.59 m
+Now, determine the falling distance for t = 1.1s given d = 0.5*g*t^2.",5.16
+ef1b13ac,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+19$41 = 60
+51?71 = 5171
+85$70 = 155
+Now, determine the result for: 74+66",8
+677055ae,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+43.13 m becomes 23.31
+38.17 m becomes 20.63
+35.46 m becomes 19.17
+5.94 m becomes 3.21
+36.6 m becomes 19.78
+Now, convert the following measurement: 46.38 m",25.07
+2bf047ca,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+91 -> XCI
+30 -> XXX
+65 -> LXV
+72 -> LXXII
+86 -> LXXXVI
+Now, write the number 49 in the Wonderland numeral system.",XLIX
+a91414ee,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00111110 -> 01111111
+00100100 -> 01001010
+00011010 -> 00110101
+11011001 -> 10111111
+00000100 -> 00001000
+10001111 -> 00010110
+01001110 -> 10011000
+10010001 -> 00101011
+
+Now, determine the output for: 10001001",00011010
+f1b0d213,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+gjutay puwcnvlhw uj vmkklq -> knight discovers in valley
+cmy phmbw onng -> cat draws book
+buemhp phmbw yahnfta ynblh -> wizard draws through tower
+ouhp puwcnvlhw yal wukvlh wlchly -> bird discovers the silver secret
+Now, decrypt the following text: wyfpljy puwcnvlhw ujwupl kuohmhq",student discovers inside library
+0c671b98,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11111111 -> 11111111
+00011010 -> 10000110
+10001111 -> 11100011
+00100010 -> 10001000
+00000000 -> 00000000
+00000011 -> 11000000
+11111100 -> 00111111
+11111110 -> 10111111
+
+Now, determine the output for: 00111000",00001110
+1c890d3e,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+24 -> XXIV
+42 -> XLII
+40 -> XL
+75 -> LXXV
+4 -> IV
+Now, write the number 33 in the Wonderland numeral system.",XXXIII
+d5a28743,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10100100 -> 00000000
+01000000 -> 00000000
+01001101 -> 00000010
+01100100 -> 00010000
+00111111 -> 10001111
+01011101 -> 00000110
+10010110 -> 00000001
+
+Now, determine the output for: 00101110",00000011
+e3590284,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00101000 -> 11111111
+11110100 -> 11111111
+00100100 -> 11111111
+01001000 -> 11111110
+00001100 -> 11111111
+10011000 -> 11111101
+01110001 -> 11111111
+
+Now, determine the output for: 01010011",11111111
+8789bd45,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11100101 -> 01010010
+10011101 -> 01001110
+00101010 -> 00010101
+00011110 -> 00001111
+10111011 -> 10011101
+00101110 -> 00010111
+11111001 -> 11011100
+01110100 -> 00111010
+10110100 -> 01011010
+
+Now, determine the output for: 00100100",00010010
+b1911ff3,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+86 -> LXXXVI
+45 -> XLV
+29 -> XXIX
+50 -> L
+Now, write the number 68 in the Wonderland numeral system.",LXVIII
+36727ff6,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ekz jmgdke ymbdiw zcanimzu -> the bright dragon explores
+ekz oxuezmgifu qfzzw uzzu -> the mysterious queen sees
+ekz hnztzm ezbhkzm mzbyu -> the clever teacher reads
+Now, decrypt the following text: oifuz zcanimzu ekz uzhmze afrrnz",mouse explores the secret puzzle
+8bbb6458,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.34s, distance = 37.46 m
+For t = 2.9s, distance = 57.53 m
+For t = 1.93s, distance = 25.48 m
+For t = 3.62s, distance = 89.65 m
+For t = 2.69s, distance = 49.5 m
+Now, determine the falling distance for t = 2.3s given d = 0.5*g*t^2.",36.19
+9ca96a88,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+voasb dbqms qwojb shkooc -> mouse reads above school
+zuntkl mnshojbds qdoaum tqdmbu -> knight discovers around garden
+voasb slamnbs lkb hocodeac hdfslqc -> mouse studies the colorful crystal
+lkb knmmbu lbqhkbd hkqsbs -> the hidden teacher chases
+Now, decrypt the following text: mdqtou dbqms lkb sldqutb ldbqsadb",dragon reads the strange treasure
+36a33623,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11101100 -> 00011001
+00000010 -> 00000000
+11011110 -> 10111111
+11011100 -> 00111011
+01000001 -> 00000000
+01100010 -> 10001100
+11101011 -> 11011110
+11001111 -> 10011011
+00100110 -> 00001100
+
+Now, determine the output for: 00000001",00000000
+20010db2,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.87s, distance = 193.38 m
+For t = 1.68s, distance = 23.01 m
+For t = 3.73s, distance = 113.44 m
+For t = 4.09s, distance = 136.39 m
+Now, determine the falling distance for t = 3.47s given d = 0.5*g*t^2.",98.18
+5be6a3c1,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+@:!?& = @:?&
+&[{?} = '@&[
+@[*@[ = %
+[@{?} = ':[@
+Now, determine the result for: [:{}@",}}?)
+54589e31,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+56 -> LVI
+96 -> XCVI
+20 -> XX
+77 -> LXXVII
+Now, write the number 19 in the Wonderland numeral system.",XIX
+a2e6bcdb,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+jzl agmkzj zyjjlg qzyxlx -> the bright hatter chases
+tmvygo pessetx alfeno jetlg -> wizard follows beyond tower
+hnmkzj pecno peglxj -> knight found forest
+ysmql qglyjlx mn wmssykl -> alice creates in village
+amgo xllx jzl ynqmlnj aeeh -> bird sees the ancient book
+Now, decrypt the following text: decxl qzyxlx dlxxykl",mouse chases message
+d4483d51,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+56+14 = 601
+74-71 = 03
+91*88 = 1761
+84*27 = 5543
+76-16 = 6
+Now, determine the result for: 33*87",3752
+d7e5414c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+#@}<\ = @#@|
+<""}\| = #@""|
+[@}\# = [|\$
+[<{@# = $\
+@#}@` = |`$`
+Now, determine the result for: #[}@[",|%\\
+7a9561b2,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+zxltwxd twlnxn ibbd -> teacher chases door
+zwx nxtdxz dlppjz dxlin -> the secret rabbit reads
+pjdi vbqqbun kxg -> bird follows key
+crxxe udjzxn mrooqx -> queen writes puzzle
+wlzzxd twlnxn je qjpdldg -> hatter chases in library
+Now, decrypt the following text: ujoldi nxxn exld tlsx",wizard sees near cave
+5cc25518,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+usk mbeebxz kvi ueicit uszkei -> cat follows the clever castle
+xgqsty ygzubcitz go kbxit -> wizard discovers in tower
+jtgouizz tisyz jbkgbo -> princess reads potion
+xgqsty ygzubcitz jbkgbo -> wizard discovers potion
+kvi ystw vskkit mbeebxz -> the dark hatter follows
+Now, decrypt the following text: kvi rnzkitgbaz ytshbo mbeebxz",the mysterious dragon follows
+4530aff6,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+50:68 = 18
+67&89 = 156
+25:32 = 7
+16`47 = 753
+41:76 = 35
+Now, determine the result for: 12&99",111
+4e01d71a,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.65s, distance = 81.17 m
+For t = 1.48s, distance = 13.35 m
+For t = 4.49s, distance = 122.83 m
+For t = 4.05s, distance = 99.94 m
+Now, determine the falling distance for t = 3.5s given d = 0.5*g*t^2.",74.64
+aac9bfab,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+alt pnbuy tze aningpbi ynng -> cat found the colorful door
+rnbwe mrlxmuew tzgnbxz waznni -> mouse imagines through school
+hbeeu ygelrw ynng -> queen dreams door
+dmclgy ygelrw kbccie -> wizard dreams puzzle
+Now, decrypt the following text: tze fgmxzt wtbyeut gelyw",the bright student reads
+d165af22,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+28.66 m becomes 22.74
+34.14 m becomes 27.09
+21.18 m becomes 16.80
+8.03 m becomes 6.37
+20.38 m becomes 16.17
+Now, convert the following measurement: 18.35 m",14.56
+48ae115d,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+[^-\\ = (::
+[`)\> = `]
+>\'|` = (>@`
+(:'>@ = @^:
+\>)`\ = |]
+Now, determine the result for: ]>']|",\[@`
+b12df751,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+34.47 m becomes 35.59
+39.92 m becomes 41.22
+28.27 m becomes 29.19
+Now, convert the following measurement: 28.38 m",29.30
+d2fea2ca,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+osttnm rxserqnb rq zyqvnmjsqv -> hatter imagines in wonderland
+msccrt zsthonb tomyaeo yhnsq -> rabbit watches through ocean
+hst nfdjymnb aqvnm psjjnw -> cat explores under valley
+Now, decrypt the following text: msccrt mnsvb ton sqhrnqt xsd",rabbit reads the ancient map
+4f0b3c51,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+yjligjw dwlqp osdjw mlwdjs -> teacher draws under garden
+ygj ifjvjw rszmgy iglpjp -> the clever knight chases
+xwzsijpp juxfkwjp lwkosd mlwdjs -> princess explores around garden
+lfzij iwjlyjp iwcpylf -> alice creates crystal
+ily bkosd ygj pzfvjw hzwwkw -> cat found the silver mirror
+Now, decrypt the following text: aojjs dwlqp ygj pywlsmj ilpyfj",queen draws the strange castle
+d008b0b6,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+79+05 = 741
+23+28 = 411
+14*82 = 7411
+Now, determine the result for: 37+85",131
+606fd14d,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+14 -> XIV
+56 -> LVI
+51 -> LI
+46 -> XLVI
+86 -> LXXXVI
+Now, write the number 7 in the Wonderland numeral system.",VII
+5765a947,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+85 -> LXXXV
+99 -> XCIX
+15 -> XV
+71 -> LXXI
+Now, write the number 34 in the Wonderland numeral system.",XXXIV
+9a19fc2d,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+{{-># = {#
+[!-)[ = !{
+}/+&{ = &'
+[[+') = >&
+/'+// = &[[
+Now, determine the result for: !&+)#",#>[
+ccd2dbe4,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ymnnwa klgexhwag gweawn -> hatter discovers secret
+falzewgg ltmjlzwg vzkwa emgnpw -> princess imagines under castle
+kamjxz kambg nyw gweawn kxxa -> dragon draws the secret door
+mplew kawmtg nyw jxpkwz twggmjw -> alice dreams the golden message
+Now, decrypt the following text: kamjxz balnwg vzkwa fmpmew",dragon writes under palace
+73584164,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+75 -> LXXV
+47 -> XLVII
+74 -> LXXIV
+64 -> LXIV
+56 -> LVI
+Now, write the number 92 in the Wonderland numeral system.",XCII
+b2506950,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+98 -> XCVIII
+65 -> LXV
+58 -> LVIII
+Now, write the number 44 in the Wonderland numeral system.",XLIV
+7291b804,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+zwf aojf yrffp ocsgopfj -> the wise queen imagines
+ntopqfjj jzrbofj beet -> princess studies door
+zwf jovhft tsmmoz btsaj -> the silver rabbit draws
+jzrbfpz ievveaj nezoep -> student follows potion
+Now, decrypt the following text: zwf spqofpz kopg bojqehftj",the ancient king discovers
+92c58c9a,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+lpe netfel fhkkml neen -> the secret rabbit sees
+nldyexl qhltpen thnloe -> student watches castle
+lpe ruoyex lehtpef fehyn -> the golden teacher reads
+Now, decrypt the following text: lpe pmyyex smxr yfhqn",the hidden king draws
+b595b6e8,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11010111 -> 01110001
+00101010 -> 10000000
+11111011 -> 10110000
+11010001 -> 00010000
+01010110 -> 00000000
+01010011 -> 00010000
+10100010 -> 00100000
+00110011 -> 00000000
+01000000 -> 00000000
+
+Now, determine the output for: 11101010",10100000
+82453ed5,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+tzyhmzi vwydvszp tmiledm qlsuzinysu -> teacher imagines through wonderland
+kezzs izyup wzppydz -> queen reads message
+tzyhmzi uizywp tmz bivdmt oltvls -> teacher dreams the bright potion
+Now, decrypt the following text: tmz uyix myttzi pzzp",the dark hatter sees
+9e494425,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+25.18 m becomes 34.75
+7.64 m becomes 10.54
+7.72 m becomes 10.65
+13.73 m becomes 18.95
+Now, convert the following measurement: 40.18 m",55.45
+23b0eb54,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+](*/| = ](/|
+(|-]} = ))
+\(-|| = -:/
+Now, determine the result for: ]/*:)",]/:)
+bfae1468,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+22.08 m becomes 31.60
+15.71 m becomes 22.48
+8.8 m becomes 12.59
+11.99 m becomes 17.16
+Now, convert the following measurement: 16.65 m",23.83
+c88eca54,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ywg asrg tsiv nudqv -> the wise bird found
+tsiv vibar lgk -> bird draws key
+mdggq aisygr pbj -> queen writes map
+jisqogrr owbrgr sq obryzg -> princess chases in castle
+ywg vbil asebiv oigbygr -> the dark wizard creates
+Now, decrypt the following text: ygbowgi abyowgr ywg asrg oikrybz",teacher watches the wise crystal
+6aaf6d43,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+93 -> XCIII
+81 -> LXXXI
+56 -> LVI
+68 -> LXVIII
+Now, write the number 33 in the Wonderland numeral system.",XXXIII
+c0f32a1e,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+54+03 = 67
+03+86 = 99
+18*29 = 2547
+84+36 = 211
+14-79 = 65
+Now, determine the result for: 92*02",085
+cf463245,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+76 -> LXXVI
+54 -> LIV
+37 -> XXXVII
+80 -> LXXX
+39 -> XXXIX
+Now, write the number 56 in the Wonderland numeral system.",LVI
+1da4f2db,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00111110 -> 00011111
+00010101 -> 10001010
+11011110 -> 01101111
+00101010 -> 00010101
+10110000 -> 01011000
+01110100 -> 00111010
+10001111 -> 00000111
+01110000 -> 00111000
+01110110 -> 00111011
+
+Now, determine the output for: 11001110",01100111
+d1c6beb0,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+))})% = })
+|\?'> = '%[|
+/>`/{ = [{'
+Now, determine the result for: \\`%'",|/
+536b705e,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ahr fszursa ocrrs wukzbgryk -> the ancient queen discovers
+ahr huwwrs nsuiha wukzbgryk -> the hidden knight discovers
+hfaary yrfwk us tbcsafus -> hatter reads in mountain
+zfa kacwurk ahr tfiuzfd krzyra -> cat studies the magical secret
+juxfyw wukzbgryk ayrfkcyr -> wizard discovers treasure
+Now, decrypt the following text: ahr wfyn yfqqua jyuark",the dark rabbit writes
+95a53faf,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+67 -> LXVII
+82 -> LXXXII
+12 -> XII
+60 -> LX
+95 -> XCV
+Now, write the number 42 in the Wonderland numeral system.",XLII
+7870aff7,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+idtnwl fwxxwmy tdwhli vwhlrtql -> dragon follows around mountain
+idtnwl kdetrey roe oqiiel fwdeyr -> dragon creates the hidden forest
+idtnwl iqykwcedy hlied wketl -> dragon discovers under ocean
+Now, decrypt the following text: vwhye fwxxwmy roe yqxced rdetyhde",mouse follows the silver treasure
+33436da3,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+41 -> XLI
+96 -> XCVI
+21 -> XXI
+Now, write the number 55 in the Wonderland numeral system.",LV
+c5955a0a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+$:-[[ = (&
+:?-)[ = $
+$(-&$ = &$
+Now, determine the result for: &:-&|",@'
+b0853608,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+87 -> LXXXVII
+20 -> XX
+31 -> XXXI
+29 -> XXIX
+Now, write the number 41 in the Wonderland numeral system.",XLI
+847d8897,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00101110 -> 00001000
+11010010 -> 00000000
+01011000 -> 00000000
+01101101 -> 00010001
+10000100 -> 00000000
+01111011 -> 00001100
+11110001 -> 00000100
+
+Now, determine the output for: 10010010",00000000
+0e467c7b,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+22.05 m becomes 28.58
+14.69 m becomes 19.04
+25.24 m becomes 32.72
+17.22 m becomes 22.32
+36.08 m becomes 46.77
+Now, convert the following measurement: 41.11 m",53.29
+ae494323,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.44s, distance = 31.11 m
+For t = 3.0s, distance = 47.03 m
+For t = 1.31s, distance = 8.97 m
+For t = 4.97s, distance = 129.09 m
+Now, determine the falling distance for t = 1.16s given d = 0.5*g*t^2.",7.03
+d016485f,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+poxsw swws nzw prtlurc pra -> mouse sees the magical map
+nzw slckwe nxencw dlsuokwes -> the silver turtle discovers
+ervvln yoxmd nzw slckwe aonlom -> rabbit found the silver potion
+nzw phsnweloxs rcluw snxdlws -> the mysterious alice studies
+Now, decrypt the following text: dertom swws rvokw arcruw",dragon sees above palace
+96e36a3c,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.07s, distance = 38.16 m
+For t = 1.52s, distance = 9.35 m
+For t = 1.95s, distance = 15.4 m
+For t = 1.74s, distance = 12.26 m
+Now, determine the falling distance for t = 3.37s given d = 0.5*g*t^2.",45.98
+07cbed38,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+45^08 = 0234
+37}95 = 131
+99^88 = 2178
+Now, determine the result for: 52}51",93
+f05dc9a6,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01101011 -> 01001100
+10111011 -> 01011011
+11101011 -> 01011100
+11110100 -> 10001110
+10000000 -> 00000000
+01000010 -> 00000000
+00100111 -> 00100000
+11110110 -> 10011110
+01100110 -> 00000100
+
+Now, determine the output for: 01100001",00001100
+2ee39f5f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+56+67 = 6756
+93+76 = 7693
+91*59 = 5081
+17*75 = 7404
+Now, determine the result for: 63*53",0621
+ecd328ef,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11000011 -> 11111000
+00100010 -> 10011000
+00110100 -> 10101101
+00101001 -> 01001010
+01001110 -> 11110011
+00010110 -> 10110101
+11101010 -> 11111010
+00100101 -> 01101001
+
+Now, determine the output for: 11010000",10110100
+2cf042b9,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+!>-)| = ]|
+!|-)@ = -^^
+@|+[| = <[
+>^-<^ = -^
+Now, determine the result for: |>-|[",?^
+eea90764,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+mtkkdn emtgo flndlz -> rabbit draws potion
+kdme xstopo xmyontu -> bird chases crystal
+mtkkdn oppo xmyontu -> rabbit sees crystal
+nvmnup xmptnpo opxmpn -> turtle creates secret
+avppz djtqdzpo onlmy -> queen imagines story
+Now, decrypt the following text: nsp jtqdxtu hdzq onvedpo",the magical king studies
+635fea7c,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.65s, distance = 86.73 m
+For t = 1.6s, distance = 16.67 m
+For t = 3.35s, distance = 73.06 m
+Now, determine the falling distance for t = 3.55s given d = 0.5*g*t^2.",82.04
+a02aeb6d,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+33 -> XXXIII
+67 -> LXVII
+99 -> XCIX
+Now, write the number 2 in the Wonderland numeral system.",II
+522f94ac,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+qrxxvf vircvwkm crqpkw -> rabbit imagines garden
+averqp mkkm fjk avmk zrmftk -> wizard sees the wise castle
+fjk rwzvkwf qrxxvf qkrpm -> the ancient rabbit reads
+rtvzk pvmzbhkqm rxbhk tvxqrqg -> alice discovers above library
+Now, decrypt the following text: fjk prql pqrcbw dbttbam",the dark dragon follows
+b977b320,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+srijod uyfdrvu qvm -> wizard studies key
+ycv tabaonfb qrlw sjytcvu -> the colorful king watches
+qrlw sjytcvu ycv horwcy tomuyjb -> king watches the bright crystal
+ycv sruv pfvvl ovjdu -> the wise queen reads
+cjyyvo dojsu haaq -> hatter draws book
+Now, decrypt the following text: hrod dojsu ycv uvtovy tjuybv",bird draws the secret castle
+10d29630,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10011010 -> 00101010
+00011011 -> 00001100
+00100111 -> 01111100
+00001010 -> 01101000
+10110101 -> 01110110
+00101111 -> 01011100
+00010110 -> 10011000
+00011111 -> 10011100
+10010100 -> 11010010
+01110111 -> 00111101
+
+Now, determine the output for: 01100010",11001001
+033d2b33,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+cnw dqiwey tnqgem -> cat writes garden
+wue jnticnl unwweq gqndy -> the magical hatter draws
+nlice ywxgiey bxzzle -> alice studies puzzle
+wxqwle dnwcuey wue nmciemw wqenyxqe -> turtle watches the ancient treasure
+wencueq qengy wue uiggem bxzzle -> teacher reads the hidden puzzle
+Now, decrypt the following text: jkxye gqenjy menq cnhe",mouse dreams near cave
+4f01e7b4,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+17.81 m becomes 20.10
+49.37 m becomes 55.72
+12.56 m becomes 14.18
+19.47 m becomes 21.97
+14.41 m becomes 16.26
+Now, convert the following measurement: 7.76 m",8.76
+03deaa1c,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+kpc dctrhmd emf -> cat studies key
+cmpkbmq uqhcmd hz vjqmdc -> teacher writes in forest
+bpccmq kbpdmd itaaom -> hatter chases puzzle
+lhqr rqmpyd dmkqmc -> bird dreams secret
+Now, decrypt the following text: cbm dhoxmq yjtdm hypwhzmd",the silver mouse imagines
+35b9db40,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.84s, distance = 18.55 m
+For t = 3.18s, distance = 55.4 m
+For t = 2.04s, distance = 22.8 m
+For t = 1.63s, distance = 14.56 m
+For t = 2.1s, distance = 24.16 m
+Now, determine the falling distance for t = 3.1s given d = 0.5*g*t^2.",52.65
+93e6fcf8,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+20 -> XX
+49 -> XLIX
+77 -> LXXVII
+89 -> LXXXIX
+82 -> LXXXII
+Now, write the number 13 in the Wonderland numeral system.",XIII
+50a694de,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+""#{""[ = !`!
+%#)[[ = `[
+[})""% = !""
+["")!# = ""'
+`'(["" = %[
+Now, determine the result for: ]`(!!",%]
+1342687b,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+@(+<< = ]!
+]!+]< = %%
+<(*]) = )/:@
+Now, determine the result for: %<*#(",<%#<
+aac98230,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+45.72 m becomes 61.18
+37.76 m becomes 50.53
+46.42 m becomes 62.12
+Now, convert the following measurement: 21.86 m",29.25
+cc5d037a,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.29s, distance = 121.86 m
+For t = 2.06s, distance = 28.1 m
+For t = 3.88s, distance = 99.68 m
+Now, determine the falling distance for t = 4.51s given d = 0.5*g*t^2.",134.68
+b2285221,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+81 -> LXXXI
+54 -> LIV
+81 -> LXXXI
+72 -> LXXII
+83 -> LXXXIII
+Now, write the number 47 in the Wonderland numeral system.",XLVII
+605e1c08,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+90""19 = 9019
+38]92 = 3497
+76+73 = 3
+Now, determine the result for: 10""20",1020
+98bbac0f,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01001110 -> 10010011
+01000000 -> 00010000
+10101111 -> 01101011
+11011000 -> 00110110
+10110101 -> 01101101
+01100011 -> 01011000
+11111101 -> 01111111
+01000010 -> 10010000
+11111001 -> 01111110
+
+Now, determine the output for: 10101101",01101011
+1a2ac571,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.04s, distance = 155.41 m
+For t = 1.0s, distance = 9.52 m
+For t = 4.28s, distance = 174.43 m
+For t = 2.93s, distance = 81.74 m
+Now, determine the falling distance for t = 1.21s given d = 0.5*g*t^2.",13.94
+97d0bad8,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.28s, distance = 87.47 m
+For t = 1.01s, distance = 8.29 m
+For t = 4.78s, distance = 185.77 m
+For t = 4.34s, distance = 153.14 m
+Now, determine the falling distance for t = 4.94s given d = 0.5*g*t^2.",198.41
+799c6822,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11001111 -> 11100111
+01110000 -> 00111000
+10111100 -> 01011110
+11100111 -> 11110011
+10101001 -> 01010100
+00101101 -> 00010110
+11111111 -> 11111111
+
+Now, determine the output for: 11011100",01101110
+e3b5373a,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+38 -> XXXVIII
+94 -> XCIV
+54 -> LIV
+26 -> XXVI
+62 -> LXII
+Now, write the number 50 in the Wonderland numeral system.",L
+937c06c5,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+85:17 = 102
+47]72 = 25
+62'71 = 6271
+10]99 = 9
+94:71 = 165
+Now, determine the result for: 18]17",1
+2c34ec23,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.33s, distance = 6.62 m
+For t = 3.4s, distance = 43.29 m
+For t = 4.68s, distance = 82.02 m
+For t = 4.18s, distance = 65.43 m
+For t = 2.8s, distance = 29.36 m
+Now, determine the falling distance for t = 1.21s given d = 0.5*g*t^2.",5.48
+e9b69bf8,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+66[34 = 8382
+92!13 = 1392
+13]87 = ]74
+24]13 = 11
+11]84 = ]73
+Now, determine the result for: 99]84",15
+6402d0ee,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+03|85 = 88
+74|97 = 621
+17\27 = \1
+94\21 = 73
+Now, determine the result for: 92\86",\93
+c552685b,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.48s, distance = 58.52 m
+For t = 2.66s, distance = 67.33 m
+For t = 4.92s, distance = 230.33 m
+For t = 4.44s, distance = 187.58 m
+Now, determine the falling distance for t = 4.36s given d = 0.5*g*t^2.",180.88
+aa505ca3,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+zoqqw eipnqn pacuq ceqpw -> queen chases above ocean
+yconq qdvfcxqn jiq efquqx jxqpnoxq -> mouse explores the clever treasure
+joxjfq sxqpyn ypv -> turtle dreams map
+Now, decrypt the following text: jqpeiqx kcows exhnjpf",teacher found crystal
+903c0d6a,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+46.69 m becomes 78.27
+22.44 m becomes 37.62
+48.05 m becomes 80.55
+Now, convert the following measurement: 36.18 m",60.65
+250416b2,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+15.59 m becomes 23.17
+19.25 m becomes 28.61
+43.35 m becomes 64.42
+Now, convert the following measurement: 21.83 m",32.44
+00457d26,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+`!*[{ = '""[`
+\'*'> = ![@
+\'-!` = \\
+`!*\& = '@'{
+Now, determine the result for: [[-!'",@&
+ae0e57c4,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.24s, distance = 10.05 m
+For t = 2.62s, distance = 44.88 m
+For t = 1.75s, distance = 20.02 m
+For t = 2.26s, distance = 33.4 m
+For t = 2.86s, distance = 53.48 m
+Now, determine the falling distance for t = 4.97s given d = 0.5*g*t^2.",161.51
+98ad2572,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.8s, distance = 139.52 m
+For t = 1.96s, distance = 37.12 m
+For t = 4.59s, distance = 203.55 m
+Now, determine the falling distance for t = 1.54s given d = 0.5*g*t^2.",22.91
+d8b240fd,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.8s, distance = 98.91 m
+For t = 4.22s, distance = 76.45 m
+For t = 4.19s, distance = 75.37 m
+For t = 4.76s, distance = 97.27 m
+For t = 4.35s, distance = 81.24 m
+Now, determine the falling distance for t = 1.66s given d = 0.5*g*t^2.",11.83
+210f5249,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+31.62 m becomes 30.89
+11.19 m becomes 10.93
+13.99 m becomes 13.66
+32.03 m becomes 31.29
+25.77 m becomes 25.17
+Now, convert the following measurement: 25.83 m",25.23
+39425039,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.52s, distance = 14.07 m
+For t = 1.76s, distance = 18.87 m
+For t = 4.34s, distance = 114.72 m
+For t = 1.97s, distance = 23.64 m
+For t = 3.27s, distance = 65.12 m
+Now, determine the falling distance for t = 3.45s given d = 0.5*g*t^2.",72.49
+faf60df9,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+45.85 m becomes 60.45
+12.81 m becomes 16.89
+42.47 m becomes 55.99
+20.06 m becomes 26.45
+Now, convert the following measurement: 17.65 m",23.27
+44a5d760,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+rtaex amrnagxj agjasx ajtrgs -> alice imagines inside island
+lqxxg ubttbvj dox ebtbcuqt jdbcz -> queen follows the colorful story
+jdqsxgd sajebyxcj ubcxjd -> student discovers forest
+jdqsxgd jdqsaxj dox nbtsxg jxecxd -> student studies the golden secret
+jdqsxgd amrnagxj hqwwtx -> student imagines puzzle
+Now, decrypt the following text: dox oassxg jdqsxgd amrnagxj",the hidden student imagines
+d8bc44b3,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+01+55 = 56
+35*04 = 9112
+85-98 = 13
+Now, determine the result for: 37-06",31
+935022fa,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.16s, distance = 153.83 m
+For t = 4.32s, distance = 165.89 m
+For t = 3.16s, distance = 88.76 m
+For t = 3.66s, distance = 119.07 m
+For t = 2.13s, distance = 40.33 m
+Now, determine the falling distance for t = 4.79s given d = 0.5*g*t^2.",203.95
+11d08160,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+14 -> XIV
+8 -> VIII
+48 -> XLVIII
+18 -> XVIII
+Now, write the number 71 in the Wonderland numeral system.",LXXI
+b5c8ac87,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+zdajuxd bgozuz yoi -> student chases map
+oshbu jkuoyz qppm -> alice dreams book
+nauux bkuoduz ipdhpx -> queen creates potion
+dgu qkhfgd mxhfgd todbguz -> the bright knight watches
+Now, decrypt the following text: mhxf rpaxj dgkpafg vhssofu",king found through village
+bc1ef494,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+]!-{{ = ){
+]:-\{ = ))
+:\+<! = )]<
+{:-#( = \)
+Now, determine the result for: )(*\#",#)]
+4601649f,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.29s, distance = 90.1 m
+For t = 4.19s, distance = 85.95 m
+For t = 1.62s, distance = 12.85 m
+For t = 3.72s, distance = 67.75 m
+For t = 3.38s, distance = 55.93 m
+Now, determine the falling distance for t = 4.38s given d = 0.5*g*t^2.",93.92
+835c56b6,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01110111 -> 00111011
+11100101 -> 00101111
+00110000 -> 10000001
+00111010 -> 11010001
+00010000 -> 10000000
+01111010 -> 11010011
+01110001 -> 00001011
+01010011 -> 00011010
+00000110 -> 00110000
+11111111 -> 01111111
+
+Now, determine the output for: 10001110",01110100
+ca8d32e6,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11101101 -> 00101110
+01001100 -> 01101100
+10011000 -> 11011001
+01011000 -> 11101101
+10000100 -> 01011110
+11000011 -> 01101111
+10010100 -> 01011011
+10000111 -> 11111110
+
+Now, determine the output for: 11001110",10001100
+c887d78e,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+30.71 m becomes 54.33
+42.18 m becomes 74.62
+13.11 m becomes 23.19
+Now, convert the following measurement: 19.64 m",34.75
+65a42d6a,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.55s, distance = 63.81 m
+For t = 1.11s, distance = 6.24 m
+For t = 4.91s, distance = 122.06 m
+For t = 4.07s, distance = 83.87 m
+Now, determine the falling distance for t = 4.16s given d = 0.5*g*t^2.",87.62
+a189d177,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+jsllk fcbmlm dcl uaml tbv -> queen chases the wise map
+tzsml xlbrm tbv -> mouse reads map
+xbhhad fxlbdlm hlezkr iahxbxe -> rabbit creates beyond library
+Now, decrypt the following text: dlbfclx ubdfclm hlezkr uzkrlxibkr",teacher watches beyond wonderland
+8ffacd86,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.48s, distance = 54.87 m
+For t = 1.98s, distance = 17.76 m
+For t = 1.48s, distance = 9.93 m
+For t = 3.74s, distance = 63.38 m
+Now, determine the falling distance for t = 3.94s given d = 0.5*g*t^2.",70.34
+c04024c2,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.79s, distance = 46.29 m
+For t = 4.15s, distance = 102.42 m
+For t = 4.08s, distance = 98.99 m
+Now, determine the falling distance for t = 4.93s given d = 0.5*g*t^2.",144.53
+16fac7bb,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+45.49 m becomes 74.63
+17.96 m becomes 29.46
+8.03 m becomes 13.17
+32.17 m becomes 52.78
+Now, convert the following measurement: 38.6 m",63.33
+c7c9f6a1,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.26s, distance = 56.78 m
+For t = 3.63s, distance = 41.23 m
+For t = 3.96s, distance = 49.07 m
+For t = 1.7s, distance = 9.04 m
+Now, determine the falling distance for t = 1.63s given d = 0.5*g*t^2.",8.31
+22514367,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+76 -> LXXVI
+78 -> LXXVIII
+40 -> XL
+Now, write the number 74 in the Wonderland numeral system.",LXXIV
+ec695c4d,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+42.35 m becomes 70.76
+18.9 m becomes 31.58
+19.03 m becomes 31.79
+Now, convert the following measurement: 13.77 m",23.01
+66659efb,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+46.43 m becomes 45.74
+12.85 m becomes 12.66
+16.19 m becomes 15.95
+8.48 m becomes 8.35
+Now, convert the following measurement: 30.72 m",30.26
+7d5e3349,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+78 -> LXXVIII
+8 -> VIII
+16 -> XVI
+86 -> LXXXVI
+79 -> LXXIX
+Now, write the number 62 in the Wonderland numeral system.",LXII
+0440e6ab,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00101101 -> 10100000
+00001011 -> 01100000
+11011000 -> 00000001
+00111000 -> 00000000
+11110100 -> 10000001
+10001110 -> 11000001
+01001000 -> 00000000
+00101111 -> 11100000
+
+Now, determine the output for: 01110011",01100000
+d5ad5106,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+78 -> LXXVIII
+56 -> LVI
+77 -> LXXVII
+96 -> XCVI
+26 -> XXVI
+Now, write the number 38 in the Wonderland numeral system.",XXXVIII
+9c99c184,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.96s, distance = 67.11 m
+For t = 3.52s, distance = 94.9 m
+For t = 3.42s, distance = 89.58 m
+For t = 3.12s, distance = 74.56 m
+Now, determine the falling distance for t = 4.99s given d = 0.5*g*t^2.",190.71
+55954e3c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+02-87 = -85
+73+51 = 25
+53*69 = 1633
+57+97 = 451
+Now, determine the result for: 39*36",0685
+4c327b55,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10001000 -> 00011000
+10100110 -> 01000110
+00101110 -> 01011110
+10011010 -> 00111101
+10100001 -> 01001000
+00000000 -> 00000000
+10101110 -> 01010110
+11010010 -> 10101001
+
+Now, determine the output for: 01101101",11011100
+084f0513,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+12.0 m becomes 22.63
+23.48 m becomes 44.28
+5.07 m becomes 9.56
+27.99 m becomes 52.79
+Now, convert the following measurement: 15.83 m",29.86
+4ce156ee,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+33.91 m becomes 56.14
+32.8 m becomes 54.31
+35.97 m becomes 59.56
+37.3 m becomes 61.76
+26.26 m becomes 43.48
+Now, convert the following measurement: 43.42 m",71.89
+705c6748,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+97 -> XCVII
+45 -> XLV
+64 -> LXIV
+93 -> XCIII
+Now, write the number 98 in the Wonderland numeral system.",XCVIII
+0ceac403,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10000110 -> 11010000
+10110001 -> 00110110
+01001101 -> 10101001
+00110011 -> 01100110
+01110001 -> 00101110
+10010010 -> 01010010
+10100101 -> 10110100
+
+Now, determine the output for: 00000101",10100000
+4b86e0bb,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10100101 -> 01111010
+10111001 -> 10010100
+11001101 -> 00001110
+10110010 -> 11001001
+11110100 -> 11011010
+11011011 -> 10110101
+00110011 -> 10000001
+
+Now, determine the output for: 00001011",01011101
+9483f712,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+iacck mbcgocn uybbfb -> queen creates mirror
+ufanc mbcgocn orbfawr nmrffx -> mouse creates through school
+lbykmcnn zynmfhcbn uybbfb -> princess discovers mirror
+Now, decrypt the following text: noazcko yugwykcn orc mxchcb mbenogx",student imagines the clever crystal
+caf8a95c,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+ipciky vcyfld iqy wekvyg xcbdifk -> turtle dreams the golden crystal
+cfrrzi uepgv zgdzvy ofkkyb -> rabbit found inside valley
+iqy jzdy apyyg dipvzyd -> the wise queen studies
+iqy xkyoyc dipvygi zlfwzgyd -> the clever student imagines
+Now, decrypt the following text: lepdy jcziyd lfh",mouse writes map
+2a4de31a,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+32.12 m becomes 31.34
+36.62 m becomes 35.73
+28.75 m becomes 28.05
+39.78 m becomes 38.81
+13.44 m becomes 13.11
+Now, convert the following measurement: 36.89 m",35.99
+e483e127,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+)]}>) = ]>::
+)'{)< = :'
+`#{|' = '])
+Now, determine the result for: :]}#:",#''>
+917fcc49,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+vozahyjj lnehuyj euy sdjeyoztmj byd -> princess watches the mysterious key
+bzaq lozeyj cydtap stmaenza -> king writes beyond mountain
+euy htgtofmg stmjy lozeyj -> the colorful mouse writes
+Now, decrypt the following text: jempyae jempzyj vmxxgy",student studies puzzle
+360ea139,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+27 -> XXVII
+77 -> LXXVII
+95 -> XCV
+72 -> LXXII
+81 -> LXXXI
+Now, write the number 13 in the Wonderland numeral system.",XIII
+0fdc689e,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+5.54 m becomes 3.67
+12.02 m becomes 7.96
+10.76 m becomes 7.12
+Now, convert the following measurement: 44.65 m",29.56
+5eea60e7,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+50`92 = 4601
+51%42 = 9
+10`79 = 791
+Now, determine the result for: 79`10",791
+0ee2b6f4,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.62s, distance = 102.54 m
+For t = 4.94s, distance = 117.24 m
+For t = 2.05s, distance = 20.19 m
+For t = 4.77s, distance = 109.31 m
+Now, determine the falling distance for t = 1.73s given d = 0.5*g*t^2.",14.38
+6098a712,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+42.21 m becomes 43.31
+17.77 m becomes 18.23
+39.6 m becomes 40.63
+13.36 m becomes 13.71
+Now, convert the following measurement: 44.78 m",45.94
+b794b844,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+22.16 m becomes 13.29
+32.56 m becomes 19.53
+20.07 m becomes 12.04
+31.22 m becomes 18.72
+12.11 m becomes 7.26
+Now, convert the following measurement: 38.08 m",22.84
+427d5643,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+fevcb blpertbu fdrxb mrjwafvw -> alice explores above mountain
+fevcb itvabu mbuufob -> alice writes message
+qtforw qvucrxbtu ayb crertsje drrk -> dragon discovers the colorful book
+Now, decrypt the following text: fevcb uajqvbu ayb uvexbt pjggeb",alice studies the silver puzzle
+fbbe43a3,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01110111 -> 11100000
+00000110 -> 00001100
+10011000 -> 00100011
+00110010 -> 01100010
+00001101 -> 00011011
+10110011 -> 01110000
+11111010 -> 11101011
+10111011 -> 01100001
+
+Now, determine the output for: 00001010",00010101
+a82af070,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+5.27 m becomes 3.33
+38.62 m becomes 24.37
+11.11 m becomes 7.01
+Now, convert the following measurement: 14.11 m",8.91
+74515acf,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.86s, distance = 14.75 m
+For t = 4.65s, distance = 92.16 m
+For t = 1.56s, distance = 10.37 m
+Now, determine the falling distance for t = 2.04s given d = 0.5*g*t^2.",17.74
+fe9ca47a,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+2 -> II
+32 -> XXXII
+32 -> XXXII
+87 -> LXXXVII
+Now, write the number 98 in the Wonderland numeral system.",XCVIII
+1fa88224,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.55s, distance = 5.95 m
+For t = 1.93s, distance = 9.22 m
+For t = 1.27s, distance = 3.99 m
+Now, determine the falling distance for t = 2.02s given d = 0.5*g*t^2.",10.1
+2a6b5032,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+25 -> XXV
+79 -> LXXIX
+24 -> XXIV
+33 -> XXXIII
+34 -> XXXIV
+Now, write the number 15 in the Wonderland numeral system.",XV
+5eeb4557,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+6.61 m becomes 7.50
+28.81 m becomes 32.68
+21.01 m becomes 23.83
+25.06 m becomes 28.42
+31.17 m becomes 35.35
+Now, convert the following measurement: 35.67 m",40.46
+dfbf4e0e,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01100111 -> 01010010
+00111011 -> 10011010
+10010000 -> 01100001
+11101001 -> 01110111
+01000110 -> 10010100
+10111011 -> 10011011
+00000010 -> 00001100
+01010010 -> 11101100
+
+Now, determine the output for: 10001001",00110111
+979c0b0e,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.65s, distance = 17.48 m
+For t = 1.27s, distance = 4.01 m
+For t = 3.63s, distance = 32.79 m
+For t = 2.5s, distance = 15.55 m
+Now, determine the falling distance for t = 4.51s given d = 0.5*g*t^2.",50.62
+f20bf656,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11000000 -> 00000001
+00110000 -> 00000000
+00000000 -> 00000000
+01110111 -> 11100000
+11101111 -> 11100001
+10001110 -> 11000001
+00101010 -> 01000000
+01100100 -> 10000000
+
+Now, determine the output for: 01010101",10100000
+9e0eaab9,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.96s, distance = 68.41 m
+For t = 4.44s, distance = 86.0 m
+For t = 4.92s, distance = 105.6 m
+For t = 2.87s, distance = 35.93 m
+For t = 2.01s, distance = 17.62 m
+Now, determine the falling distance for t = 4.78s given d = 0.5*g*t^2.",99.67
+698fa458,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+19.39 m becomes 10.87
+20.78 m becomes 11.65
+10.1 m becomes 5.66
+Now, convert the following measurement: 19.57 m",10.97
+d7d21615,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+100 -> C
+53 -> LIII
+53 -> LIII
+81 -> LXXXI
+14 -> XIV
+Now, write the number 13 in the Wonderland numeral system.",XIII
+c9e2bade,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+70 -> LXX
+90 -> XC
+57 -> LVII
+Now, write the number 71 in the Wonderland numeral system.",LXXI
+7e3fefc6,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+?(*}| = ?&@&
+|(*?$ = &]:]
+$:+]$ = (]
+(:-$/ = $]
+Now, determine the result for: ((-:@",?
+672029b2,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+27*77 = 4455
+18*84 = 8883
+78*99 = 3168
+Now, determine the result for: 98-83",31
+c708be9a,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.14s, distance = 4.8 m
+For t = 4.69s, distance = 81.26 m
+For t = 4.33s, distance = 69.26 m
+For t = 4.05s, distance = 60.59 m
+For t = 4.57s, distance = 77.15 m
+Now, determine the falling distance for t = 2.27s given d = 0.5*g*t^2.",19.04
+48a5b6e8,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+69 -> LXIX
+85 -> LXXXV
+46 -> XLVI
+43 -> XLIII
+31 -> XXXI
+Now, write the number 70 in the Wonderland numeral system.",LXX
+e821a3ca,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+10000110 -> 10101101
+00010100 -> 01010101
+10111111 -> 11110111
+11001110 -> 11011011
+10010100 -> 00110101
+10110001 -> 10100111
+01101101 -> 00111011
+
+Now, determine the output for: 10000001",00110111
+28b0ff48,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+/'+|# = ""/
+(?-(' = '
+^""*'# = /]|(
+Now, determine the result for: |^-^^",']
+ad364a7c,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.79s, distance = 26.61 m
+For t = 1.15s, distance = 10.98 m
+For t = 1.58s, distance = 20.73 m
+For t = 3.72s, distance = 114.94 m
+Now, determine the falling distance for t = 4.61s given d = 0.5*g*t^2.",176.52
+94b3156f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+}\-""' = |'<
+|?-""\ = }""
+#\['| = \""#\
+Now, determine the result for: |()""}",)''
+d9d85c78,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+46.92 m becomes 93.84
+45.64 m becomes 91.28
+27.4 m becomes 54.80
+Now, convert the following measurement: 46.08 m",92.16
+57e45624,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+12 -> XII
+45 -> XLV
+97 -> XCVII
+67 -> LXVII
+2 -> II
+Now, write the number 5 in the Wonderland numeral system.",V
+3b06ed13,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+35 -> XXXV
+86 -> LXXXVI
+96 -> XCVI
+Now, write the number 74 in the Wonderland numeral system.",LXXIV
+0e2636ae,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+28.02 m becomes 18.45
+48.23 m becomes 31.75
+16.15 m becomes 10.63
+Now, convert the following measurement: 14.75 m",9.71
+b9e9dc9f,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01011001 -> 01000101
+11111011 -> 10001111
+00010011 -> 00001100
+00101110 -> 00111000
+00011100 -> 01110000
+01110111 -> 00011101
+01110000 -> 11000001
+00001010 -> 00101000
+11110100 -> 01010011
+
+Now, determine the output for: 00000000",00000000
+740e0460,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+34.33 m becomes 26.61
+7.32 m becomes 5.67
+45.88 m becomes 35.56
+Now, convert the following measurement: 15.02 m",11.64
+68903918,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+54/69 = 15
+92/78 = 14
+23+20 = 43
+Now, determine the result for: 59-69",4072
+d8798f2e,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+9 -> IX
+41 -> XLI
+36 -> XXXVI
+63 -> LXIII
+Now, write the number 86 in the Wonderland numeral system.",LXXXVI
+3b6db97b,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+8.6 m becomes 7.92
+16.44 m becomes 15.14
+24.68 m becomes 22.73
+6.83 m becomes 6.29
+Now, convert the following measurement: 26.42 m",24.33
+d64a6578,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+58{12 = 697
+27{69 = 1864
+76?86 = ?10
+Now, determine the result for: 75{35",2626
+8bc6a26c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+34{85 = 2889
+26#93 = 119
+20#75 = 95
+43*40 = *3
+Now, determine the result for: 12#26",38
+f929abdc,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+33 -> XXXIII
+46 -> XLVI
+88 -> LXXXVIII
+45 -> XLV
+Now, write the number 94 in the Wonderland numeral system.",XCIV
+09a80640,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.77s, distance = 138.99 m
+For t = 2.59s, distance = 65.6 m
+For t = 2.59s, distance = 65.6 m
+For t = 3.88s, distance = 147.22 m
+Now, determine the falling distance for t = 4.11s given d = 0.5*g*t^2.",165.19
+7abab429,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00010001 -> 00000000
+01100001 -> 00000000
+01011110 -> 00000000
+00000001 -> 00000000
+11100101 -> 00000000
+10010101 -> 00000001
+01100000 -> 00000000
+00010000 -> 00000000
+
+Now, determine the output for: 11101111",00000000
+3a77dee7,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.22s, distance = 5.08 m
+For t = 4.95s, distance = 83.64 m
+For t = 3.14s, distance = 33.65 m
+Now, determine the falling distance for t = 2.67s given d = 0.5*g*t^2.",24.33
+7d301a45,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+rub crfhlyb sefn bdomifbc -> the strange bird explores
+jhr jfbhrbc tlnbf pemmhyb -> cat creates under village
+ofeljbcc bdomifbc jhcrmb -> princess explores castle
+gtbbl juhcbc rub cbjfbr aeffif -> queen chases the secret mirror
+nfhyil khrjubc rub sfeyur oireil -> dragon watches the bright potion
+Now, decrypt the following text: xely fbhnc hfitln jhcrmb",king reads around castle
+1249ddb4,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01000101 -> 00011100
+00101011 -> 10101001
+00101111 -> 10111001
+11011010 -> 01110011
+11010111 -> 01000110
+11011000 -> 01111011
+11100011 -> 10010000
+10100101 -> 10000000
+01000110 -> 00010000
+
+Now, determine the output for: 01101001",10101001
+e4aeed67,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+'(#?` = '(`{
+`':}"" = (}
+@{:{` = {')
+({^)& = {""
+Now, determine the result for: '"":'{",@`
+7064acac,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+11000000 -> 11110011
+00011110 -> 10011110
+00110011 -> 00001100
+00011100 -> 00111110
+10101111 -> 11000111
+10001101 -> 01100111
+10111101 -> 01100110
+11100000 -> 11110011
+10010001 -> 10100110
+
+Now, determine the output for: 00111000",01111100
+2f37b967,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.02s, distance = 7.07 m
+For t = 3.72s, distance = 93.98 m
+For t = 2.62s, distance = 46.62 m
+For t = 2.67s, distance = 48.41 m
+For t = 3.64s, distance = 89.98 m
+Now, determine the falling distance for t = 2.84s given d = 0.5*g*t^2.",54.78
+5f66eb60,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01000111 -> 10000011
+00111111 -> 01011111
+01100110 -> 10011001
+11101110 -> 11111111
+01111010 -> 10111100
+01111110 -> 10111111
+01010000 -> 00100000
+01100000 -> 00010000
+00101000 -> 00010000
+
+Now, determine the output for: 11111111",11111111
+24e662dd,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+15.52 m becomes 18.09
+41.12 m becomes 47.92
+44.52 m becomes 51.89
+20.47 m becomes 23.86
+48.47 m becomes 56.49
+Now, convert the following measurement: 40.29 m",46.96
+71cd0e14,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+99 -> XCIX
+15 -> XV
+73 -> LXXIII
+Now, write the number 25 in the Wonderland numeral system.",XXV
+4cec2a02,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+28.15 m becomes 44.12
+26.89 m becomes 42.15
+9.1 m becomes 14.26
+48.0 m becomes 75.24
+43.35 m becomes 67.95
+Now, convert the following measurement: 24.02 m",37.65
+b5539826,"In Alice's Wonderland, a secret unit conversion is applied to measurements. For example:
+29.74 m becomes 38.27
+19.49 m becomes 25.08
+44.61 m becomes 57.40
+Now, convert the following measurement: 8.58 m",11.04
+f6009480,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+lmvw ovxnyxc ykx ozxbxv ovpcynz -> bird creates the clever crystal
+arxxe cxxc yvxncrvx -> queen sees treasure
+sdrcx wvngc ykx kmwwxe cxovxy -> mouse draws the hidden secret
+lmvw xtizdvxc exnv sdreynme -> bird explores near mountain
+ykx cyvneqx gmjnvw wvxnsc -> the strange wizard dreams
+Now, decrypt the following text: hemqky gvmyxc idymde",knight writes potion
+ab3166c8,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+hsidqps ujmmjoh lkjipd mefklkg -> student follows around library
+nepb wkqlsqh xekkjk -> king creates mirror
+npebcs qzvmjkqh scq dlkn nqg -> knight explores the dark key
+scq wmqrqk hsidqps qzvmjkqh -> the clever student explores
+Now, decrypt the following text: nepb okesqh scq wikejih vittmq",king writes the curious puzzle
+a8dbe0c6,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.37s, distance = 102.6 m
+For t = 2.36s, distance = 50.32 m
+For t = 1.83s, distance = 30.26 m
+For t = 3.57s, distance = 115.14 m
+Now, determine the falling distance for t = 1.48s given d = 0.5*g*t^2.",19.79
+49fb46e8,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+00001100 -> 00110000
+11001010 -> 00101110
+01000110 -> 00011010
+01100001 -> 10000111
+01110010 -> 11001011
+01100010 -> 10001011
+11010111 -> 01011010
+
+Now, determine the output for: 11010010",01001110
+cbd76ba8,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 4.89s, distance = 194.11 m
+For t = 1.0s, distance = 8.12 m
+For t = 2.06s, distance = 34.45 m
+For t = 3.51s, distance = 100.01 m
+Now, determine the falling distance for t = 3.26s given d = 0.5*g*t^2.",86.27
+201255d5,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+btnfz mtnoi pswfdja -> mouse found crystal
+qeog iszjbf drz pazyzs mtszfd -> king dreams the clever forest
+dnsdaz fzzf bjh -> turtle sees map
+Now, decrypt the following text: drz feayzs sjuued iefptyzsf",the silver rabbit discovers
+924ffdf9,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 2.43s, distance = 31.55 m
+For t = 2.65s, distance = 37.52 m
+For t = 1.36s, distance = 9.88 m
+For t = 1.71s, distance = 15.62 m
+Now, determine the falling distance for t = 3.69s given d = 0.5*g*t^2.",72.74
+fb23edcb,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+7 -> VII
+37 -> XXXVII
+15 -> XV
+66 -> LXVI
+62 -> LXII
+Now, write the number 69 in the Wonderland numeral system.",LXIX
+f68a0b15,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.69s, distance = 20.15 m
+For t = 4.1s, distance = 118.61 m
+For t = 3.11s, distance = 68.24 m
+For t = 1.82s, distance = 23.37 m
+For t = 1.96s, distance = 27.1 m
+Now, determine the falling distance for t = 1.49s given d = 0.5*g*t^2.",15.66
+96291987,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+kmh mijjhb jfrstb etvbj -> the hidden dragon found
+kmh cvfitvo rxich jioctuhfo -> the curious alice discovers
+kmh qaokhfitvo rxich etxxtno -> the mysterious alice follows
+khrcmhf jioctuhfo kmh ohcfhk dtty -> teacher discovers the secret book
+jfrstb cfhrkho rdtuh ocmttx -> dragon creates above school
+Now, decrypt the following text: qtvoh hlzxtfho ib uixxrsh",mouse explores in village
+8de57d95,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 3.0s, distance = 73.94 m
+For t = 3.17s, distance = 82.55 m
+For t = 2.31s, distance = 43.84 m
+For t = 2.64s, distance = 57.26 m
+For t = 3.49s, distance = 100.06 m
+Now, determine the falling distance for t = 1.38s given d = 0.5*g*t^2.",15.64
+a3b4dccd,"In Alice's Wonderland, secret encryption rules are used on text. Here are some examples:
+nciir ewuoio srosxi flcrhusr -> queen chases inside mountain
+hckhvi kiuxo yialrx eudi -> turtle reads beyond cave
+wuhhik quhewio sr sovurx -> hatter watches in island
+hwi eckslco euh oiio -> the curious cat sees
+Now, decrypt the following text: ohcxirh ekiuhio crxik sovurx",student creates under island
+b0c908ce,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+13 -> XIII
+85 -> LXXXV
+45 -> XLV
+81 -> LXXXI
+31 -> XXXI
+Now, write the number 96 in the Wonderland numeral system.",XCVI
+a36be33f,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.95s, distance = 19.84 m
+For t = 2.81s, distance = 41.21 m
+For t = 2.04s, distance = 21.72 m
+Now, determine the falling distance for t = 1.46s given d = 0.5*g*t^2.",11.12
+67b4058c,"In Alice's Wonderland, the gravitational constant has been secretly changed. Here are some example observations:
+For t = 1.74s, distance = 19.17 m
+For t = 2.67s, distance = 45.15 m
+For t = 1.23s, distance = 9.58 m
+Now, determine the falling distance for t = 1.46s given d = 0.5*g*t^2.",13.5

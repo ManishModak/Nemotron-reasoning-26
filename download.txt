@@ -1,0 +1,167 @@
+6.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.5s 3 0.00s - to python to disable frozen modules.
+6.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+6.9s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.9s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.9s 7 0.00s - to python to disable frozen modules.
+6.9s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.3s 9 Installing TRL offline from: /kaggle/input/datasets/manishmodak/trl-offline
+29.0s 10 Installed TRL: 1.1.0
+29.2s 11 Installing bitsandbytes (offline) from: /kaggle/input/datasets/manishmodak/bnb-offline
+31.4s 12 bitsandbytes pip install finished.
+31.6s 13 Added cutlass path: /kaggle/usr/lib/notebooks/ryanholbrook/nvidia_utility_script/nvidia_cutlass_dsl/python_packages
+77.5s 14 /kaggle/usr/lib/notebooks/ryanholbrook/nvidia_utility_script/torch/compiler/__init__.py:148: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+77.5s 15 return torch._dynamo.allow_in_graph(fn)
+77.5s 16 
+77.5s 17 /kaggle/usr/lib/notebooks/ryanholbrook/nvidia_utility_script/torch/compiler/__init__.py:148: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+77.5s 18 return torch._dynamo.allow_in_graph(fn)
+97.2s 19 Using optim=adamw_8bit (bitsandbytes 0.49.2 )
+97.2s 20 torch: 2.12.0.dev20260324+cu128 cuda: True
+97.3s 21 ✅ Eval mode: Train=9000, Eval=500 (from /kaggle/input/datasets/manishmodak/nemotron-split-data)
+97.3s 22 Training rows: 9000
+98.1s 23 Found model in Kaggle inputs: /kaggle/input/models/metric/nemotron-3-nano-30b-a3b-bf16/transformers/default/1
+98.4s 24 Trainer eval dataset: 500 examples (held-out; eval_loss + best checkpoint)
+98.4s 25 Training dataset: 9000 examples
+98.4s 26 
+98.4s 27 --- Sample prompt (first 500 chars) ---
+98.4s 28 <|im_start|>system
+98.4s 29 <|im_end|>
+98.4s 30 <|im_start|>user
+98.4s 31 In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+98.4s 32 \{@^> = '&^
+98.4s 33 [&:[{ = ^'`{
+98.4s 34 ^^|\\ = |&&
+98.4s 35 <>@`' = '{>
+98.4s 36 Now, determine the result for: \\@>>
+98.4s 37 Please put your final answer inside `\boxed{}`. For example: `\boxed{your answer}`<|im_end|>
+98.4s 38 <|im_start|>assistant
+98.4s 39 <think>
+98.4s 40 
+98.4s 41 
+98.4s 42 --- Sample completion ---
+98.4s 43 \boxed{'>&}
+552.1s 44 /usr/local/lib/python3.12/dist-packages/torchao/float8/float8_tensor.py:122: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 45 @torch._dynamo.allow_in_graph
+552.1s 46 /usr/local/lib/python3.12/dist-packages/torchao/float8/float8_tensor.py:195: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 47 @torch._dynamo.allow_in_graph
+552.1s 48 /usr/local/lib/python3.12/dist-packages/torchao/float8/float8_scaling_utils.py:90: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 49 @torch._dynamo.allow_in_graph
+552.1s 50 /usr/local/lib/python3.12/dist-packages/torchao/float8/float8_linear.py:60: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 51 @torch._dynamo.allow_in_graph
+552.1s 52 /usr/local/lib/python3.12/dist-packages/torchao/dtypes/nf4tensor.py:1059: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 53 @torch._dynamo.allow_in_graph
+552.1s 54 /usr/local/lib/python3.12/dist-packages/torchao/quantization/subclass.py:206: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 55 @torch._dynamo.allow_in_graph
+552.1s 56 /usr/local/lib/python3.12/dist-packages/torchao/quantization/subclass.py:355: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 57 @torch._dynamo.allow_in_graph
+552.1s 58 /usr/local/lib/python3.12/dist-packages/torchao/quantization/subclass.py:392: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 59 @torch._dynamo.allow_in_graph
+552.1s 60 
+552.1s 61 /usr/local/lib/python3.12/dist-packages/torchao/float8/float8_tensor.py:122: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 62 @torch._dynamo.allow_in_graph
+552.1s 63 /usr/local/lib/python3.12/dist-packages/torchao/float8/float8_tensor.py:195: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 64 @torch._dynamo.allow_in_graph
+552.1s 65 /usr/local/lib/python3.12/dist-packages/torchao/float8/float8_scaling_utils.py:90: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 66 @torch._dynamo.allow_in_graph
+552.1s 67 /usr/local/lib/python3.12/dist-packages/torchao/float8/float8_linear.py:60: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 68 @torch._dynamo.allow_in_graph
+552.1s 69 /usr/local/lib/python3.12/dist-packages/torchao/dtypes/nf4tensor.py:1059: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 70 @torch._dynamo.allow_in_graph
+552.1s 71 /usr/local/lib/python3.12/dist-packages/torchao/quantization/subclass.py:206: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 72 @torch._dynamo.allow_in_graph
+552.1s 73 /usr/local/lib/python3.12/dist-packages/torchao/quantization/subclass.py:355: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 74 @torch._dynamo.allow_in_graph
+552.1s 75 /usr/local/lib/python3.12/dist-packages/torchao/quantization/subclass.py:392: FutureWarning: torch._dynamo.allow_in_graph is deprecated and will be removed in a future version. Use torch._dynamo.nonstrict_trace instead.
+552.1s 76 @torch._dynamo.allow_in_graph
+559.7s 77 trainable params: 880,138,240 || all params: 32,458,075,584 || trainable%: 2.7116
+561.3s 78 warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+561.3s 79 
+561.3s 80 warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+561.5s 81 WARNING:trl.trainer.sft_trainer:Padding-free training is enabled, but the attention implementation is not set to a supported flash attention variant. Padding-free training flattens batches into a single sequence, and only the following implementations are known to reliably support this: flash_attention_2, flash_attention_3, kernels-community/flash-attn2, kernels-community/flash-attn3, kernels-community/vllm-flash-attn3. Using other implementations may lead to unexpected behavior. To ensure compatibility, set `attn_implementation` in the model configuration to one of these supported options or verify that your attention mechanism can handle flattened sequences.
+561.5s 82 
+561.5s 83 WARNING:trl.trainer.sft_trainer:Padding-free training is enabled, but the attention implementation is not set to a supported flash attention variant. Padding-free training flattens batches into a single sequence, and only the following implementations are known to reliably support this: flash_attention_2, flash_attention_3, kernels-community/flash-attn2, kernels-community/flash-attn3, kernels-community/vllm-flash-attn3. Using other implementations may lead to unexpected behavior. To ensure compatibility, set `attn_implementation` in the model configuration to one of these supported options or verify that your attention mechanism can handle flattened sequences.
+561.6s 84 WARNING:trl.trainer.sft_trainer:You are using packing, but the attention implementation is not set to a supported flash attention variant. Packing gathers multiple samples into a single sequence, and only the following implementations are known to reliably support this: flash_attention_2, flash_attention_3, kernels-community/flash-attn2, kernels-community/flash-attn3, kernels-community/vllm-flash-attn3. Using other implementations may lead to cross-contamination between samples. To avoid this, either disable packing by setting `packing=False`, or set `attn_implementation` in the model configuration to one of these supported options.
+561.6s 85 
+561.6s 86 WARNING:trl.trainer.sft_trainer:You are using packing, but the attention implementation is not set to a supported flash attention variant. Packing gathers multiple samples into a single sequence, and only the following implementations are known to reliably support this: flash_attention_2, flash_attention_3, kernels-community/flash-attn2, kernels-community/flash-attn3, kernels-community/vllm-flash-attn3. Using other implementations may lead to cross-contamination between samples. To avoid this, either disable packing by setting `packing=False`, or set `attn_implementation` in the model configuration to one of these supported options.
+566.0s 87 The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 11, 'pad_token_id': 11}.
+566.0s 88 
+566.0s 89 The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 11, 'pad_token_id': 11}.
+566.7s 90 ============================================================
+566.7s 91 TRAINING CONFIG (Run A-prime)
+566.7s 92 ============================================================
+566.7s 93 Epochs:         3
+566.7s 94 LR:             0.0002
+566.7s 95 LR schedule:    cosine (was linear)
+566.7s 96 Warmup ratio:   0.05 (was 0)
+566.7s 97 Optimizer:      adamw_8bit
+566.7s 98 Max seq length: 1024
+566.7s 99 Post-train eval: max_new_tokens=2048
+566.7s 100 Batch size:     2 x 4 grad accum
+566.7s 101 Response-only:  True
+566.7s 102 Packing:        True
+566.7s 103 Train samples:  9000
+566.7s 104 Save:           best@eval_loss, total_limit=1
+566.7s 105 ============================================================
+566.7s 106 No checkpoint in /kaggle/input - training from scratch
+10790.5s 107 Removed /kaggle/working/checkpoint-250
+10792.9s 108 Saved adapter + tokenizer under /kaggle/working/final_adapter
+10792.9s 109 adding: adapter_config.json (deflated 55%)
+10793.1s 110 adding: adapter_model.safetensors  adding: adapter_config.json (deflated 55%)
+10909.9s 111 adding: adapter_model.safetensors (deflated 9%)
+10909.9s 112 (deflated 9%)
+10909.9s 113 Wrote /kaggle/working/submission.zip
+10910.1s 114 ============================================================
+10910.1s 115 RUNNING EVALUATION on 500 held-out rows
+10910.1s 116 ============================================================
+10910.2s 117 WARNING:transformers_modules._1.modeling_nemotron_h:NemotronH requires an initialized `NemotronHHybridDynamicCache` to return a cache. None was provided, so no cache will be returned.
+10910.2s 118 
+10910.2s 119 WARNING:transformers_modules._1.modeling_nemotron_h:NemotronH requires an initialized `NemotronHHybridDynamicCache` to return a cache. None was provided, so no cache will be returned.
+11211.0s 120 [50/500] accuracy so far: 28/50 (56.0%)
+11513.7s 121 [100/500] accuracy so far: 57/100 (57.0%)
+11810.3s 122 [150/500] accuracy so far: 88/150 (58.7%)
+12116.8s 123 [200/500] accuracy so far: 110/200 (55.0%)
+12424.3s 124 [250/500] accuracy so far: 136/250 (54.4%)
+12711.6s 125 [300/500] accuracy so far: 168/300 (56.0%)
+12994.4s 126 [350/500] accuracy so far: 191/350 (54.6%)
+13287.4s 127 [400/500] accuracy so far: 217/400 (54.2%)
+13597.3s 128 [450/500] accuracy so far: 249/450 (55.3%)
+13888.4s 129 [500/500] accuracy so far: 278/500 (55.6%)
+13888.4s 130 
+13888.4s 131 ============================================================
+13888.4s 132 EVAL RESULTS (500 held-out rows)
+13888.4s 133 ============================================================
+13888.4s 134 Overall accuracy: 278/500 (55.6%)
+13888.4s 135 
+13888.4s 136 Per-family breakdown:
+13888.4s 137 bit_manipulation    : 36/84 (42.9%)
+13888.4s 138 encryption          : 29/83 (34.9%)
+13888.4s 139 equations           : 13/82 (15.9%)
+13888.4s 140 gravity             : 33/84 (39.3%)
+13888.4s 141 numeral             : 83/83 (100.0%)
+13888.4s 142 unit_conversion     : 84/84 (100.0%)
+13888.4s 143 
+13888.4s 144 Sample failures (first 5):
+13888.4s 145 [encryption] expected='bird writes door' got='king writes door'
+13888.4s 146 [encryption] expected='cat studies the silver message' got='cat studies the clever message'
+13888.4s 147 [encryption] expected='rabbit studies near tower' got='rabbit studies near cave'
+13888.4s 148 [bit_manipulation] expected='11100010' got='00000100'
+13888.4s 149 [bit_manipulation] expected='00011010' got='00011110'
+13888.4s 150 ============================================================
+13888.4s 151 
+13888.4s 152 Saved eval results to /kaggle/working/eval_results.json
+13893.6s 153 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+13893.6s 154 cells[i][c] = re.sub('\\\\\|', '|', cell)
+13893.7s 155 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+13893.7s 156 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+13894.6s 157 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+13894.7s 158 [NbConvertApp] Writing 130033 bytes to __notebook__.ipynb
+13896.6s 159 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+13897.1s 160 [NbConvertApp] Writing 452289 bytes to __results__.html
+
+
+
+
+
+
+score - 0.52

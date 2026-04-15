@@ -1,0 +1,24 @@
+row_id,question,gold_answer,family,cot_response,extracted_answer,verified,tier,cot_response_t2,extracted_answer_t2,verified_t2,correction_mode,model,task_error
+8814e4a7,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+85 -> LXXXV
+13 -> XIII
+13 -> XIII
+76 -> LXXVI
+41 -> XLI
+Now, write the number 70 in the Wonderland numeral system.",LXX,numeral,"The examples show that the “Wonderland numeral system” is simply the Roman numeral system:
+
+- 85 → LXXXV (50 + 30 + 5)  
+- 13 → XIII (10 + 3)  
+- 76 → LXXVI (50 + 20 + 6)  
+- 41 → XLI (40 + 1)
+
+To write 70 in Roman numerals, decompose it as 50 + 20:
+
+- 50 is **L**  
+- 20 is **XX**
+
+Putting them together gives **LXX**.
+
+\[
+\boxed{LXX}
+\]",LXX,True,tier1_genuine,,,False,,minimaxai/minimax-m2.7,

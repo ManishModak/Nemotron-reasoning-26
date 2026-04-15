@@ -14,8 +14,14 @@ htmlcov/
 venv/
 env/
 
+# Secrets (OpenRouter keys, etc.)
+.env
+.env.local
+.env.*.local
+
 # Jupyter
 .ipynb_checkpoints/
+*.log
 
 # OS / editors
 .DS_Store
