@@ -1,0 +1,8 @@
+# Dependencies for scripts/nvidia_taskcot.py (NVIDIA NIM hosted API)
+# Install with: pip install -r scripts/requirements-nvidia-taskcot.txt
+
+# OpenAI SDK for streaming chat completions against NVIDIA/OpenRouter endpoints
+openai>=1.40.0
+
+# Data handling (pandas is typically pre-installed in most environments)
+pandas>=2.0.0

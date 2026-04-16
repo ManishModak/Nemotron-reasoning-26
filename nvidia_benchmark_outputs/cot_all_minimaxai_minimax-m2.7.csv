@@ -22,3 +22,74 @@ Putting them together gives **LXX**.
 \[
 \boxed{LXX}
 \]",LXX,True,tier1_genuine,,,False,,minimaxai/minimax-m2.7,
+812131f1,"In Alice's Wonderland, a secret bit manipulation rule transforms 8-bit binary numbers. The transformation involves operations like bit shifts, rotations, XOR, AND, OR, NOT, and possibly majority or choice functions.
+
+Here are some examples of input -> output:
+01001000 -> 01000100
+10000010 -> 00011000
+11000100 -> 00101100
+00110100 -> 10100011
+01011010 -> 11010101
+10001100 -> 01101000
+11010001 -> 10000101
+
+Now, determine the output for: 10111110",11111011,bit_manipulation,,,False,error,,,False,,minimaxai/minimax-m2.7,HTTP 504: 
+91336795,"In Alice's Wonderland, numbers are secretly converted into a different numeral system. Some examples are given below:
+66 -> LXVI
+12 -> XII
+76 -> LXXVI
+3 -> III
+96 -> XCVI
+Now, write the number 44 in the Wonderland numeral system.",XLIV,numeral,"**Step‑by‑step reasoning**
+
+1. **Identify the numeral system**  
+   The examples given are:
+   - 66 → **LXVI**  
+   - 12 → **XII**  
+   - 76 → **LXXVI**  
+   - 3  → **III**  
+   - 96 → **XCVI**  
+
+   These are exactly the Roman numerals we know from everyday use.
+
+2. **Recall the Roman‑numeral values and subtractive rules**  
+
+   | Symbol | Value |
+   |--------|-------|
+   | I      | 1 |
+   | V      | 5 |
+   | X      | 10 |
+   | L      | 50 |
+   | C      | 100 |
+   | D      | 500 |
+   | M      | 1000 |
+
+   Subtractive pairs:  
+   - IV = 4 (5 − 1)  
+   - IX = 9 (10 − 1)  
+   - XL = 40 (50 − 10)  
+   - XC = 90 (100 − 10)  
+   - CD = 400 (500 − 100)  
+   - CM = 900 (1000 − 100)
+
+3. **Break the target number, 44, into its Roman‑numeral components**  
+
+   - 44 = 40 + 4  
+   - 40 is written as **XL** (subtractive pair).  
+   - 4 is written as **IV** (subtractive pair).
+
+4. **Combine the components**  
+
+   40 + 4 → **XL** + **IV** = **XLIV**.
+
+5. **Verify**  
+
+   - XL = 40  
+   - IV = 4  
+   - XLIV = 40 + 4 = 44 ✔️
+
+**Answer**
+
+\[
+\boxed{XLIV}
+\]",XLIV,True,tier1_genuine,,,False,,minimaxai/minimax-m2.7,

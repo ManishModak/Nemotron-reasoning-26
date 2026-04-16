@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-04-16T04:50:36.442406+00:00",
+  "model": "minimaxai/minimax-m2.7",
+  "api_url": "https://integrate.api.nvidia.com/v1/chat/completions",
+  "sample_path": "datasets/benchmark_sample_500.csv",
+  "row_count": 500,
+  "correction_mode": "session",
+  "temperature": 0.2,
+  "max_tokens": 16384,
+  "http_backend": "auto",
+  "stream": true
+}
